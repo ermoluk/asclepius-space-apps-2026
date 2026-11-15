@@ -8,8 +8,8 @@
 <h1 align="center">Asclepius: an explainable health expert system for astronauts</h1>
 
 <p align="center">
-  <b><a href="https://asclepius.phronesisco.tech">Live demo: asclepius.phronesisco.tech</a></b><br>
-  NASA Space Apps Challenge 2026 · Team Bubliki<br>
+  <b><a href="https://asclepius.phronesisco.tech">Live demo</a> · <a href="https://youtu.be/nKgauD-4YBg">Demo video</a> · <a href="https://www.spaceappschallenge.org/2026/find-a-team/bubliki/">Team Bubliki</a></b><br>
+  NASA Space Apps Challenge 2026<br>
   Challenge: <i>Create Health Monitoring Software for Astronauts on Space Missions</i>
 </p>
 
