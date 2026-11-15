@@ -247,5 +247,14 @@ cited references (`knowledge-base/08-references.md`). The backend reads it direc
 
 ## AI disclosure
 
-The idea and all design decisions are the team's own. An AI assistant helped collect and summarise NASA resources, draft the knowledge
-base and write code under the team's direction.
+The idea and all design decisions are the team's own. AI tools were used under the team's direction:
+
+- **Code and knowledge base**: an AI coding assistant helped collect and summarise NASA resources, draft the knowledge-base tables
+  and write the code. Every rule cites its source.
+- **Data**: the fictional crew (`data/crew/`), the illustrative in-flight values and every value labelled `synthetic-calibrated`
+  were produced by code written with the assistant. Values labelled `real-astronaut`, `real-ground` or `real-population` come from
+  the cited datasets as published (corrections are listed above).
+- **Logo**: the first concept was an image generated with ChatGPT. The logo in the app and in this repository is a flat vector
+  redrawing of it (`frontend/public/brand/logo-dark.svg`, `logo-light.svg`); the generated image is no longer used in the app.
+- **Demo video**: the narration is an AI-generated voice (open-source Kokoro-82M text-to-speech, run locally, reading the team's
+  script). The app shots are screen recordings of the running app; the other graphics are vector animations rendered by code.
