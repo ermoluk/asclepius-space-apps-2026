@@ -64,9 +64,11 @@ Data tables in `../data/`.
 |---|---|---|
 | OSD569 | NASA OSDR OSD-569 — Inspiration4 whole blood, Complete Blood Count ✔ (in `data/`) | https://osdr.nasa.gov/bio/repo/data/studies/OSD-569 |
 | OSD575 | NASA OSDR OSD-575 — Inspiration4 serum, Comprehensive Metabolic Panel + multiplex panels ✔ (in `data/`) | https://osdr.nasa.gov/bio/repo/data/studies/OSD-575 |
+| OSD572 | NASA OSDR OSD-572: Inspiration4 skin, oral and nasal swab metagenomes, GeneLab MetaPhlAn taxonomy table (passport microbiome diversity at L-92, L-44, L-3) | https://osdr.nasa.gov/bio/repo/data/studies/OSD-572 |
 | OSD410 | NASA OSDR OSD-410 (GEO GSE63952) — dose/time transcriptional response to ionizing radiation ✔ (in `data/`); Rouchka EC et al., Data in Brief 2019, doi:10.1016/j.dib.2019.104624 | https://osdr.nasa.gov/bio/repo/data/studies/OSD-410 |
 | DONKI | NASA CCMC DONKI — Space Weather Database Of Notifications, Knowledge, Information: solar energetic particle events (snapshot 2024–2025 in `data/space_weather/`) | https://ccmc.gsfc.nasa.gov/tools/DONKI |
 | NHANES2011 | CDC/NCHS — National Health and Nutrition Examination Survey 2011–2012: examination, laboratory and questionnaire files (passport exam donors, population norms) | https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?BeginYear=2011 |
+| NHANES2003 | CDC/NCHS: National Health and Nutrition Examination Survey 2003-2004, balance examination (modified Romberg, BAX_C) and demographics (passport balance test, validation) | https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/BAX_C.htm |
 | LIFESNAPS | Yfantidou S et al. LifeSnaps, a 4-month multi-modal dataset capturing unobtrusive snapshots of our lives in the wild. *Sci Data* 2022;9:663 (CC BY 4.0; passport daily-stream donors) | https://doi.org/10.1038/s41597-022-01764-x |
 | MMASH | Rossi A et al. A public dataset of 24-h multi-levels psycho-physiological responses in young healthy adults. *Data* 2020;5(4):91 (PhysioNet MMASH, ODbL) | https://physionet.org/content/mmash/ |
 | PTBXL | Wagner P et al. PTB-XL, a large publicly available electrocardiography dataset. *Sci Data* 2020;7:154; ECG intervals from PTB-XL+ (Strodthoff N et al., *Sci Data* 2023) | https://physionet.org/content/ptb-xl/ |
