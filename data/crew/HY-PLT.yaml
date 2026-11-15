@@ -1,0 +1,20 @@
+id: HY-PLT
+seed: 150621150995064  # keeps the generated series identical to the earlier call-sign
+name: Marcus Bell
+role: Pilot
+sex: M
+age: 42
+lab_donor: I4-C003
+story_targets: {hr_rest: 60, bp_sys: 122}
+modifiers: [P-01]
+authored:
+  A3: {value: 10, unit: "days"}
+  A4: {value: "1 prior flight, 12 days", unit: ""}
+  A5: {value: "space motion sickness on previous flight (days 1-2)", unit: ""}
+  A6: {value: 11, unit: "mSv"}
+  C1: {value: "none", unit: ""}
+  C10: {value: "B+", unit: ""}
+  E2: {value: "genetic module declined", unit: ""}
+  I1: {value: "MSSQ-short moderate", unit: ""}
+  J4: {value: "call to family", unit: ""}
+  M3: {value: "mood data shared with CMO", unit: ""}

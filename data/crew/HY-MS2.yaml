@@ -1,0 +1,24 @@
+id: HY-MS2
+seed: 192543739884728  # keeps the generated series identical to the earlier call-sign
+name: Elena Kovach
+role: Mission Specialist 2
+sex: F
+age: 44
+lab_donor: I4-C002
+story_targets: {hr_rest: 62, bp_sys: 112}
+modifiers: [P-02, P-15]
+prefer_kidney_stone_donor: true   # pick an NHANES exam donor who also reports a kidney stone
+authored:
+  A3: {value: 10, unit: "days"}
+  A4: {value: "1 prior flight, 184 days", unit: ""}
+  A5: {value: "none", unit: ""}
+  A6: {value: 58, unit: "mSv"}
+  C1: {value: "none", unit: ""}
+  C2: {value: "kidney stone 2019, passed spontaneously", unit: ""}
+  C10: {value: "O-", unit: ""}
+  C13: {value: "continuous combined oral contraceptive (cycle suppression)", unit: ""}
+  E2: {value: "genetic module declined", unit: ""}
+  I1: {value: "MSSQ-short low", unit: ""}
+  J4: {value: "journal, talking with a crewmate", unit: ""}
+  L3: {value: 3.0, unit: "L/day target (P-02)"}
+  M3: {value: "mood data shared with CMO and psychologist", unit: ""}

@@ -1,0 +1,15 @@
+subject_id,source_id,kind,sex,age_band,note
+I4-C001,OSD-569,astronaut,M,,Inspiration4 crew code as published; sex from the OSD-575 metadata; age not used
+I4-C002,OSD-569,astronaut,F,,Inspiration4 crew code as published; sex from the OSD-575 metadata; age not used
+I4-C003,OSD-569,astronaut,F,,Inspiration4 crew code as published; sex from the OSD-575 metadata; age not used
+I4-C004,OSD-569,astronaut,M,,Inspiration4 crew code as published; sex from the OSD-575 metadata; age not used
+LS-087de9,LIFESNAPS,ground,M,30+,daily wearable donor
+LS-164d59,LIFESNAPS,ground,M,30+,daily wearable donor
+LS-76a727,LIFESNAPS,ground,M,30+,daily wearable donor
+LS-b3d87c,LIFESNAPS,ground,F,30+,daily wearable donor
+LS-f39e56,LIFESNAPS,ground,M,30+,daily wearable donor
+NH-66287,NHANES-2011,population,M,40-49,astronaut-like exam donor
+NH-66505,NHANES-2011,population,M,30-39,astronaut-like exam donor
+NH-67879,NHANES-2011,population,F,40-49,astronaut-like exam donor
+NH-68374,NHANES-2011,population,M,40-49,astronaut-like exam donor
+NH-70973,NHANES-2011,population,M,30-39,astronaut-like exam donor

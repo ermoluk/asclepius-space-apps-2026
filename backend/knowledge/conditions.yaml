@@ -1,0 +1,1228 @@
+C001:
+  id: C001
+  name: Abdominal injury
+  system: TRAUMA
+  type: IMM
+  max_level: RED
+  features: Blunt impact to abdomen + pain, guarding, falling BP / rising HR
+  confirm: vitals q15 min; ultrasound (FAST) by CMO
+  refs:
+  - IMM-MYERS
+  - ATLS
+C002:
+  id: C002
+  name: Abdominal wall hernia
+  system: GI
+  type: IMM
+  max_level: RED
+  features: New bulge in abdominal wall/groin, worse on straining; painful, irreducible → urgent
+  confirm: guided palpation; pain NRS
+  refs:
+  - IMM-MYERS
+C003:
+  id: C003
+  name: Abnormal uterine bleeding
+  system: GU
+  type: IMM
+  max_level: ORANGE
+  features: Bleeding outside expected pattern (passport C13), heavy flow, dizziness
+  confirm: Hb if available; HR/BP
+  refs:
+  - IMM-MYERS
+C004:
+  id: C004
+  name: Acute arthritis
+  system: MSK
+  type: IMM
+  max_level: ORANGE
+  features: Hot, red, swollen joint ± fever
+  confirm: temperature; joint exam
+  refs:
+  - IMM-MYERS
+C005:
+  id: C005
+  name: Acute cholecystitis / biliary colic
+  system: GI
+  type: IMM
+  max_level: RED
+  features: RUQ pain after meals, nausea, ± fever
+  confirm: temperature; ultrasound
+  refs:
+  - IMM-MYERS
+C006:
+  id: C006
+  name: Acute compartment syndrome
+  system: TRAUMA
+  type: IMM
+  max_level: RED
+  features: Limb injury + pain out of proportion, tense compartment, pain on passive stretch, numbness
+  confirm: serial neuro-vascular checks
+  refs:
+  - IMM-MYERS
+  - ATLS
+C007:
+  id: C007
+  name: Acute diverticulitis
+  system: GI
+  type: IMM
+  max_level: ORANGE
+  features: LLQ pain, fever, change in bowel habit
+  confirm: temperature; WBC
+  refs:
+  - IMM-MYERS
+C008:
+  id: C008
+  name: Acute glaucoma
+  system: EYE
+  type: IMM
+  max_level: RED
+  features: Sudden painful red eye, halos around lights, blurred vision, headache, nausea
+  confirm: IOP (tonometer)
+  refs:
+  - IMM-MYERS
+C009:
+  id: C009
+  name: Acute pancreatitis
+  system: GI
+  type: IMM
+  max_level: RED
+  features: Severe epigastric pain radiating to back, vomiting
+  confirm: vitals; lipase if available
+  refs:
+  - IMM-MYERS
+C010:
+  id: C010
+  name: Acute prostatitis
+  system: GU
+  type: IMM
+  max_level: ORANGE
+  features: Perineal pain, dysuria, fever
+  confirm: temperature; urine dipstick
+  refs:
+  - IMM-MYERS
+C011:
+  id: C011
+  name: Acute radiation syndrome
+  system: RAD
+  type: IMM
+  max_level: RED
+  features: Nausea / vomiting / fatigue / skin redness within 48 h of an SPE or high dose
+  confirm: dose record; lymphocyte count trend
+  refs:
+  - IMM-MYERS
+  - TB020
+C012:
+  id: C012
+  name: Acute sinusitis
+  system: ENT
+  type: IMM
+  max_level: YELLOW
+  features: Facial pain/pressure + congestion > 10 days or worsening, ± fever
+  confirm: temperature
+  refs:
+  - IMM-MYERS
+C013:
+  id: C013
+  name: Allergic reaction
+  system: IMMUNE
+  type: IMM
+  max_level: YELLOW
+  features: Hives, itching, mild swelling, no airway or circulation signs
+  confirm: recheck in 30 min for anaphylaxis signs
+  refs:
+  - IMM-MYERS
+  - ANAPH
+C014:
+  id: C014
+  name: Altitude sickness (hypobaric hypoxia)
+  system: RESP
+  type: IMM
+  max_level: RED
+  features: Headache, confusion, insomnia, nausea at reduced cabin pressure / low pIO₂; SpO₂ low
+  confirm: SpO₂; cabin pIO₂
+  refs:
+  - IMM-MYERS
+  - RISK-HYPOX
+C015:
+  id: C015
+  name: Angina / myocardial infarction
+  system: CV
+  type: IMM
+  max_level: RED
+  features: Pressure-like chest pain, esp. exertional, ± sweating, dyspnea, nausea
+  confirm: ECG; HEART-score elements
+  refs:
+  - IMM-MYERS
+  - HEART
+C016:
+  id: C016
+  name: Anaphylaxis
+  system: IMMUNE
+  type: IMM
+  max_level: RED
+  features: Skin/mucosal signs + breathing difficulty or low BP, minutes-hours after exposure
+  confirm: BP, SpO₂, airway
+  refs:
+  - IMM-MYERS
+  - ANAPH
+C017:
+  id: C017
+  name: Ankle sprain / strain
+  system: MSK
+  type: IMM
+  max_level: YELLOW
+  features: Ankle injury, pain, swelling; Ottawa criteria negative
+  confirm: Ottawa ankle check
+  refs:
+  - IMM-MYERS
+  - OTTAWA-ANKLE
+C018:
+  id: C018
+  name: Anxiety
+  system: BEHAV
+  type: IMM
+  max_level: ORANGE
+  features: GAD-7 ≥ 10, "anxious/overwhelmed" labels, sleep loss
+  confirm: GAD-7
+  refs:
+  - IMM-MYERS
+  - GAD7
+  - TB016
+C019:
+  id: C019
+  name: Appendicitis
+  system: GI
+  type: IMM
+  max_level: RED
+  features: Periumbilical → RLQ pain, anorexia, nausea, fever; Alvarado ≥ 7
+  confirm: Alvarado elements; WBC; ultrasound
+  refs:
+  - IMM-MYERS
+  - ALVARADO
+C020:
+  id: C020
+  name: Atrial fibrillation / flutter
+  system: CV
+  type: IMM
+  max_level: RED
+  features: Palpitations, irregular pulse, dyspnea, dizziness
+  confirm: ECG strip
+  refs:
+  - IMM-MYERS
+  - CV-ER
+C021:
+  id: C021
+  name: Back injury
+  system: MSK
+  type: IMM
+  max_level: ORANGE
+  features: Back pain after load/impact; neurological signs → RED
+  confirm: neuro check (strength, sensation, bladder)
+  refs:
+  - IMM-MYERS
+  - NICE-NG59
+C022:
+  id: C022
+  name: Back pain (SAS)
+  system: MSK
+  type: SAS
+  max_level: GREEN
+  features: Low back ache in first ~2 weeks, no trauma, no red flags
+  confirm: '-'
+  refs:
+  - KERSTMAN2012
+  - IMM-INC
+C023:
+  id: C023
+  name: Barotrauma (ear/sinus block)
+  system: ENT
+  type: IMM
+  max_level: YELLOW
+  features: Ear/sinus pain or fullness after pressure change (EVA, repress, depress)
+  confirm: hearing check
+  refs:
+  - IMM-MYERS
+C024:
+  id: C024
+  name: Behavioral emergency
+  system: BEHAV
+  type: IMM
+  max_level: RED
+  features: Self-harm thoughts (PHQ-9 item 9), hallucinations, danger to self/others
+  confirm: private contact with psychologist
+  refs:
+  - IMM-MYERS
+  - TB016
+  - PHQ9
+C025:
+  id: C025
+  name: Burns
+  system: SKIN
+  type: IMM
+  max_level: RED
+  features: Thermal/electrical/chemical burn; size by rule of nines; face/hands/airway → RED
+  confirm: '% body area'
+  refs:
+  - IMM-MYERS
+  - WALLACE
+C026:
+  id: C026
+  name: Cardiogenic shock
+  system: CV
+  type: IMM
+  max_level: RED
+  features: Low BP, cold clammy skin, confusion, chest pain/arrhythmia
+  confirm: BP, ECG, SpO₂
+  refs:
+  - IMM-MYERS
+  - AHA-ACLS
+C027:
+  id: C027
+  name: Chest injury
+  system: TRAUMA
+  type: IMM
+  max_level: RED
+  features: Chest impact + pain on breathing, dyspnea, low SpO₂
+  confirm: SpO₂, RR; ultrasound
+  refs:
+  - IMM-MYERS
+  - ATLS
+C028:
+  id: C028
+  name: Choking / obstructed airway
+  system: RESP
+  type: IMM
+  max_level: RED
+  features: Cannot speak/cough/breathe after eating
+  confirm: '- (act immediately)'
+  refs:
+  - IMM-MYERS
+  - AHA-ACLS
+C029:
+  id: C029
+  name: Constipation (SAS)
+  system: GI
+  type: SAS
+  max_level: GREEN
+  features: No stool ≥ 3 days early in flight, no red flags
+  confirm: '-'
+  refs:
+  - IMM-INC
+C030:
+  id: C030
+  name: Decompression sickness (EVA)
+  system: EVA
+  type: IMM
+  max_level: RED
+  features: Joint pain, tingling, skin mottling, dyspnea, confusion ≤ 24 h after EVA/depress
+  confirm: neuro check; symptom recheck after repress
+  refs:
+  - IMM-MYERS
+  - RISK-DCS
+C031:
+  id: C031
+  name: 'Dental: exposed pulp'
+  system: DENT
+  type: IMM
+  max_level: ORANGE
+  features: Broken tooth with exposed pink/bleeding centre, severe pain
+  confirm: photo; pain NRS
+  refs:
+  - IMM-MYERS
+  - IMM-INC
+C032:
+  id: C032
+  name: Dental caries
+  system: DENT
+  type: IMM
+  max_level: YELLOW
+  features: Sensitivity to sweet/cold, visible cavity
+  confirm: photo
+  refs:
+  - IMM-MYERS
+C033:
+  id: C033
+  name: Dental abscess
+  system: DENT
+  type: IMM
+  max_level: ORANGE
+  features: Throbbing tooth pain, gum swelling, fever
+  confirm: temperature
+  refs:
+  - IMM-MYERS
+C034:
+  id: C034
+  name: Dental avulsion
+  system: DENT
+  type: IMM
+  max_level: ORANGE
+  features: Tooth knocked out after impact
+  confirm: '- (time-critical re-implant)'
+  refs:
+  - IMM-MYERS
+C035:
+  id: C035
+  name: Dental crown loss
+  system: DENT
+  type: IMM
+  max_level: YELLOW
+  features: Crown came off
+  confirm: '-'
+  refs:
+  - IMM-MYERS
+C036:
+  id: C036
+  name: Dental filling loss
+  system: DENT
+  type: IMM
+  max_level: YELLOW
+  features: Filling lost, sensitivity
+  confirm: '-'
+  refs:
+  - IMM-MYERS
+C037:
+  id: C037
+  name: Toothache
+  system: DENT
+  type: IMM
+  max_level: YELLOW
+  features: Tooth pain without visible cause
+  confirm: pain NRS, temperature
+  refs:
+  - IMM-MYERS
+C038:
+  id: C038
+  name: Depression
+  system: BEHAV
+  type: IMM
+  max_level: ORANGE
+  features: PHQ-9 ≥ 10, low mood ≥ 5/7 days, withdrawal, sleep change
+  confirm: PHQ-9
+  refs:
+  - IMM-MYERS
+  - PHQ9
+  - RISK-BMED
+C039:
+  id: C039
+  name: Diarrhea
+  system: GI
+  type: IMM
+  max_level: ORANGE
+  features: ≥ 3 loose stools/day; dehydration signs
+  confirm: fluids, HR, temperature
+  refs:
+  - IMM-MYERS
+C040:
+  id: C040
+  name: Elbow dislocation
+  system: TRAUMA
+  type: IMM
+  max_level: RED
+  features: Elbow deformity after fall/load, cannot move
+  confirm: neuro-vascular check of hand
+  refs:
+  - IMM-MYERS
+C041:
+  id: C041
+  name: Elbow sprain / strain
+  system: MSK
+  type: IMM
+  max_level: YELLOW
+  features: Elbow pain after load, full range kept
+  confirm: function check
+  refs:
+  - IMM-MYERS
+C042:
+  id: C042
+  name: Eye abrasion
+  system: EYE
+  type: IMM
+  max_level: ORANGE
+  features: Foreign-body sensation, tearing, pain after debris contact (debris floats in 0 g)
+  confirm: fluorescein exam by CMO
+  refs:
+  - IMM-MYERS
+C043:
+  id: C043
+  name: Eye chemical burn
+  system: EYE
+  type: IMM
+  max_level: RED
+  features: Chemical splash to eye
+  confirm: '- (irrigate immediately)'
+  refs:
+  - IMM-MYERS
+C044:
+  id: C044
+  name: Eye corneal ulcer
+  system: EYE
+  type: IMM
+  max_level: RED
+  features: Painful red eye, discharge, contact-lens wearer
+  confirm: CMO exam
+  refs:
+  - IMM-MYERS
+C045:
+  id: C045
+  name: Eye infection (conjunctivitis)
+  system: EYE
+  type: IMM
+  max_level: YELLOW
+  features: Red eye, discharge, itch, vision normal
+  confirm: vision check
+  refs:
+  - IMM-MYERS
+C046:
+  id: C046
+  name: Eye penetration
+  system: EYE
+  type: IMM
+  max_level: RED
+  features: Penetrating eye injury
+  confirm: '- (shield, no pressure)'
+  refs:
+  - IMM-MYERS
+C047:
+  id: C047
+  name: Finger dislocation
+  system: TRAUMA
+  type: IMM
+  max_level: ORANGE
+  features: Finger deformity after impact
+  confirm: circulation/sensation of finger
+  refs:
+  - IMM-MYERS
+C048:
+  id: C048
+  name: Fingernail delamination (EVA)
+  system: EVA
+  type: IMM
+  max_level: YELLOW
+  features: Fingernail lifting, pain after EVA glove use
+  confirm: photo
+  refs:
+  - IMM-MYERS
+  - RISK-EVA
+C049:
+  id: C049
+  name: Gastroenteritis
+  system: GI
+  type: IMM
+  max_level: ORANGE
+  features: Vomiting + diarrhea ± fever; crewmates with same symptoms
+  confirm: temperature; fluids; crew cluster
+  refs:
+  - IMM-MYERS
+  - RISK-HMI
+C050:
+  id: C050
+  name: Head injury
+  system: TRAUMA
+  type: IMM
+  max_level: RED
+  features: Head impact; LOC, amnesia, vomiting ≥ 2, GCS < 15 → RED
+  confirm: GCS; Canadian CT head rule elements
+  refs:
+  - IMM-MYERS
+  - GCS
+  - CCHR
+C051:
+  id: C051
+  name: Headache (CO₂-associated)
+  system: ENV
+  type: IMM
+  max_level: YELLOW
+  features: Headache with CO₂ 1-h > 3.0 or 7-day > 2.5 mmHg
+  confirm: cabin CO₂; recheck after 1 h in fresh-air module
+  refs:
+  - IMM-MYERS
+  - TB004
+C052:
+  id: C052
+  name: Headache (late)
+  system: NEURO
+  type: IMM
+  max_level: YELLOW
+  features: Headache after the adaptation window, no CO₂ cause
+  confirm: red-flag screen (SNNOOP10); BP
+  refs:
+  - IMM-MYERS
+  - SNNOOP10
+C053:
+  id: C053
+  name: Headache (SAS)
+  system: NEURO
+  type: SAS
+  max_level: GREEN
+  features: Headache in first 3 days, no red flags
+  confirm: '-'
+  refs:
+  - HEADACHE2024
+  - IMM-INC
+C054:
+  id: C054
+  name: Hearing loss
+  system: ENT
+  type: IMM
+  max_level: ORANGE
+  features: Hearing change, tinnitus; noise dose > 100%
+  confirm: hearing self-test vs passport
+  refs:
+  - IMM-MYERS
+  - STD3001-V2
+C055:
+  id: C055
+  name: Hemorrhoids
+  system: GI
+  type: IMM
+  max_level: YELLOW
+  features: Rectal pain/bleeding with straining, constipation
+  confirm: '-'
+  refs:
+  - IMM-MYERS
+C056:
+  id: C056
+  name: Herpes zoster reactivation
+  system: SKIN
+  type: IMM
+  max_level: ORANGE
+  features: Painful band-shaped rash on one side (VZV seropositive → P-04)
+  confirm: photo; temperature
+  refs:
+  - IMM-MYERS
+  - RISK-IMMUNE
+C057:
+  id: C057
+  name: Hip sprain / strain
+  system: MSK
+  type: IMM
+  max_level: YELLOW
+  features: Hip pain after load, can move
+  confirm: function check
+  refs:
+  - IMM-MYERS
+C058:
+  id: C058
+  name: Hip / proximal femur fracture
+  system: TRAUMA
+  type: IMM
+  max_level: RED
+  features: Fall/impact, severe hip pain, cannot move leg, shortened/rotated leg (risk ↑ with bone loss)
+  confirm: ultrasound/CMO exam
+  refs:
+  - IMM-MYERS
+  - TB030
+C059:
+  id: C059
+  name: Hypertension
+  system: CV
+  type: IMM
+  max_level: RED
+  features: BP ≥ 140/90 repeated; ≥ 180/120 crisis
+  confirm: repeat BP after 5 min rest
+  refs:
+  - IMM-MYERS
+  - AHA-BP
+C060:
+  id: C060
+  name: Indigestion
+  system: GI
+  type: IMM
+  max_level: YELLOW
+  features: Heartburn, epigastric discomfort after meals
+  confirm: '-'
+  refs:
+  - IMM-MYERS
+C061:
+  id: C061
+  name: Influenza
+  system: IMMUNE
+  type: IMM
+  max_level: ORANGE
+  features: Sudden fever, myalgia, cough, fatigue; crew cluster
+  confirm: temperature, SpO₂, NEWS2
+  refs:
+  - IMM-MYERS
+  - RISK-HMI
+C062:
+  id: C062
+  name: Insomnia (SAS)
+  system: SLEEP
+  type: SAS
+  max_level: GREEN
+  features: Difficulty sleeping in first days of flight
+  confirm: sleep log 3 nights
+  refs:
+  - IMM-INC
+  - BARGER2014
+C063:
+  id: C063
+  name: Knee sprain / strain
+  system: MSK
+  type: IMM
+  max_level: YELLOW
+  features: Knee injury, pain; Ottawa knee negative
+  confirm: Ottawa knee check
+  refs:
+  - IMM-MYERS
+  - OTTAWA-KNEE
+C064:
+  id: C064
+  name: Late insomnia
+  system: SLEEP
+  type: IMM
+  max_level: YELLOW
+  features: Sleep < 6 h or poor quality beyond adaptation window
+  confirm: actigraphy; ISI
+  refs:
+  - IMM-MYERS
+  - RISK-SLEEP
+  - ISI
+C065:
+  id: C065
+  name: Lower-extremity stress fracture
+  system: MSK
+  type: IMM
+  max_level: ORANGE
+  features: Localised bone pain with loading (partial-gravity surface ops, treadmill)
+  confirm: point tenderness; ultrasound
+  refs:
+  - IMM-MYERS
+  - TB030
+C066:
+  id: C066
+  name: Lumbar spine fracture
+  system: TRAUMA
+  type: IMM
+  max_level: RED
+  features: High load (landing) + severe back pain, neuro signs
+  confirm: neuro check
+  refs:
+  - IMM-MYERS
+  - RISK-DYN
+C067:
+  id: C067
+  name: Medication overdose / adverse reaction
+  system: ENV
+  type: IMM
+  max_level: ORANGE
+  features: New symptom 0-24 h after a medication; rash, drowsiness, confusion
+  confirm: medication log; vitals
+  refs:
+  - IMM-MYERS
+C068:
+  id: C068
+  name: Mouth ulcer
+  system: DENT
+  type: IMM
+  max_level: GREEN
+  features: Painful mouth sore
+  confirm: '- (escalate if > 2 weeks)'
+  refs:
+  - IMM-MYERS
+C069:
+  id: C069
+  name: Nasal congestion (SAS)
+  system: ENT
+  type: SAS
+  max_level: GREEN
+  features: Stuffy nose / facial fullness from fluid shift, no fever
+  confirm: '-'
+  refs:
+  - IMM-INC
+C070:
+  id: C070
+  name: Nephrolithiasis (kidney stone)
+  system: GU
+  type: IMM
+  max_level: RED
+  features: Colicky flank pain → groin, blood in urine, nausea (urine Ca +50% in flight)
+  confirm: urine dipstick; STONE elements; ultrasound
+  refs:
+  - IMM-MYERS
+  - TB030
+  - STONE
+C071:
+  id: C071
+  name: Neurogenic shock
+  system: TRAUMA
+  type: IMM
+  max_level: RED
+  features: Spinal injury + low BP with slow HR, warm skin
+  confirm: BP, HR, neuro check
+  refs:
+  - IMM-MYERS
+  - ATLS
+C072:
+  id: C072
+  name: Nosebleed (SAS)
+  system: ENT
+  type: SAS
+  max_level: GREEN
+  features: Nosebleed early in flight, stops with pressure < 20 min
+  confirm: '- (ORANGE if > 20 min)'
+  refs:
+  - IMM-INC
+C073:
+  id: C073
+  name: Otitis externa
+  system: ENT
+  type: IMM
+  max_level: YELLOW
+  features: Ear canal pain, worse when pulling ear, itch, discharge (headsets, humidity)
+  confirm: '-'
+  refs:
+  - IMM-MYERS
+C074:
+  id: C074
+  name: Otitis media
+  system: ENT
+  type: IMM
+  max_level: YELLOW
+  features: Ear pain, fullness, reduced hearing ± fever
+  confirm: temperature
+  refs:
+  - IMM-MYERS
+C075:
+  id: C075
+  name: Paresthesias
+  system: NEURO
+  type: IMM
+  max_level: ORANGE
+  features: Tingling/numbness (EVA suit pressure points, or neuro cause)
+  confirm: distribution; post-EVA?
+  refs:
+  - IMM-MYERS
+C076:
+  id: C076
+  name: Pharyngitis
+  system: ENT
+  type: IMM
+  max_level: YELLOW
+  features: Sore throat; Centor ≥ 3 suggests bacterial
+  confirm: Centor elements; temperature
+  refs:
+  - IMM-MYERS
+  - CENTOR
+C077:
+  id: C077
+  name: Respiratory infection
+  system: RESP
+  type: IMM
+  max_level: ORANGE
+  features: Cough, congestion, fever; low SpO₂ → ORANGE/RED
+  confirm: temperature, SpO₂, RR
+  refs:
+  - IMM-MYERS
+  - NEWS2
+C078:
+  id: C078
+  name: Retinal detachment
+  system: EYE
+  type: IMM
+  max_level: RED
+  features: Flashes, new floaters, curtain over vision
+  confirm: visual field check
+  refs:
+  - IMM-MYERS
+C079:
+  id: C079
+  name: Seizures
+  system: NEURO
+  type: IMM
+  max_level: RED
+  features: Witnessed convulsion / loss of awareness
+  confirm: '- (protect, time it)'
+  refs:
+  - IMM-MYERS
+C080:
+  id: C080
+  name: Sepsis
+  system: IMMUNE
+  type: IMM
+  max_level: RED
+  features: Infection + qSOFA ≥ 2 or NEWS2 ≥ 7
+  confirm: vitals; qSOFA
+  refs:
+  - IMM-MYERS
+  - SEPSIS3
+  - NEWS2
+C081:
+  id: C081
+  name: Shoulder dislocation
+  system: TRAUMA
+  type: IMM
+  max_level: ORANGE
+  features: Shoulder deformity after load (EVA, translation), cannot move
+  confirm: neuro-vascular check of arm
+  refs:
+  - IMM-MYERS
+C082:
+  id: C082
+  name: Shoulder sprain / strain
+  system: MSK
+  type: IMM
+  max_level: YELLOW
+  features: Shoulder pain after EVA/exercise, movement kept
+  confirm: function check
+  refs:
+  - IMM-MYERS
+  - RISK-EVA
+C083:
+  id: C083
+  name: Skin abrasion
+  system: SKIN
+  type: IMM
+  max_level: GREEN
+  features: Superficial scrape
+  confirm: '- (watch for infection)'
+  refs:
+  - IMM-MYERS
+C084:
+  id: C084
+  name: Skin infection
+  system: SKIN
+  type: IMM
+  max_level: ORANGE
+  features: Red, warm, spreading, painful skin ± fever (an IMM evacuation driver)
+  confirm: mark border; temperature
+  refs:
+  - IMM-MYERS
+  - IMM-INC
+C085:
+  id: C085
+  name: Skin laceration
+  system: SKIN
+  type: IMM
+  max_level: ORANGE
+  features: Cut; deep / gaping / bleeding > 10 min → ORANGE
+  confirm: photo; bleeding control
+  refs:
+  - IMM-MYERS
+C086:
+  id: C086
+  name: Skin rash
+  system: SKIN
+  type: IMM
+  max_level: YELLOW
+  features: Rash / hypersensitivity without systemic signs (most common ISS event)
+  confirm: photo; temperature
+  refs:
+  - IMM-MYERS
+  - CRUCIAN2016
+C087:
+  id: C087
+  name: Small bowel obstruction
+  system: GI
+  type: IMM
+  max_level: RED
+  features: Colicky abdominal pain, vomiting, distension, no stool/flatus
+  confirm: '-'
+  refs:
+  - IMM-MYERS
+C088:
+  id: C088
+  name: Smoke inhalation
+  system: ENV
+  type: IMM
+  max_level: RED
+  features: Fire/smoke event + cough, dyspnea, low SpO₂
+  confirm: SpO₂
+  refs:
+  - IMM-MYERS
+C089:
+  id: C089
+  name: Space motion sickness (SAS)
+  system: VEST
+  type: SAS
+  max_level: YELLOW
+  features: Nausea/vomiting, malaise in first 72 h or after gravity transition
+  confirm: '-'
+  refs:
+  - SMS-SHUTTLE
+  - RISK-SMV
+  - PENSACOLA
+C090:
+  id: C090
+  name: Stroke
+  system: NEURO
+  type: IMM
+  max_level: RED
+  features: Sudden one-sided weakness, facial droop, speech trouble, vision loss, imbalance (BE-FAST)
+  confirm: BE-FAST; time of onset
+  refs:
+  - IMM-MYERS
+  - BEFAST
+C091:
+  id: C091
+  name: Sudden cardiac arrest
+  system: CV
+  type: IMM
+  max_level: RED
+  features: Unresponsive, not breathing normally
+  confirm: '- (CPR/defibrillation)'
+  refs:
+  - IMM-MYERS
+  - AHA-ACLS
+C092:
+  id: C092
+  name: Toxic exposure (ammonia)
+  system: ENV
+  type: IMM
+  max_level: RED
+  features: Ammonia alarm + eye/throat burning, cough
+  confirm: SpO₂; eye irrigation
+  refs:
+  - IMM-MYERS
+C093:
+  id: C093
+  name: Traumatic hypovolemic shock
+  system: TRAUMA
+  type: IMM
+  max_level: RED
+  features: Bleeding/injury + HR > 100, falling BP, confusion
+  confirm: vitals q5 min
+  refs:
+  - IMM-MYERS
+  - ATLS
+C094:
+  id: C094
+  name: Urinary incontinence (SAS)
+  system: GU
+  type: SAS
+  max_level: GREEN
+  features: Leakage early in flight (altered bladder sensation)
+  confirm: '-'
+  refs:
+  - IMM-INC
+C095:
+  id: C095
+  name: Urinary retention (SAS)
+  system: GU
+  type: SAS
+  max_level: ORANGE
+  features: Cannot empty bladder early in flight (0 g, medications)
+  confirm: time since last void; bladder ultrasound
+  refs:
+  - IMM-INC
+C096:
+  id: C096
+  name: Urinary tract infection
+  system: GU
+  type: IMM
+  max_level: ORANGE
+  features: Dysuria, frequency ± fever (an IMM evacuation driver; urosepsis caused a real evacuation)
+  confirm: urine dipstick; temperature
+  refs:
+  - IMM-MYERS
+  - IMM-INC
+C097:
+  id: C097
+  name: Vaginal yeast infection
+  system: GU
+  type: IMM
+  max_level: YELLOW
+  features: Itch, discharge
+  confirm: '-'
+  refs:
+  - IMM-MYERS
+C098:
+  id: C098
+  name: VIIP / SANS
+  system: EYE
+  type: IMM
+  max_level: ORANGE
+  features: Near-vision blur, acuity decline (one eye), headache, after day 30
+  confirm: near acuity; OCT/ultrasound
+  refs:
+  - IMM-MYERS
+  - RISK-SANS
+  - LEE2020
+C099:
+  id: C099
+  name: Wrist fracture
+  system: TRAUMA
+  type: IMM
+  max_level: ORANGE
+  features: Fall/impact on hand, deformity, bony tenderness (an IMM evacuation driver)
+  confirm: splint; CMO exam
+  refs:
+  - IMM-MYERS
+  - IMM-INC
+C100:
+  id: C100
+  name: Wrist sprain / strain
+  system: MSK
+  type: IMM
+  max_level: YELLOW
+  features: Wrist pain, no deformity, no bony tenderness
+  confirm: function check
+  refs:
+  - IMM-MYERS
+X01:
+  id: X01
+  name: Sleep deficit
+  system: SLEEP
+  type: X
+  max_level: YELLOW
+  features: Sleep < 6 h × 3 days (2 if P-10)
+  confirm: actigraphy
+  refs:
+  - RISK-SLEEP
+  - TB041
+X02:
+  id: X02
+  name: Fatigue impairing performance
+  system: SLEEP
+  type: X
+  max_level: ORANGE
+  features: Sleep deficit + PVT slower / KSS ≥ 7 / Samn-Perelli ≥ 5
+  confirm: PVT now
+  refs:
+  - RISK-SLEEP
+  - PVT-BASNER
+  - SAMN-PERELLI
+X03:
+  id: X03
+  name: Orthostatic intolerance
+  system: CV
+  type: X
+  max_level: ORANGE
+  features: Dizziness/fainting at gravity transition, orthostatic BP drop
+  confirm: lying/standing BP
+  refs:
+  - CV-ER
+  - ORTHO2011
+  - MECK2001
+X04:
+  id: X04
+  name: Jugular venous thrombosis
+  system: CV
+  type: X
+  max_level: RED
+  features: One-sided neck/face swelling or pain, new headache, after day 30
+  confirm: neck ultrasound
+  refs:
+  - CV-ER
+  - MARSHALL-GOEBEL2019
+X05:
+  id: X05
+  name: Hypoglycemia
+  system: NUTR
+  type: X
+  max_level: RED
+  features: Glucose < 70 (level 1) or < 54 (level 2) ± shakiness, sweating, confusion
+  confirm: glucose recheck in 15 min
+  refs:
+  - ADA-SOC
+X06:
+  id: X06
+  name: Hyperglycemia
+  system: NUTR
+  type: X
+  max_level: ORANGE
+  features: Fasting ≥ 126 on 2 days or random ≥ 200 + symptoms
+  confirm: fasting glucose; HbA1c at exam
+  refs:
+  - ADA-SOC
+X07:
+  id: X07
+  name: Inadequate nutrition / weight loss
+  system: NUTR
+  type: X
+  max_level: RED
+  features: Mass −5% / −7.7%, intake < 80% × 3 days
+  confirm: weekly mass; food log
+  refs:
+  - NUTR-ER
+  - RISK-NUTR
+X08:
+  id: X08
+  name: Dehydration
+  system: NUTR
+  type: X
+  max_level: ORANGE
+  features: Fluids < 2.5 L, dark urine, Na > 145, vomiting/diarrhea
+  confirm: fluid log; urine color
+  refs:
+  - NUTR-ER
+  - STD3001-V2
+X09:
+  id: X09
+  name: Cumulative radiation exposure
+  system: RAD
+  type: X
+  max_level: ORANGE
+  features: Cumulative dose ≥ 80% of 600 mSv; BFO 30-day near 250 mGy-Eq
+  confirm: dosimeter readout
+  refs:
+  - STD3001-V1
+  - TB020
+X10:
+  id: X10
+  name: Deconditioning (aerobic, strength, bone)
+  system: MSK
+  type: X
+  max_level: ORANGE
+  features: Exercise < 90 min/day; aerobic or strength < 80% of pre-flight
+  confirm: submax cycle test
+  refs:
+  - RISK-FIT
+  - STD3001-V1
+  - TB030
+X11:
+  id: X11
+  name: Heat stress / hyperthermia
+  system: ENV
+  type: X
+  max_level: ORANGE
+  features: Cabin/suit temp high + temp ≥ 38.1 + HR ↑, during EVA or exercise
+  confirm: temperature; HR
+  refs:
+  - RISK-EVA
+  - STD3001-V2
+X12:
+  id: X12
+  name: Team conflict / low cohesion
+  system: BEHAV
+  type: X
+  max_level: YELLOW
+  features: Cohesion ≤ 2 on ≥ 3/7 days; "crewmates" as negative context
+  confirm: crew debrief
+  refs:
+  - RISK-TEAM
+  - STDMEAS
+X13:
+  id: X13
+  name: Loneliness / isolation stress
+  system: BEHAV
+  type: X
+  max_level: YELLOW
+  features: '"Lonely/homesick" labels, UCLA-3 ≥ 6, no family contact > 14 days'
+  confirm: UCLA-3
+  refs:
+  - RISK-BMED
+  - UCLA3
+  - TB016
+X14:
+  id: X14
+  name: Cognitive decline vs baseline
+  system: BEHAV
+  type: X
+  max_level: ORANGE
+  features: Cognition z ≤ −1.5 or PVT lapses ×2 without sleep cause; CO₂/hypoxia check
+  confirm: repeat test; check CO₂, SpO₂
+  refs:
+  - COGNITION
+  - TB016
+  - TB004
+X15:
+  id: X15
+  name: Space anemia
+  system: CV
+  type: X
+  max_level: ORANGE
+  features: Hb below range, fatigue, reduced exercise tolerance (hemolysis ↑ in flight)
+  confirm: Hb at exam
+  refs:
+  - TRUDEL2022

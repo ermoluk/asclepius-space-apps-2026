@@ -1,0 +1,528 @@
+crew_id,field_id,metric,value,lo,hi,n,completeness,readiness,rebase14,trend_per_30d,method,unit,provenance,source_ids
+HY-CDR,A3,,10,,,1,1,ready,,,character story,days,authored,AUTHORED
+HY-CDR,A4,,"2 prior flights, 341 days",,,1,1,ready,,,character story,,authored,AUTHORED
+HY-CDR,A5,,none,,,1,1,ready,,,character story,,authored,AUTHORED
+HY-CDR,A6,,96,,,1,1,ready,,,character story,mSv,authored,AUTHORED
+HY-CDR,B1,height,169,,,1,1,ready,,,single exam,cm,real-population,NHANES-2011
+HY-CDR,B2,body_mass,70.4,69.7,71.2,26,1,ready,,-0.0013,mean of the last 3 measurements (KB B2),kg,real-population;synthetic-calibrated,NHANES-2011
+HY-CDR,B3,hr_clinic,76,,,1,1,ready,,,single exam,bpm,real-population,NHANES-2011
+HY-CDR,B3,hr_rest,52,49,54,180,1,ready,53,0.016,median of 180 days; personal range = p10..p90,bpm,real-ground;synthetic-calibrated,LIFESNAPS
+HY-CDR,B4,bp_dia,75.5,72.6,78,3,1,ready,,,mean of exam sessions (each a mean of 3 readings),mmHg,real-population;synthetic-calibrated,NHANES-2011
+HY-CDR,B4,bp_sys,118.8,118,120.4,3,1,ready,,,mean of exam sessions (each a mean of 3 readings),mmHg,real-population;synthetic-calibrated,NHANES-2011
+HY-CDR,B5,ortho_dbp_supine,72,,,1,1,ready,,,single exam,mmHg,real-ground,TILT
+HY-CDR,B5,ortho_ddbp,4,,,1,1,ready,,,single exam,mmHg,real-ground,TILT
+HY-CDR,B5,ortho_dhr,2,,,1,1,ready,,,single exam,bpm,real-ground,TILT
+HY-CDR,B5,ortho_dsbp,6,,,1,1,ready,,,single exam,mmHg,real-ground,TILT
+HY-CDR,B5,ortho_hr_supine,55,,,1,1,ready,,,single exam,bpm,real-ground,TILT
+HY-CDR,B5,ortho_sbp_supine,116,,,1,1,ready,,,single exam,mmHg,real-ground,TILT
+HY-CDR,B6,spo2,96.3,95.6,97.1,179,0.994,ready,96.4,-0.0036,median of 180 days; personal range = p10..p90,%,real-ground;synthetic-calibrated,LIFESNAPS
+HY-CDR,B7,skin_temp_dev,-2.35,-2.82,-1.89,175,0.972,ready,-2.27,0.0083,median of 180 days; personal range = p10..p90,degC,real-ground;synthetic-calibrated,LIFESNAPS
+HY-CDR,B7,temp_oral,36.557,,,3,1,ready,,,mean of exam sessions,degC,synthetic-calibrated,NORMS
+HY-CDR,B8,resp_rate,14.333,,,3,1,ready,,,mean of exam sessions,/min,synthetic-calibrated,NORMS
+HY-CDR,B9,hrv_rmssd,66.8,56.4,77.06,177,0.983,ready,62.55,0.0813,median of 180 days; personal range = p10..p90,ms,real-ground;synthetic-calibrated,LIFESNAPS
+HY-CDR,B10,glucose,78.416,65,99,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mg/dL,real-astronaut;synthetic-calibrated,OSD-575
+HY-CDR,B10,hba1c,6.1,,,1,1,ready,,,single exam,%,real-population,NHANES-2011
+HY-CDR,B11,ecg_hr,66,,,1,1,ready,,,single exam,bpm,real-ground,PTB-XL
+HY-CDR,B11,ecg_pr,158,,,1,1,ready,,,single exam,ms,real-ground,PTB-XL
+HY-CDR,B11,ecg_qrs,100,,,1,1,ready,,,single exam,ms,real-ground,PTB-XL
+HY-CDR,B11,ecg_qt,412,,,1,1,ready,,,single exam,ms,real-ground,PTB-XL
+HY-CDR,B11,ecg_qtc,431,,,1,1,ready,,,single exam,ms,real-ground,PTB-XL
+HY-CDR,B12,cimt,0.64,,,1,1,ready,,,single exam,mm,synthetic-calibrated,NORMS
+HY-CDR,C1,,none,,,1,1,ready,,,character story,,authored,AUTHORED
+HY-CDR,C1,asthma_ever,0,,,1,1,ready,,,single exam,1=yes,real-population,NHANES-2011
+HY-CDR,C2,kidney_stone_history,0,,,1,1,ready,,,single exam,1=yes,real-population,NHANES-2011
+HY-CDR,C4,,no known allergies,,,1,1,ready,,,character story,,authored,AUTHORED
+HY-CDR,C10,,O+,,,1,1,ready,,,character story,,authored,AUTHORED
+HY-CDR,C12,family_early_mi,1,,,1,1,ready,,,single exam,1=yes,real-population,NHANES-2011
+HY-CDR,C15,balance_conditions_passed,4,,,1,1,ready,,,single exam,0-4,real-population,NHANES-2003
+HY-CDR,C15,balance_foam_eyes_closed,1,,,1,1,ready,,,single exam,1=pass,real-population,NHANES-2003
+HY-CDR,C16,hearing_pta_left,25,,,1,1,ready,,,single exam,dB HL,real-population,NHANES-2011
+HY-CDR,C16,hearing_pta_right,22.5,,,1,1,ready,,,single exam,dB HL,real-population,NHANES-2011
+HY-CDR,D1,hematocrit,49.263,38.5,50,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),%,real-astronaut;synthetic-calibrated,OSD-569
+HY-CDR,D1,hemoglobin,16.74,13.2,17.1,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),g/dL,real-astronaut;synthetic-calibrated,OSD-569
+HY-CDR,D1,lymphocytes_abs,2263.43,850,3900,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),cells/uL,real-astronaut;synthetic-calibrated,OSD-569
+HY-CDR,D1,neutrophils_abs,4690.65,1500,7800,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),cells/uL,real-astronaut;synthetic-calibrated,OSD-569
+HY-CDR,D1,platelets,247.759,140,400,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),10^3/uL,real-astronaut;synthetic-calibrated,OSD-569
+HY-CDR,D1,wbc,8.335,3.8,10.8,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),10^3/uL,real-astronaut;synthetic-calibrated,OSD-569
+HY-CDR,D2,albumin,4.54,3.6,5.1,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),g/dL,real-astronaut;synthetic-calibrated,OSD-575
+HY-CDR,D2,alt,36.74,9,46,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),U/L,real-astronaut;synthetic-calibrated,OSD-575
+HY-CDR,D2,ast,40.469,10,40,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),U/L,real-astronaut;synthetic-calibrated,OSD-575
+HY-CDR,D2,bun,20.25,7,25,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mg/dL,real-astronaut;synthetic-calibrated,OSD-575
+HY-CDR,D2,calcium,10.086,8.6,10.3,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mg/dL,real-astronaut;synthetic-calibrated,OSD-575
+HY-CDR,D2,creatinine,1.109,0.6,1.35,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mg/dL,real-astronaut;synthetic-calibrated,OSD-575
+HY-CDR,D2,egfr,82.201,60,,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mL/min/1.73m2,real-astronaut;synthetic-calibrated,OSD-575
+HY-CDR,D2,potassium,4.059,3.5,5.3,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mmol/L,real-astronaut;synthetic-calibrated,OSD-575
+HY-CDR,D2,sodium,139.508,135,146,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mmol/L,real-astronaut;synthetic-calibrated,OSD-575
+HY-CDR,D3,vitd,29.046,,,1,1,ready,,,single exam,ng/mL,real-population,NHANES-2011
+HY-CDR,D4,crp,9.713,,,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mg/L,real-astronaut;synthetic-calibrated,OSD-575-EVE-CV
+HY-CDR,D4,hdl,41,,,1,1,ready,,,single exam,mg/dL,real-population,NHANES-2011
+HY-CDR,D4,total_chol,232,,,1,1,ready,,,single exam,mg/dL,real-population,NHANES-2011
+HY-CDR,D6,hsv1_pos,1,,,1,1,ready,,,single exam,1=pos,real-population,NHANES-2011
+HY-CDR,D6,hsv2_pos,0,,,1,1,ready,,,single exam,1=pos,real-population,NHANES-2011
+HY-CDR,D7,cortisol_bed,0.0341366,,,1,1,ready,,,single exam,norm,real-ground,MMASH
+HY-CDR,D7,cortisol_wake,0.0779387,,,1,1,ready,,,single exam,norm,real-ground,MMASH
+HY-CDR,D7,melatonin_bed,1.7384e-08,,,1,1,ready,,,single exam,norm,real-ground,MMASH
+HY-CDR,D7,melatonin_wake,6.748e-09,,,1,1,ready,,,single exam,norm,real-ground,MMASH
+HY-CDR,D10,microbiome_nasal,1.514,,,3,1,ready,,,mean of exam sessions,Shannon,real-astronaut,OSD-572
+HY-CDR,D10,microbiome_oral,2.678,,,3,1,ready,,,mean of exam sessions,Shannon,real-astronaut,OSD-572
+HY-CDR,D10,microbiome_skin_arm,2.544,,,3,1,ready,,,mean of exam sessions,Shannon,real-astronaut,OSD-572
+HY-CDR,D10,microbiome_skin_forehead,1.403,,,3,1,ready,,,mean of exam sessions,Shannon,real-astronaut,OSD-572
+HY-CDR,E2,,genetic module declined,,,1,1,ready,,,character story,,authored,AUTHORED
+HY-CDR,F2,grip_strength,80.9,,,2,1,ready,,,mean of exam sessions,kg,real-population;synthetic-calibrated,NHANES-2011
+HY-CDR,F4,steps,13774,8284.3,19989.2,180,1,ready,15564.5,153.714,median of 180 days; personal range = p10..p90,steps/day,real-ground;synthetic-calibrated,LIFESNAPS
+HY-CDR,F5,vo2peak,48.05,,,2,1,ready,,,mean of exam sessions,mL/kg/min,synthetic-calibrated,LIFESNAPS
+HY-CDR,F7,bmd_total,1.155,,,2,1,ready,,,mean of exam sessions,g/cm2,real-population;synthetic-calibrated,NHANES-2011
+HY-CDR,F7,body_fat_pct,22.213,,,2,1,ready,,,mean of exam sessions,%,real-population;synthetic-calibrated,NHANES-2011
+HY-CDR,F7,lean_mass,52.736,,,2,1,ready,,,mean of exam sessions,kg,real-population;synthetic-calibrated,NHANES-2011
+HY-CDR,G1,near_acuity_logmar,0.1,0.08,0.12,25,1,ready,,-0.0014,median of weekly measurements,logMAR,synthetic-calibrated,NORMS
+HY-CDR,G2,iop,13.84,,,1,1,ready,,,single exam,mmHg,synthetic-calibrated,NORMS
+HY-CDR,G2,oct_rnfl,96.21,,,1,1,ready,,,single exam,um,synthetic-calibrated,NORMS
+HY-CDR,H1,sleep_hours,5.69,4.54,7.02,174,0.967,ready,6.23,0.0045,median of all nights (actigraphy L-180..L-167 shown separately as rebase14 is the HSP window),h,real-ground;synthetic-calibrated,LIFESNAPS
+HY-CDR,H1,sleep_hours_reported,7,,,1,1,ready,,,single exam,h,real-population,NHANES-2011
+HY-CDR,H2,meq,47,,,1,1,ready,,,single exam,16-86,real-ground,MMASH
+HY-CDR,H3,psqi,5,,,1,1,ready,,,single exam,0-21,real-ground,MMASH
+HY-CDR,H4,isi,5,,,1,1,ready,,,single exam,0-28,synthetic-calibrated,NORMS
+HY-CDR,H6,sleep_efficiency,93,88,96,173,0.961,ready,94,-0.0877,median of 180 days; personal range = p10..p90,%,real-ground;synthetic-calibrated,LIFESNAPS
+HY-CDR,H7,sleep_hours,5.04,,,13,0.072,ready,,,median of the 2-week actigraphy session (L-180..L-167),h,synthetic-calibrated,LIFESNAPS
+HY-CDR,I1,,MSSQ-short low,,,1,1,ready,,,character story,,authored,AUTHORED
+HY-CDR,I3,,not yet loaded: sensorimotor battery (no open data),,,0,0,missing,,,source planned in data/catalog.yaml,,,planned
+HY-CDR,J1,ipip_agreeableness,36,,,1,1,ready,,,single exam,10-50,real-ground,LIFESNAPS
+HY-CDR,J1,ipip_conscientiousness,41,,,1,1,ready,,,single exam,10-50,real-ground,LIFESNAPS
+HY-CDR,J1,ipip_extraversion,30,,,1,1,ready,,,single exam,10-50,real-ground,LIFESNAPS
+HY-CDR,J1,ipip_intellect,37,,,1,1,ready,,,single exam,10-50,real-ground,LIFESNAPS
+HY-CDR,J1,ipip_stability,33,,,1,1,ready,,,single exam,10-50,real-ground,LIFESNAPS
+HY-CDR,J2,gad7,2,2,2.5,6,1,ready,,,median of monthly measurements,0-21,synthetic-calibrated,NORMS
+HY-CDR,J2,phq9,3,2,3,6,1,ready,,,median of monthly measurements,0-27,real-population;synthetic-calibrated,NHANES-2011
+HY-CDR,J2,stai_state,44,41.2,45.4,7,1,ready,,,median of monthly measurements,20-80,real-ground,LIFESNAPS
+HY-CDR,J2,ucla3,4.5,4,5,6,1,ready,,,median of monthly measurements,3-9,synthetic-calibrated,NORMS
+HY-CDR,J2,who5,72,67,76,6,1,ready,,,median of monthly measurements,0-100,synthetic-calibrated,NORMS
+HY-CDR,J3,pss,14.5,12,15.5,6,1,ready,,,median of monthly measurements,0-40,synthetic-calibrated,NORMS
+HY-CDR,J3,stress_score,82,63,100,176,0.978,ready,84,-0.3717,median of 180 days; personal range = p10..p90,0-100,real-ground;synthetic-calibrated,LIFESNAPS
+HY-CDR,J4,,"music, exercise",,,1,1,ready,,,character story,,authored,AUTHORED
+HY-CDR,K1,pvt_rt,263,249.6,279,27,1,ready,,,L-90 cognition session (not the L-120 familiarisation run),ms,synthetic-calibrated,NORMS
+HY-CDR,M3,,mood data private,,,1,1,ready,,,character story,,authored,AUTHORED
+HY-CDR,CHECKIN,fatigue,4,3,5,148,0.822,ready,4.5,-0.0032,median of 180 days; personal range = p10..p90,1-7,real-ground;synthetic-calibrated,LIFESNAPS;NORMS
+HY-CDR,CHECKIN,kss,5,3,6,148,0.822,ready,4,0.0281,median of 180 days; personal range = p10..p90,1-9,synthetic-calibrated,NORMS
+HY-CDR,CHECKIN,mood_valence,4,2,5.3,148,0.822,ready,3,-0.0154,median of 180 days; personal range = p10..p90,1-7,real-ground;synthetic-calibrated,LIFESNAPS;NORMS
+HY-CDR,CHECKIN,team_cohesion,5,4,5,148,0.822,ready,5,0.0286,median of 180 days; personal range = p10..p90,1-5,synthetic-calibrated,NORMS
+HY-CDR,CHECKIN,workload,5,3,7,148,0.822,ready,5,0.0053,median of 180 days; personal range = p10..p90,0-10,synthetic-calibrated,NORMS
+HY-MS1,A3,,10,,,1,1,ready,,,character story,days,authored,AUTHORED
+HY-MS1,A4,,first flight,,,1,1,ready,,,character story,,authored,AUTHORED
+HY-MS1,A5,,n/a,,,1,1,ready,,,character story,,authored,AUTHORED
+HY-MS1,A6,,0,,,1,1,ready,,,character story,mSv,authored,AUTHORED
+HY-MS1,B1,height,171.2,,,1,1,ready,,,single exam,cm,real-population,NHANES-2011
+HY-MS1,B2,body_mass,67.4,66.4,67.9,26,1,ready,,0.0309,mean of the last 3 measurements (KB B2),kg,real-population;synthetic-calibrated,NHANES-2011
+HY-MS1,B3,hr_clinic,60,,,1,1,ready,,,single exam,bpm,real-population,NHANES-2011
+HY-MS1,B3,hr_rest,58,55,62,137,0.761,ready,61,0.5651,median of 180 days; personal range = p10..p90,bpm,real-ground;synthetic-calibrated,LIFESNAPS
+HY-MS1,B4,bp_dia,58.8,56,62.4,3,1,ready,,,mean of exam sessions (each a mean of 3 readings),mmHg,real-population;synthetic-calibrated,NHANES-2011
+HY-MS1,B4,bp_sys,114.4,111.5,116,3,1,ready,,,mean of exam sessions (each a mean of 3 readings),mmHg,real-population;synthetic-calibrated,NHANES-2011
+HY-MS1,B5,ortho_dbp_supine,56,,,1,1,ready,,,single exam,mmHg,real-ground,TILT
+HY-MS1,B5,ortho_ddbp,26,,,1,1,ready,,,single exam,mmHg,real-ground,TILT
+HY-MS1,B5,ortho_dhr,21.1,,,1,1,ready,,,single exam,bpm,real-ground,TILT
+HY-MS1,B5,ortho_dsbp,-5,,,1,1,ready,,,single exam,mmHg,real-ground,TILT
+HY-MS1,B5,ortho_hr_supine,52.9,,,1,1,ready,,,single exam,bpm,real-ground,TILT
+HY-MS1,B5,ortho_sbp_supine,118,,,1,1,ready,,,single exam,mmHg,real-ground,TILT
+HY-MS1,B6,spo2,96.5,95.79,97.3,120,0.667,ready,,-0.0609,median of 180 days; personal range = p10..p90,%,real-ground;synthetic-calibrated,LIFESNAPS
+HY-MS1,B7,skin_temp_dev,-1.67,-2.94,-0.66,118,0.656,ready,-2.2,-0.078,median of 180 days; personal range = p10..p90,degC,real-ground;synthetic-calibrated,LIFESNAPS
+HY-MS1,B7,temp_oral,36.587,,,3,1,ready,,,mean of exam sessions,degC,synthetic-calibrated,NORMS
+HY-MS1,B8,resp_rate,12.993,,,3,1,ready,,,mean of exam sessions,/min,synthetic-calibrated,NORMS
+HY-MS1,B9,hrv_rmssd,42.6,30.2,48,114,0.633,ready,30.2,-1.9379,median of 180 days; personal range = p10..p90,ms,real-ground;synthetic-calibrated,LIFESNAPS
+HY-MS1,B10,glucose,76.026,65,99,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mg/dL,real-astronaut;synthetic-calibrated,OSD-575
+HY-MS1,B10,hba1c,5.1,,,1,1,ready,,,single exam,%,real-population,NHANES-2011
+HY-MS1,B11,ecg_hr,74,,,1,1,ready,,,single exam,bpm,real-ground,PTB-XL
+HY-MS1,B11,ecg_pr,166,,,1,1,ready,,,single exam,ms,real-ground,PTB-XL
+HY-MS1,B11,ecg_qrs,106,,,1,1,ready,,,single exam,ms,real-ground,PTB-XL
+HY-MS1,B11,ecg_qt,374,,,1,1,ready,,,single exam,ms,real-ground,PTB-XL
+HY-MS1,B11,ecg_qtc,415,,,1,1,ready,,,single exam,ms,real-ground,PTB-XL
+HY-MS1,B12,cimt,0.6,,,1,1,ready,,,single exam,mm,synthetic-calibrated,NORMS
+HY-MS1,C1,,migraine without aura,,,1,1,ready,,,character story,,authored,AUTHORED
+HY-MS1,C1,asthma_ever,0,,,1,1,ready,,,single exam,1=yes,real-population,NHANES-2011
+HY-MS1,C2,kidney_stone_history,0,,,1,1,ready,,,single exam,1=yes,real-population,NHANES-2011
+HY-MS1,C3,,"migraine 1-2/month; triggers: short sleep, bright light; helps: dark, quiet, hydration",,,1,1,ready,,,character story,,authored,AUTHORED
+HY-MS1,C10,,A-,,,1,1,ready,,,character story,,authored,AUTHORED
+HY-MS1,C12,family_early_mi,1,,,1,1,ready,,,single exam,1=yes,real-population,NHANES-2011
+HY-MS1,C15,balance_conditions_passed,3,,,1,1,ready,,,single exam,0-4,real-population,NHANES-2003
+HY-MS1,C15,balance_foam_eyes_closed,0,,,1,1,ready,,,single exam,1=pass,real-population,NHANES-2003
+HY-MS1,C16,hearing_pta_left,16.25,,,1,1,ready,,,single exam,dB HL,real-population,NHANES-2011
+HY-MS1,C16,hearing_pta_right,20,,,1,1,ready,,,single exam,dB HL,real-population,NHANES-2011
+HY-MS1,D1,hematocrit,43.908,38.5,50,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),%,real-astronaut;synthetic-calibrated,OSD-569
+HY-MS1,D1,hemoglobin,14.618,13.2,17.1,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),g/dL,real-astronaut;synthetic-calibrated,OSD-569
+HY-MS1,D1,lymphocytes_abs,2154.46,850,3900,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),cells/uL,real-astronaut;synthetic-calibrated,OSD-569
+HY-MS1,D1,neutrophils_abs,3035.53,1500,7800,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),cells/uL,real-astronaut;synthetic-calibrated,OSD-569
+HY-MS1,D1,platelets,249.337,140,400,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),10^3/uL,real-astronaut;synthetic-calibrated,OSD-569
+HY-MS1,D1,wbc,5.908,3.8,10.8,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),10^3/uL,real-astronaut;synthetic-calibrated,OSD-569
+HY-MS1,D2,albumin,4.98,3.6,5.1,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),g/dL,real-astronaut;synthetic-calibrated,OSD-575
+HY-MS1,D2,alt,14.988,9,46,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),U/L,real-astronaut;synthetic-calibrated,OSD-575
+HY-MS1,D2,ast,15.52,10,40,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),U/L,real-astronaut;synthetic-calibrated,OSD-575
+HY-MS1,D2,bun,20.572,7,25,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mg/dL,real-astronaut;synthetic-calibrated,OSD-575
+HY-MS1,D2,calcium,9.76,8.6,10.3,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mg/dL,real-astronaut;synthetic-calibrated,OSD-575
+HY-MS1,D2,creatinine,1.208,0.6,1.35,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mg/dL,real-astronaut;synthetic-calibrated,OSD-575
+HY-MS1,D2,egfr,72.924,60,,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mL/min/1.73m2,real-astronaut;synthetic-calibrated,OSD-575
+HY-MS1,D2,potassium,4.261,3.5,5.3,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mmol/L,real-astronaut;synthetic-calibrated,OSD-575
+HY-MS1,D2,sodium,140.623,135,146,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mmol/L,real-astronaut;synthetic-calibrated,OSD-575
+HY-MS1,D3,vitd,23.357,,,1,1,ready,,,single exam,ng/mL,real-population,NHANES-2011
+HY-MS1,D4,crp,6.427,,,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mg/L,real-astronaut;synthetic-calibrated,OSD-575-EVE-CV
+HY-MS1,D4,hdl,64,,,1,1,ready,,,single exam,mg/dL,real-population,NHANES-2011
+HY-MS1,D4,total_chol,251,,,1,1,ready,,,single exam,mg/dL,real-population,NHANES-2011
+HY-MS1,D6,hsv1_pos,1,,,1,1,ready,,,single exam,1=pos,real-population,NHANES-2011
+HY-MS1,D6,hsv2_pos,0,,,1,1,ready,,,single exam,1=pos,real-population,NHANES-2011
+HY-MS1,D7,cortisol_bed,0.0405923,,,1,1,ready,,,single exam,norm,real-ground,MMASH
+HY-MS1,D7,cortisol_wake,0.0155724,,,1,1,ready,,,single exam,norm,real-ground,MMASH
+HY-MS1,D7,melatonin_bed,2.038e-09,,,1,1,ready,,,single exam,norm,real-ground,MMASH
+HY-MS1,D7,melatonin_wake,9.653e-09,,,1,1,ready,,,single exam,norm,real-ground,MMASH
+HY-MS1,D10,microbiome_nasal,1.579,,,3,1,ready,,,mean of exam sessions,Shannon,real-astronaut,OSD-572
+HY-MS1,D10,microbiome_oral,2.861,,,3,1,ready,,,mean of exam sessions,Shannon,real-astronaut,OSD-572
+HY-MS1,D10,microbiome_skin_arm,1.258,,,3,1,ready,,,mean of exam sessions,Shannon,real-astronaut,OSD-572
+HY-MS1,D10,microbiome_skin_forehead,0.461,,,3,1,ready,,,mean of exam sessions,Shannon,real-astronaut,OSD-572
+HY-MS1,E2,,genetic module declined,,,1,1,ready,,,character story,,authored,AUTHORED
+HY-MS1,F2,grip_strength,88.25,,,2,1,ready,,,mean of exam sessions,kg,real-population;synthetic-calibrated,NHANES-2011
+HY-MS1,F4,steps,5351.5,710.5,13160,144,0.8,ready,4916.5,337.389,median of 180 days; personal range = p10..p90,steps/day,real-ground;synthetic-calibrated,LIFESNAPS
+HY-MS1,F5,vo2peak,48.75,,,2,1,ready,,,mean of exam sessions,mL/kg/min,synthetic-calibrated,LIFESNAPS
+HY-MS1,F7,bmd_total,1.048,,,2,1,ready,,,mean of exam sessions,g/cm2,real-population;synthetic-calibrated,NHANES-2011
+HY-MS1,F7,body_fat_pct,25.325,,,2,1,ready,,,mean of exam sessions,%,real-population;synthetic-calibrated,NHANES-2011
+HY-MS1,F7,lean_mass,47.471,,,2,1,ready,,,mean of exam sessions,kg,real-population;synthetic-calibrated,NHANES-2011
+HY-MS1,G1,near_acuity_logmar,0.02,0,0.04,25,1,ready,,0.0016,median of weekly measurements,logMAR,synthetic-calibrated,NORMS
+HY-MS1,G2,iop,16.34,,,1,1,ready,,,single exam,mmHg,synthetic-calibrated,NORMS
+HY-MS1,G2,oct_rnfl,98.01,,,1,1,ready,,,single exam,um,synthetic-calibrated,NORMS
+HY-MS1,H1,sleep_hours,7.58,6.07,8.9,117,0.65,ready,7.93,0.0355,median of all nights (actigraphy L-180..L-167 shown separately as rebase14 is the HSP window),h,real-ground;synthetic-calibrated,LIFESNAPS
+HY-MS1,H1,sleep_hours_reported,8,,,1,1,ready,,,single exam,h,real-population,NHANES-2011
+HY-MS1,H2,meq,38,,,1,1,ready,,,single exam,16-86,real-ground,MMASH
+HY-MS1,H3,psqi,7,,,1,1,ready,,,single exam,0-21,real-ground,MMASH
+HY-MS1,H4,isi,15,,,1,1,ready,,,single exam,0-28,synthetic-calibrated,NORMS
+HY-MS1,H5,,"evening type; caffeine 3 cups/day, last at 15:00",,,1,1,ready,,,character story,,authored,AUTHORED
+HY-MS1,H6,sleep_efficiency,95,91.6,97,127,0.706,ready,96,0.0064,median of 180 days; personal range = p10..p90,%,real-ground;synthetic-calibrated,LIFESNAPS
+HY-MS1,H7,sleep_hours,6.84,,,8,0.044,ready,,,median of the 2-week actigraphy session (L-180..L-167),h,synthetic-calibrated,LIFESNAPS
+HY-MS1,I1,,MSSQ-short low,,,1,1,ready,,,character story,,authored,AUTHORED
+HY-MS1,I3,,not yet loaded: sensorimotor battery (no open data),,,0,0,missing,,,source planned in data/catalog.yaml,,,planned
+HY-MS1,J1,ipip_agreeableness,33,,,1,1,ready,,,single exam,10-50,real-ground,LIFESNAPS
+HY-MS1,J1,ipip_conscientiousness,40,,,1,1,ready,,,single exam,10-50,real-ground,LIFESNAPS
+HY-MS1,J1,ipip_extraversion,25,,,1,1,ready,,,single exam,10-50,real-ground,LIFESNAPS
+HY-MS1,J1,ipip_intellect,33,,,1,1,ready,,,single exam,10-50,real-ground,LIFESNAPS
+HY-MS1,J1,ipip_stability,30,,,1,1,ready,,,single exam,10-50,real-ground,LIFESNAPS
+HY-MS1,J2,gad7,4.5,3,5,6,1,ready,,,median of monthly measurements,0-21,synthetic-calibrated,NORMS
+HY-MS1,J2,phq9,0,0,0,6,1,ready,,,median of monthly measurements,0-27,real-population;synthetic-calibrated,NHANES-2011
+HY-MS1,J2,stai_state,56,53,57.8,7,1,ready,,,median of monthly measurements,20-80,real-ground,LIFESNAPS
+HY-MS1,J2,ucla3,4,4,4,6,1,ready,,,median of monthly measurements,3-9,synthetic-calibrated,NORMS
+HY-MS1,J2,who5,70.5,66.5,75,6,1,ready,,,median of monthly measurements,0-100,synthetic-calibrated,NORMS
+HY-MS1,J3,pss,8.5,7.5,9.5,6,1,ready,,,median of monthly measurements,0-40,synthetic-calibrated,NORMS
+HY-MS1,J4,,photos of Earth,,,1,1,ready,,,character story,,authored,AUTHORED
+HY-MS1,K1,pvt_rt,250,236.6,266.6,27,1,ready,,,L-90 cognition session (not the L-120 familiarisation run),ms,synthetic-calibrated,NORMS
+HY-MS1,M3,,mood data shared with CMO,,,1,1,ready,,,character story,,authored,AUTHORED
+HY-MS1,CHECKIN,fatigue,3,3,5,148,0.822,ready,3,0.0598,median of 180 days; personal range = p10..p90,1-7,real-ground;synthetic-calibrated,LIFESNAPS;NORMS
+HY-MS1,CHECKIN,kss,3,2,4,148,0.822,ready,3,-0.0021,median of 180 days; personal range = p10..p90,1-9,synthetic-calibrated,NORMS
+HY-MS1,CHECKIN,mood_valence,5,1,6,148,0.822,ready,1,-0.5478,median of 180 days; personal range = p10..p90,1-7,real-ground;synthetic-calibrated,LIFESNAPS;NORMS
+HY-MS1,CHECKIN,team_cohesion,4,4,5,148,0.822,ready,4,0.0068,median of 180 days; personal range = p10..p90,1-5,synthetic-calibrated,NORMS
+HY-MS1,CHECKIN,workload,5,3,7,148,0.822,ready,5,0.0363,median of 180 days; personal range = p10..p90,0-10,synthetic-calibrated,NORMS
+HY-MS2,A3,,10,,,1,1,ready,,,character story,days,authored,AUTHORED
+HY-MS2,A4,,"1 prior flight, 184 days",,,1,1,ready,,,character story,,authored,AUTHORED
+HY-MS2,A5,,none,,,1,1,ready,,,character story,,authored,AUTHORED
+HY-MS2,A6,,58,,,1,1,ready,,,character story,mSv,authored,AUTHORED
+HY-MS2,B1,height,167.1,,,1,1,ready,,,single exam,cm,real-population,NHANES-2011
+HY-MS2,B2,body_mass,68.2,67.9,69.4,26,1,ready,,-0.0495,mean of the last 3 measurements (KB B2),kg,real-population;synthetic-calibrated,NHANES-2011
+HY-MS2,B3,hr_clinic,52,,,1,1,ready,,,single exam,bpm,real-population,NHANES-2011
+HY-MS2,B3,hr_rest,64,60,70,177,0.983,ready,64.5,0.4096,median of 180 days; personal range = p10..p90,bpm,real-ground;synthetic-calibrated,LIFESNAPS
+HY-MS2,B4,bp_dia,66.5,61.2,72.2,3,1,ready,,,mean of exam sessions (each a mean of 3 readings),mmHg,real-population;synthetic-calibrated,NHANES-2011
+HY-MS2,B4,bp_sys,106.9,102.8,109.3,3,1,ready,,,mean of exam sessions (each a mean of 3 readings),mmHg,real-population;synthetic-calibrated,NHANES-2011
+HY-MS2,B5,ortho_dbp_supine,70,,,1,1,ready,,,single exam,mmHg,real-ground,TILT
+HY-MS2,B5,ortho_ddbp,11.9,,,1,1,ready,,,single exam,mmHg,real-ground,TILT
+HY-MS2,B5,ortho_dhr,14.6,,,1,1,ready,,,single exam,bpm,real-ground,TILT
+HY-MS2,B5,ortho_dsbp,6.3,,,1,1,ready,,,single exam,mmHg,real-ground,TILT
+HY-MS2,B5,ortho_hr_supine,59.3,,,1,1,ready,,,single exam,bpm,real-ground,TILT
+HY-MS2,B5,ortho_sbp_supine,110,,,1,1,ready,,,single exam,mmHg,real-ground,TILT
+HY-MS2,B7,skin_temp_dev,-2.09,-2.76,-1.35,176,0.978,ready,-2.21,-0.0184,median of 180 days; personal range = p10..p90,degC,real-ground;synthetic-calibrated,LIFESNAPS
+HY-MS2,B7,temp_oral,36.593,,,3,1,ready,,,mean of exam sessions,degC,synthetic-calibrated,NORMS
+HY-MS2,B8,resp_rate,14.13,,,3,1,ready,,,mean of exam sessions,/min,synthetic-calibrated,NORMS
+HY-MS2,B9,hrv_rmssd,24.8,18.4,31.96,178,0.989,ready,26.75,0.0787,median of 180 days; personal range = p10..p90,ms,real-ground;synthetic-calibrated,LIFESNAPS
+HY-MS2,B10,glucose,75.866,65,99,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mg/dL,real-astronaut;synthetic-calibrated,OSD-575
+HY-MS2,B10,hba1c,4.8,,,1,1,ready,,,single exam,%,real-population,NHANES-2011
+HY-MS2,B11,ecg_hr,71,,,1,1,ready,,,single exam,bpm,real-ground,PTB-XL
+HY-MS2,B11,ecg_pr,140,,,1,1,ready,,,single exam,ms,real-ground,PTB-XL
+HY-MS2,B11,ecg_qrs,80,,,1,1,ready,,,single exam,ms,real-ground,PTB-XL
+HY-MS2,B11,ecg_qt,384,,,1,1,ready,,,single exam,ms,real-ground,PTB-XL
+HY-MS2,B11,ecg_qtc,417,,,1,1,ready,,,single exam,ms,real-ground,PTB-XL
+HY-MS2,B12,cimt,0.59,,,1,1,ready,,,single exam,mm,synthetic-calibrated,NORMS
+HY-MS2,C1,,none,,,1,1,ready,,,character story,,authored,AUTHORED
+HY-MS2,C1,asthma_ever,1,,,1,1,ready,,,single exam,1=yes,real-population,NHANES-2011
+HY-MS2,C2,,"kidney stone 2019, passed spontaneously",,,1,1,ready,,,character story,,authored,AUTHORED
+HY-MS2,C2,kidney_stone_history,1,,,1,1,ready,,,single exam,1=yes,real-population,NHANES-2011
+HY-MS2,C10,,O-,,,1,1,ready,,,character story,,authored,AUTHORED
+HY-MS2,C12,family_early_mi,0,,,1,1,ready,,,single exam,1=yes,real-population,NHANES-2011
+HY-MS2,C13,,continuous combined oral contraceptive (cycle suppression),,,1,1,ready,,,character story,,authored,AUTHORED
+HY-MS2,C15,balance_conditions_passed,3,,,1,1,ready,,,single exam,0-4,real-population,NHANES-2003
+HY-MS2,C15,balance_foam_eyes_closed,0,,,1,1,ready,,,single exam,1=pass,real-population,NHANES-2003
+HY-MS2,C16,hearing_pta_left,5,,,1,1,ready,,,single exam,dB HL,real-population,NHANES-2011
+HY-MS2,C16,hearing_pta_right,0,,,1,1,ready,,,single exam,dB HL,real-population,NHANES-2011
+HY-MS2,D1,hematocrit,39.016,35,45,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),%,real-astronaut;synthetic-calibrated,OSD-569
+HY-MS2,D1,hemoglobin,12.579,11.7,15.5,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),g/dL,real-astronaut;synthetic-calibrated,OSD-569
+HY-MS2,D1,lymphocytes_abs,2329.51,850,3900,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),cells/uL,real-astronaut;synthetic-calibrated,OSD-569
+HY-MS2,D1,neutrophils_abs,3438.53,1500,7800,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),cells/uL,real-astronaut;synthetic-calibrated,OSD-569
+HY-MS2,D1,platelets,239.184,140,400,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),10^3/uL,real-astronaut;synthetic-calibrated,OSD-569
+HY-MS2,D1,wbc,6.197,3.8,10.8,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),10^3/uL,real-astronaut;synthetic-calibrated,OSD-569
+HY-MS2,D2,albumin,4.6,3.6,5.1,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),g/dL,real-astronaut;synthetic-calibrated,OSD-575
+HY-MS2,D2,alt,19.437,6,29,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),U/L,real-astronaut;synthetic-calibrated,OSD-575
+HY-MS2,D2,ast,28.196,10,35,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),U/L,real-astronaut;synthetic-calibrated,OSD-575
+HY-MS2,D2,bun,15.681,7,25,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mg/dL,real-astronaut;synthetic-calibrated,OSD-575
+HY-MS2,D2,calcium,9.82,8.6,10.4,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mg/dL,real-astronaut;synthetic-calibrated,OSD-575
+HY-MS2,D2,creatinine,0.891,0.5,1.05,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mg/dL,real-astronaut;synthetic-calibrated,OSD-575
+HY-MS2,D2,egfr,78.644,60,,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mL/min/1.73m2,real-astronaut;synthetic-calibrated,OSD-575
+HY-MS2,D2,potassium,3.905,3.5,5.3,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mmol/L,real-astronaut;synthetic-calibrated,OSD-575
+HY-MS2,D2,sodium,142.149,135,146,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mmol/L,real-astronaut;synthetic-calibrated,OSD-575
+HY-MS2,D3,vitd,21.274,,,1,1,ready,,,single exam,ng/mL,real-population,NHANES-2011
+HY-MS2,D4,crp,8.156,,,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mg/L,real-astronaut;synthetic-calibrated,OSD-575-EVE-CV
+HY-MS2,D4,hdl,68,,,1,1,ready,,,single exam,mg/dL,real-population,NHANES-2011
+HY-MS2,D4,total_chol,218,,,1,1,ready,,,single exam,mg/dL,real-population,NHANES-2011
+HY-MS2,D6,hsv1_pos,0,,,1,1,ready,,,single exam,1=pos,real-population,NHANES-2011
+HY-MS2,D6,hsv2_pos,0,,,1,1,ready,,,single exam,1=pos,real-population,NHANES-2011
+HY-MS2,D7,,not yet loaded: stress hormones (no female donor in MMASH),,,0,0,missing,,,source planned in data/catalog.yaml,,,MMASH
+HY-MS2,D10,microbiome_nasal,0.85,,,3,1,ready,,,mean of exam sessions,Shannon,real-astronaut,OSD-572
+HY-MS2,D10,microbiome_oral,1.972,,,3,1,ready,,,mean of exam sessions,Shannon,real-astronaut,OSD-572
+HY-MS2,D10,microbiome_skin_arm,2.458,,,3,1,ready,,,mean of exam sessions,Shannon,real-astronaut,OSD-572
+HY-MS2,D10,microbiome_skin_forehead,0.975,,,3,1,ready,,,mean of exam sessions,Shannon,real-astronaut,OSD-572
+HY-MS2,E2,,genetic module declined,,,1,1,ready,,,character story,,authored,AUTHORED
+HY-MS2,F2,grip_strength,70.8,,,2,1,ready,,,mean of exam sessions,kg,real-population;synthetic-calibrated,NHANES-2011
+HY-MS2,F4,steps,6503,3105.4,10185,177,0.983,ready,6662.5,-36.5743,median of 180 days; personal range = p10..p90,steps/day,real-ground;synthetic-calibrated,LIFESNAPS
+HY-MS2,F5,vo2peak,45.3,,,2,1,ready,,,mean of exam sessions,mL/kg/min,synthetic-calibrated,LIFESNAPS
+HY-MS2,F7,bmd_total,1.288,,,2,1,ready,,,mean of exam sessions,g/cm2,real-population;synthetic-calibrated,NHANES-2011
+HY-MS2,F7,body_fat_pct,30.919,,,2,1,ready,,,mean of exam sessions,%,real-population;synthetic-calibrated,NHANES-2011
+HY-MS2,F7,lean_mass,45.992,,,2,1,ready,,,mean of exam sessions,kg,real-population;synthetic-calibrated,NHANES-2011
+HY-MS2,G1,near_acuity_logmar,0.02,0,0.04,25,1,ready,,0.0022,median of weekly measurements,logMAR,synthetic-calibrated,NORMS
+HY-MS2,G2,iop,15.57,,,1,1,ready,,,single exam,mmHg,synthetic-calibrated,NORMS
+HY-MS2,G2,oct_rnfl,93.04,,,1,1,ready,,,single exam,um,synthetic-calibrated,NORMS
+HY-MS2,H1,sleep_hours,7.27,5.26,9.22,178,0.989,ready,6.89,0.0729,median of all nights (actigraphy L-180..L-167 shown separately as rebase14 is the HSP window),h,real-ground;synthetic-calibrated,LIFESNAPS
+HY-MS2,H1,sleep_hours_reported,6,,,1,1,ready,,,single exam,h,real-population,NHANES-2011
+HY-MS2,H4,isi,2,,,1,1,ready,,,single exam,0-28,synthetic-calibrated,NORMS
+HY-MS2,H6,sleep_efficiency,92,87,96,180,1,ready,93,-0.181,median of 180 days; personal range = p10..p90,%,real-ground;synthetic-calibrated,LIFESNAPS
+HY-MS2,H7,sleep_hours,8.05,,,14,0.078,ready,,,median of the 2-week actigraphy session (L-180..L-167),h,synthetic-calibrated,LIFESNAPS
+HY-MS2,I1,,MSSQ-short low,,,1,1,ready,,,character story,,authored,AUTHORED
+HY-MS2,I3,,not yet loaded: sensorimotor battery (no open data),,,0,0,missing,,,source planned in data/catalog.yaml,,,planned
+HY-MS2,J2,gad7,2,1.5,3.5,6,1,ready,,,median of monthly measurements,0-21,synthetic-calibrated,NORMS
+HY-MS2,J2,phq9,0,0,0.5,6,1,ready,,,median of monthly measurements,0-27,real-population;synthetic-calibrated,NHANES-2011
+HY-MS2,J2,stai_state,52,52,53.6,3,0.5,ready,,,median of monthly measurements,20-80,real-ground,LIFESNAPS
+HY-MS2,J2,ucla3,4,3.5,4,6,1,ready,,,median of monthly measurements,3-9,synthetic-calibrated,NORMS
+HY-MS2,J2,who5,67,64,74,6,1,ready,,,median of monthly measurements,0-100,synthetic-calibrated,NORMS
+HY-MS2,J3,pss,14.5,12,17,6,1,ready,,,median of monthly measurements,0-40,synthetic-calibrated,NORMS
+HY-MS2,J3,stress_score,72,59,87,180,1,ready,76.5,-1.1212,median of 180 days; personal range = p10..p90,0-100,real-ground;synthetic-calibrated,LIFESNAPS
+HY-MS2,J4,,"journal, talking with a crewmate",,,1,1,ready,,,character story,,authored,AUTHORED
+HY-MS2,K1,pvt_rt,230,222.2,249.8,27,1,ready,,,L-90 cognition session (not the L-120 familiarisation run),ms,synthetic-calibrated,NORMS
+HY-MS2,L3,,3,,,1,1,ready,,,character story,L/day target (P-02),authored,AUTHORED
+HY-MS2,M3,,mood data shared with CMO and psychologist,,,1,1,ready,,,character story,,authored,AUTHORED
+HY-MS2,CHECKIN,fatigue,3,2,5,156,0.867,ready,3,0.0003,median of 180 days; personal range = p10..p90,1-7,real-ground;synthetic-calibrated,LIFESNAPS;NORMS
+HY-MS2,CHECKIN,kss,4,3,5,156,0.867,ready,4,-0.0353,median of 180 days; personal range = p10..p90,1-9,synthetic-calibrated,NORMS
+HY-MS2,CHECKIN,mood_valence,4,1,5,156,0.867,ready,4,-0.338,median of 180 days; personal range = p10..p90,1-7,real-ground;synthetic-calibrated,LIFESNAPS;NORMS
+HY-MS2,CHECKIN,team_cohesion,4,3,4,156,0.867,ready,3,0.0354,median of 180 days; personal range = p10..p90,1-5,synthetic-calibrated,NORMS
+HY-MS2,CHECKIN,workload,5,3,6.5,156,0.867,ready,6,0.086,median of 180 days; personal range = p10..p90,0-10,synthetic-calibrated,NORMS
+HY-PLT,A3,,10,,,1,1,ready,,,character story,days,authored,AUTHORED
+HY-PLT,A4,,"1 prior flight, 12 days",,,1,1,ready,,,character story,,authored,AUTHORED
+HY-PLT,A5,,space motion sickness on previous flight (days 1-2),,,1,1,ready,,,character story,,authored,AUTHORED
+HY-PLT,A6,,11,,,1,1,ready,,,character story,mSv,authored,AUTHORED
+HY-PLT,B1,height,162.5,,,1,1,ready,,,single exam,cm,real-population,NHANES-2011
+HY-PLT,B2,body_mass,59.5,58.1,60,26,1,ready,,-0.0076,mean of the last 3 measurements (KB B2),kg,real-population;synthetic-calibrated,NHANES-2011
+HY-PLT,B3,hr_clinic,78,,,1,1,ready,,,single exam,bpm,real-population,NHANES-2011
+HY-PLT,B3,hr_rest,66,63,68.1,180,1,ready,69,-0.1806,median of 180 days; personal range = p10..p90,bpm,real-ground;synthetic-calibrated,LIFESNAPS
+HY-PLT,B4,bp_dia,80.6,79,81.5,3,1,ready,,,mean of exam sessions (each a mean of 3 readings),mmHg,real-population;synthetic-calibrated,NHANES-2011
+HY-PLT,B4,bp_sys,123.3,120.5,127.4,3,1,ready,,,mean of exam sessions (each a mean of 3 readings),mmHg,real-population;synthetic-calibrated,NHANES-2011
+HY-PLT,B5,ortho_dbp_supine,70,,,1,1,ready,,,single exam,mmHg,real-ground,TILT
+HY-PLT,B5,ortho_ddbp,13,,,1,1,ready,,,single exam,mmHg,real-ground,TILT
+HY-PLT,B5,ortho_dhr,15,,,1,1,ready,,,single exam,bpm,real-ground,TILT
+HY-PLT,B5,ortho_dsbp,-3,,,1,1,ready,,,single exam,mmHg,real-ground,TILT
+HY-PLT,B5,ortho_hr_supine,69,,,1,1,ready,,,single exam,bpm,real-ground,TILT
+HY-PLT,B5,ortho_sbp_supine,120,,,1,1,ready,,,single exam,mmHg,real-ground,TILT
+HY-PLT,B6,spo2,95.1,93.8,96,145,0.806,ready,94.45,-0.0526,median of 180 days; personal range = p10..p90,%,real-ground;synthetic-calibrated,LIFESNAPS
+HY-PLT,B7,skin_temp_dev,-0.88,-1.44,-0.3,170,0.944,ready,-0.74,-0.0086,median of 180 days; personal range = p10..p90,degC,real-ground;synthetic-calibrated,LIFESNAPS
+HY-PLT,B7,temp_oral,36.51,,,3,1,ready,,,mean of exam sessions,degC,synthetic-calibrated,NORMS
+HY-PLT,B8,resp_rate,13.043,,,3,1,ready,,,mean of exam sessions,/min,synthetic-calibrated,NORMS
+HY-PLT,B9,hrv_rmssd,63.05,49.83,75.65,164,0.911,ready,62.1,-0.2993,median of 180 days; personal range = p10..p90,ms,real-ground;synthetic-calibrated,LIFESNAPS
+HY-PLT,B10,glucose,71.981,65,99,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mg/dL,real-astronaut;synthetic-calibrated,OSD-575
+HY-PLT,B10,hba1c,5.1,,,1,1,ready,,,single exam,%,real-population,NHANES-2011
+HY-PLT,B11,ecg_hr,74,,,1,1,ready,,,single exam,bpm,real-ground,PTB-XL
+HY-PLT,B11,ecg_pr,136,,,1,1,ready,,,single exam,ms,real-ground,PTB-XL
+HY-PLT,B11,ecg_qrs,92,,,1,1,ready,,,single exam,ms,real-ground,PTB-XL
+HY-PLT,B11,ecg_qt,370,,,1,1,ready,,,single exam,ms,real-ground,PTB-XL
+HY-PLT,B11,ecg_qtc,410,,,1,1,ready,,,single exam,ms,real-ground,PTB-XL
+HY-PLT,B12,cimt,0.63,,,1,1,ready,,,single exam,mm,synthetic-calibrated,NORMS
+HY-PLT,C1,,none,,,1,1,ready,,,character story,,authored,AUTHORED
+HY-PLT,C1,asthma_ever,0,,,1,1,ready,,,single exam,1=yes,real-population,NHANES-2011
+HY-PLT,C2,kidney_stone_history,0,,,1,1,ready,,,single exam,1=yes,real-population,NHANES-2011
+HY-PLT,C10,,B+,,,1,1,ready,,,character story,,authored,AUTHORED
+HY-PLT,C12,family_early_mi,0,,,1,1,ready,,,single exam,1=yes,real-population,NHANES-2011
+HY-PLT,C15,balance_conditions_passed,4,,,1,1,ready,,,single exam,0-4,real-population,NHANES-2003
+HY-PLT,C15,balance_foam_eyes_closed,1,,,1,1,ready,,,single exam,1=pass,real-population,NHANES-2003
+HY-PLT,C16,hearing_pta_left,-2.5,,,1,1,ready,,,single exam,dB HL,real-population,NHANES-2011
+HY-PLT,C16,hearing_pta_right,5,,,1,1,ready,,,single exam,dB HL,real-population,NHANES-2011
+HY-PLT,D1,hematocrit,41.206,38.5,50,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),%,real-astronaut;synthetic-calibrated,OSD-569
+HY-PLT,D1,hemoglobin,13.764,13.2,17.1,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),g/dL,real-astronaut;synthetic-calibrated,OSD-569
+HY-PLT,D1,lymphocytes_abs,2348.48,850,3900,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),cells/uL,real-astronaut;synthetic-calibrated,OSD-569
+HY-PLT,D1,neutrophils_abs,6428.31,1500,7800,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),cells/uL,real-astronaut;synthetic-calibrated,OSD-569
+HY-PLT,D1,platelets,346.459,140,400,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),10^3/uL,real-astronaut;synthetic-calibrated,OSD-569
+HY-PLT,D1,wbc,9.499,3.8,10.8,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),10^3/uL,real-astronaut;synthetic-calibrated,OSD-569
+HY-PLT,D2,albumin,4.528,3.6,5.1,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),g/dL,real-astronaut;synthetic-calibrated,OSD-575
+HY-PLT,D2,alt,12.598,9,46,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),U/L,real-astronaut;synthetic-calibrated,OSD-575
+HY-PLT,D2,ast,15.002,10,40,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),U/L,real-astronaut;synthetic-calibrated,OSD-575
+HY-PLT,D2,bun,20.856,7,25,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mg/dL,real-astronaut;synthetic-calibrated,OSD-575
+HY-PLT,D2,calcium,9.74,8.6,10.3,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mg/dL,real-astronaut;synthetic-calibrated,OSD-575
+HY-PLT,D2,creatinine,1.043,0.6,1.35,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mg/dL,real-astronaut;synthetic-calibrated,OSD-575
+HY-PLT,D2,egfr,71.314,60,,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mL/min/1.73m2,real-astronaut;synthetic-calibrated,OSD-575
+HY-PLT,D2,potassium,3.516,3.5,5.3,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mmol/L,real-astronaut;synthetic-calibrated,OSD-575
+HY-PLT,D2,sodium,138.703,135,146,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mmol/L,real-astronaut;synthetic-calibrated,OSD-575
+HY-PLT,D3,vitd,50.08,,,1,1,ready,,,single exam,ng/mL,real-population,NHANES-2011
+HY-PLT,D4,crp,40.141,,,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mg/L,real-astronaut;synthetic-calibrated,OSD-575-EVE-CV
+HY-PLT,D4,hdl,85,,,1,1,ready,,,single exam,mg/dL,real-population,NHANES-2011
+HY-PLT,D4,total_chol,290,,,1,1,ready,,,single exam,mg/dL,real-population,NHANES-2011
+HY-PLT,D6,hsv1_pos,1,,,1,1,ready,,,single exam,1=pos,real-population,NHANES-2011
+HY-PLT,D6,hsv2_pos,0,,,1,1,ready,,,single exam,1=pos,real-population,NHANES-2011
+HY-PLT,D7,cortisol_bed,0.0370459,,,1,1,ready,,,single exam,norm,real-ground,MMASH
+HY-PLT,D7,cortisol_wake,0.0196588,,,1,1,ready,,,single exam,norm,real-ground,MMASH
+HY-PLT,D7,melatonin_bed,8.67e-09,,,1,1,ready,,,single exam,norm,real-ground,MMASH
+HY-PLT,D7,melatonin_wake,2.574e-09,,,1,1,ready,,,single exam,norm,real-ground,MMASH
+HY-PLT,D10,microbiome_nasal,1.769,,,3,1,ready,,,mean of exam sessions,Shannon,real-astronaut,OSD-572
+HY-PLT,D10,microbiome_oral,2.023,,,3,1,ready,,,mean of exam sessions,Shannon,real-astronaut,OSD-572
+HY-PLT,D10,microbiome_skin_arm,0.92,,,3,1,ready,,,mean of exam sessions,Shannon,real-astronaut,OSD-572
+HY-PLT,D10,microbiome_skin_forehead,0.804,,,3,1,ready,,,mean of exam sessions,Shannon,real-astronaut,OSD-572
+HY-PLT,E2,,genetic module declined,,,1,1,ready,,,character story,,authored,AUTHORED
+HY-PLT,F2,grip_strength,73.85,,,2,1,ready,,,mean of exam sessions,kg,real-population;synthetic-calibrated,NHANES-2011
+HY-PLT,F4,steps,8970,4679.5,13477.3,180,1,ready,10721,66.5814,median of 180 days; personal range = p10..p90,steps/day,real-ground;synthetic-calibrated,LIFESNAPS
+HY-PLT,F5,vo2peak,52.5,,,2,1,ready,,,mean of exam sessions,mL/kg/min,synthetic-calibrated,LIFESNAPS
+HY-PLT,F7,bmd_total,1.049,,,2,1,ready,,,mean of exam sessions,g/cm2,real-population;synthetic-calibrated,NHANES-2011
+HY-PLT,F7,body_fat_pct,25.389,,,2,1,ready,,,mean of exam sessions,%,real-population;synthetic-calibrated,NHANES-2011
+HY-PLT,F7,lean_mass,42.21,,,2,1,ready,,,mean of exam sessions,kg,real-population;synthetic-calibrated,NHANES-2011
+HY-PLT,G1,near_acuity_logmar,0.02,-0.01,0.04,25,1,ready,,0.0025,median of weekly measurements,logMAR,synthetic-calibrated,NORMS
+HY-PLT,G2,iop,14.34,,,1,1,ready,,,single exam,mmHg,synthetic-calibrated,NORMS
+HY-PLT,G2,oct_rnfl,91.98,,,1,1,ready,,,single exam,um,synthetic-calibrated,NORMS
+HY-PLT,H1,sleep_hours,5.08,3.88,6.28,166,0.922,ready,5.14,0.1327,median of all nights (actigraphy L-180..L-167 shown separately as rebase14 is the HSP window),h,real-ground;synthetic-calibrated,LIFESNAPS
+HY-PLT,H1,sleep_hours_reported,6,,,1,1,ready,,,single exam,h,real-population,NHANES-2011
+HY-PLT,H2,meq,38,,,1,1,ready,,,single exam,16-86,real-ground,MMASH
+HY-PLT,H3,psqi,4,,,1,1,ready,,,single exam,0-21,real-ground,MMASH
+HY-PLT,H4,isi,1,,,1,1,ready,,,single exam,0-28,synthetic-calibrated,NORMS
+HY-PLT,H6,sleep_efficiency,96,93,98,179,0.994,ready,96,-0.1619,median of 180 days; personal range = p10..p90,%,real-ground;synthetic-calibrated,LIFESNAPS
+HY-PLT,H7,sleep_hours,4.36,,,14,0.078,ready,,,median of the 2-week actigraphy session (L-180..L-167),h,synthetic-calibrated,LIFESNAPS
+HY-PLT,I1,,MSSQ-short moderate,,,1,1,ready,,,character story,,authored,AUTHORED
+HY-PLT,I3,,not yet loaded: sensorimotor battery (no open data),,,0,0,missing,,,source planned in data/catalog.yaml,,,planned
+HY-PLT,J1,ipip_agreeableness,49,,,1,1,ready,,,single exam,10-50,real-ground,LIFESNAPS
+HY-PLT,J1,ipip_conscientiousness,41,,,1,1,ready,,,single exam,10-50,real-ground,LIFESNAPS
+HY-PLT,J1,ipip_extraversion,45,,,1,1,ready,,,single exam,10-50,real-ground,LIFESNAPS
+HY-PLT,J1,ipip_intellect,45,,,1,1,ready,,,single exam,10-50,real-ground,LIFESNAPS
+HY-PLT,J1,ipip_stability,36,,,1,1,ready,,,single exam,10-50,real-ground,LIFESNAPS
+HY-PLT,J2,gad7,4,3.5,5,6,1,ready,,,median of monthly measurements,0-21,synthetic-calibrated,NORMS
+HY-PLT,J2,phq9,2.5,1.5,3,6,1,ready,,,median of monthly measurements,0-27,real-population;synthetic-calibrated,NHANES-2011
+HY-PLT,J2,stai_state,48.5,47.5,50.5,6,1,ready,,,median of monthly measurements,20-80,real-ground,LIFESNAPS
+HY-PLT,J2,ucla3,4,4,5,6,1,ready,,,median of monthly measurements,3-9,synthetic-calibrated,NORMS
+HY-PLT,J2,who5,54.5,52,57.5,6,1,ready,,,median of monthly measurements,0-100,synthetic-calibrated,NORMS
+HY-PLT,J3,pss,12,10.5,14.5,6,1,ready,,,median of monthly measurements,0-40,synthetic-calibrated,NORMS
+HY-PLT,J3,stress_score,82,75,86.2,179,0.994,ready,84,0.1196,median of 180 days; personal range = p10..p90,0-100,real-ground;synthetic-calibrated,LIFESNAPS
+HY-PLT,J4,,call to family,,,1,1,ready,,,character story,,authored,AUTHORED
+HY-PLT,K1,pvt_rt,283,277.2,306.8,27,1,ready,,,L-90 cognition session (not the L-120 familiarisation run),ms,synthetic-calibrated,NORMS
+HY-PLT,M3,,mood data shared with CMO,,,1,1,ready,,,character story,,authored,AUTHORED
+HY-PLT,CHECKIN,fatigue,5,3,6,157,0.872,ready,3,-0.2937,median of 180 days; personal range = p10..p90,1-7,real-ground;synthetic-calibrated,LIFESNAPS;NORMS
+HY-PLT,CHECKIN,kss,5,3,6,157,0.872,ready,4,-0.0462,median of 180 days; personal range = p10..p90,1-9,synthetic-calibrated,NORMS
+HY-PLT,CHECKIN,mood_valence,5,3,7,157,0.872,ready,7,-0.0878,median of 180 days; personal range = p10..p90,1-7,real-ground;synthetic-calibrated,LIFESNAPS;NORMS
+HY-PLT,CHECKIN,team_cohesion,4,4,5,157,0.872,ready,4,-0.0034,median of 180 days; personal range = p10..p90,1-5,synthetic-calibrated,NORMS
+HY-PLT,CHECKIN,workload,5,3,6,157,0.872,ready,5,0.0543,median of 180 days; personal range = p10..p90,0-10,synthetic-calibrated,NORMS
+CM-2,A3,,variable by scenario (180 d in low Earth orbit / Mars transit),,,1,1,ready,,,character story,,authored,AUTHORED
+CM-2,A4,,"1 prior flight, 166 days",,,1,1,ready,,,character story,,authored,AUTHORED
+CM-2,A5,,none,,,1,1,ready,,,character story,,authored,AUTHORED
+CM-2,A6,,42,,,1,1,ready,,,character story,mSv,authored,AUTHORED
+CM-2,B1,height,160.1,,,1,1,ready,,,single exam,cm,real-population,NHANES-2011
+CM-2,B2,body_mass,61.7,60.8,62.7,26,1,ready,,-0.0549,mean of the last 3 measurements (KB B2),kg,real-population;synthetic-calibrated,NHANES-2011
+CM-2,B3,hr_clinic,78,,,1,1,ready,,,single exam,bpm,real-population,NHANES-2011
+CM-2,B3,hr_rest,66,63,70,180,1,ready,69,0.0035,median of 180 days; personal range = p10..p90,bpm,real-ground;synthetic-calibrated,LIFESNAPS
+CM-2,B4,bp_dia,82.3,79.4,84.7,3,1,ready,,,mean of exam sessions (each a mean of 3 readings),mmHg,real-population;synthetic-calibrated,NHANES-2011
+CM-2,B4,bp_sys,117.5,116,118.4,3,1,ready,,,mean of exam sessions (each a mean of 3 readings),mmHg,real-population;synthetic-calibrated,NHANES-2011
+CM-2,B5,ortho_dbp_supine,70,,,1,1,ready,,,single exam,mmHg,real-ground,TILT
+CM-2,B5,ortho_ddbp,-7,,,1,1,ready,,,single exam,mmHg,real-ground,TILT
+CM-2,B5,ortho_dhr,7,,,1,1,ready,,,single exam,bpm,real-ground,TILT
+CM-2,B5,ortho_dsbp,-7,,,1,1,ready,,,single exam,mmHg,real-ground,TILT
+CM-2,B5,ortho_hr_supine,54,,,1,1,ready,,,single exam,bpm,real-ground,TILT
+CM-2,B5,ortho_sbp_supine,115,,,1,1,ready,,,single exam,mmHg,real-ground,TILT
+CM-2,B7,skin_temp_dev,-2.5,-3,-1.91,153,0.85,ready,-2.54,0.0155,median of 180 days; personal range = p10..p90,degC,real-ground;synthetic-calibrated,LIFESNAPS
+CM-2,B7,temp_oral,36.607,,,3,1,ready,,,mean of exam sessions,degC,synthetic-calibrated,NORMS
+CM-2,B8,resp_rate,15.333,,,3,1,ready,,,mean of exam sessions,/min,synthetic-calibrated,NORMS
+CM-2,B9,hrv_rmssd,39.8,25.18,54.3,167,0.928,ready,39,0.3882,median of 180 days; personal range = p10..p90,ms,real-ground;synthetic-calibrated,LIFESNAPS
+CM-2,B10,glucose,77.446,65,99,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mg/dL,real-astronaut;synthetic-calibrated,OSD-575
+CM-2,B10,hba1c,5.4,,,1,1,ready,,,single exam,%,real-population,NHANES-2011
+CM-2,B11,ecg_hr,55,,,1,1,ready,,,single exam,bpm,real-ground,PTB-XL
+CM-2,B11,ecg_pr,122,,,1,1,ready,,,single exam,ms,real-ground,PTB-XL
+CM-2,B11,ecg_qrs,104,,,1,1,ready,,,single exam,ms,real-ground,PTB-XL
+CM-2,B11,ecg_qt,460,,,1,1,ready,,,single exam,ms,real-ground,PTB-XL
+CM-2,B11,ecg_qtc,440,,,1,1,ready,,,single exam,ms,real-ground,PTB-XL
+CM-2,B12,cimt,0.58,,,1,1,ready,,,single exam,mm,synthetic-calibrated,NORMS
+CM-2,C1,,none,,,1,1,ready,,,character story,,authored,AUTHORED
+CM-2,C1,asthma_ever,0,,,1,1,ready,,,single exam,1=yes,real-population,NHANES-2011
+CM-2,C2,kidney_stone_history,0,,,1,1,ready,,,single exam,1=yes,real-population,NHANES-2011
+CM-2,C4,,no known allergies,,,1,1,ready,,,character story,,authored,AUTHORED
+CM-2,C5,,none,,,1,1,ready,,,character story,,authored,AUTHORED
+CM-2,C10,,A+,,,1,1,ready,,,character story,,authored,AUTHORED
+CM-2,C12,family_early_mi,0,,,1,1,ready,,,single exam,1=yes,real-population,NHANES-2011
+CM-2,C15,balance_conditions_passed,4,,,1,1,ready,,,single exam,0-4,real-population,NHANES-2003
+CM-2,C15,balance_foam_eyes_closed,1,,,1,1,ready,,,single exam,1=pass,real-population,NHANES-2003
+CM-2,C16,hearing_pta_left,26.25,,,1,1,ready,,,single exam,dB HL,real-population,NHANES-2011
+CM-2,C16,hearing_pta_right,10,,,1,1,ready,,,single exam,dB HL,real-population,NHANES-2011
+CM-2,D1,hematocrit,43.905,38.5,50,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),%,real-astronaut;synthetic-calibrated,OSD-569
+CM-2,D1,hemoglobin,14.511,13.2,17.1,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),g/dL,real-astronaut;synthetic-calibrated,OSD-569
+CM-2,D1,lymphocytes_abs,2228.3,850,3900,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),cells/uL,real-astronaut;synthetic-calibrated,OSD-569
+CM-2,D1,neutrophils_abs,3215.05,1500,7800,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),cells/uL,real-astronaut;synthetic-calibrated,OSD-569
+CM-2,D1,platelets,243.902,140,400,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),10^3/uL,real-astronaut;synthetic-calibrated,OSD-569
+CM-2,D1,wbc,6.149,3.8,10.8,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),10^3/uL,real-astronaut;synthetic-calibrated,OSD-569
+CM-2,D2,albumin,4.954,3.6,5.1,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),g/dL,real-astronaut;synthetic-calibrated,OSD-575
+CM-2,D2,alt,14.596,9,46,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),U/L,real-astronaut;synthetic-calibrated,OSD-575
+CM-2,D2,ast,16.3,10,40,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),U/L,real-astronaut;synthetic-calibrated,OSD-575
+CM-2,D2,bun,21.236,7,25,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mg/dL,real-astronaut;synthetic-calibrated,OSD-575
+CM-2,D2,calcium,9.757,8.6,10.3,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mg/dL,real-astronaut;synthetic-calibrated,OSD-575
+CM-2,D2,creatinine,1.25,0.6,1.35,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mg/dL,real-astronaut;synthetic-calibrated,OSD-575
+CM-2,D2,egfr,75.619,60,,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mL/min/1.73m2,real-astronaut;synthetic-calibrated,OSD-575
+CM-2,D2,potassium,4.271,3.5,5.3,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mmol/L,real-astronaut;synthetic-calibrated,OSD-575
+CM-2,D2,sodium,141.29,135,146,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mmol/L,real-astronaut;synthetic-calibrated,OSD-575
+CM-2,D3,vitd,23.077,,,1,1,ready,,,single exam,ng/mL,real-population,NHANES-2011
+CM-2,D4,crp,7.224,,,4,1,ready,,,mean of pre-flight draws (L-180 model + real L-92/L-44/L-3),mg/L,real-astronaut;synthetic-calibrated,OSD-575-EVE-CV
+CM-2,D4,hdl,37,,,1,1,ready,,,single exam,mg/dL,real-population,NHANES-2011
+CM-2,D4,total_chol,247,,,1,1,ready,,,single exam,mg/dL,real-population,NHANES-2011
+CM-2,D6,hsv1_pos,1,,,1,1,ready,,,single exam,1=pos,real-population,NHANES-2011
+CM-2,D6,hsv2_pos,0,,,1,1,ready,,,single exam,1=pos,real-population,NHANES-2011
+CM-2,D7,cortisol_bed,0.155777,,,1,1,ready,,,single exam,norm,real-ground,MMASH
+CM-2,D7,cortisol_wake,0.145431,,,1,1,ready,,,single exam,norm,real-ground,MMASH
+CM-2,D7,melatonin_bed,3.543e-09,,,1,1,ready,,,single exam,norm,real-ground,MMASH
+CM-2,D7,melatonin_wake,8.64e-09,,,1,1,ready,,,single exam,norm,real-ground,MMASH
+CM-2,D10,microbiome_nasal,1.579,,,3,1,ready,,,mean of exam sessions,Shannon,real-astronaut,OSD-572
+CM-2,D10,microbiome_oral,2.861,,,3,1,ready,,,mean of exam sessions,Shannon,real-astronaut,OSD-572
+CM-2,D10,microbiome_skin_arm,1.258,,,3,1,ready,,,mean of exam sessions,Shannon,real-astronaut,OSD-572
+CM-2,D10,microbiome_skin_forehead,0.461,,,3,1,ready,,,mean of exam sessions,Shannon,real-astronaut,OSD-572
+CM-2,E2,,genetic module declined,,,1,1,ready,,,character story,,authored,AUTHORED
+CM-2,F2,grip_strength,80.1,,,2,1,ready,,,mean of exam sessions,kg,real-population;synthetic-calibrated,NHANES-2011
+CM-2,F4,steps,9189,4385.4,15165.2,180,1,ready,8853,107.767,median of 180 days; personal range = p10..p90,steps/day,real-ground;synthetic-calibrated,LIFESNAPS
+CM-2,F5,vo2peak,47.7,,,2,1,ready,,,mean of exam sessions,mL/kg/min,synthetic-calibrated,LIFESNAPS
+CM-2,F7,bmd_total,0.98,,,2,1,ready,,,mean of exam sessions,g/cm2,real-population;synthetic-calibrated,NHANES-2011
+CM-2,F7,body_fat_pct,23.383,,,2,1,ready,,,mean of exam sessions,%,real-population;synthetic-calibrated,NHANES-2011
+CM-2,F7,lean_mass,45.915,,,2,1,ready,,,mean of exam sessions,kg,real-population;synthetic-calibrated,NHANES-2011
+CM-2,G1,near_acuity_logmar,0.05,0.03,0.08,25,1,ready,,0.0004,median of weekly measurements,logMAR,synthetic-calibrated,NORMS
+CM-2,G2,iop,14.63,,,1,1,ready,,,single exam,mmHg,synthetic-calibrated,NORMS
+CM-2,G2,oct_rnfl,97.76,,,1,1,ready,,,single exam,um,synthetic-calibrated,NORMS
+CM-2,H1,sleep_hours,6.37,5.45,7.66,180,1,ready,6.08,-0.0294,median of all nights (actigraphy L-180..L-167 shown separately as rebase14 is the HSP window),h,real-ground;synthetic-calibrated,LIFESNAPS
+CM-2,H1,sleep_hours_reported,8,,,1,1,ready,,,single exam,h,real-population,NHANES-2011
+CM-2,H2,meq,50,,,1,1,ready,,,single exam,16-86,real-ground,MMASH
+CM-2,H3,psqi,4,,,1,1,ready,,,single exam,0-21,real-ground,MMASH
+CM-2,H4,isi,4,,,1,1,ready,,,single exam,0-28,synthetic-calibrated,NORMS
+CM-2,H6,sleep_efficiency,94,90,98,180,1,ready,95.5,-0.4635,median of 180 days; personal range = p10..p90,%,real-ground;synthetic-calibrated,LIFESNAPS
+CM-2,H7,sleep_hours,6.93,,,14,0.078,ready,,,median of the 2-week actigraphy session (L-180..L-167),h,synthetic-calibrated,LIFESNAPS
+CM-2,I1,,MSSQ-short low,,,1,1,ready,,,character story,,authored,AUTHORED
+CM-2,I3,,not yet loaded: sensorimotor battery (no open data),,,0,0,missing,,,source planned in data/catalog.yaml,,,planned
+CM-2,J1,ipip_agreeableness,31,,,1,1,ready,,,single exam,10-50,real-ground,LIFESNAPS
+CM-2,J1,ipip_conscientiousness,41,,,1,1,ready,,,single exam,10-50,real-ground,LIFESNAPS
+CM-2,J1,ipip_extraversion,16,,,1,1,ready,,,single exam,10-50,real-ground,LIFESNAPS
+CM-2,J1,ipip_intellect,28,,,1,1,ready,,,single exam,10-50,real-ground,LIFESNAPS
+CM-2,J1,ipip_stability,37,,,1,1,ready,,,single exam,10-50,real-ground,LIFESNAPS
+CM-2,J2,gad7,1.5,1,3,6,1,ready,,,median of monthly measurements,0-21,synthetic-calibrated,NORMS
+CM-2,J2,phq9,0,0,0.5,6,1,ready,,,median of monthly measurements,0-27,real-population;synthetic-calibrated,NHANES-2011
+CM-2,J2,stai_state,47.5,45,50,6,1,ready,,,median of monthly measurements,20-80,real-ground,LIFESNAPS
+CM-2,J2,ucla3,3,3,4,6,1,ready,,,median of monthly measurements,3-9,synthetic-calibrated,NORMS
+CM-2,J2,who5,83,74.5,86,6,1,ready,,,median of monthly measurements,0-100,synthetic-calibrated,NORMS
+CM-2,J3,pss,8,6,9,6,1,ready,,,median of monthly measurements,0-40,synthetic-calibrated,NORMS
+CM-2,J3,stress_score,75,32,98.2,180,1,ready,75,0.3539,median of 180 days; personal range = p10..p90,0-100,real-ground;synthetic-calibrated,LIFESNAPS
+CM-2,J4,,"exercise, sleep hygiene",,,1,1,ready,,,character story,,authored,AUTHORED
+CM-2,K1,pvt_rt,273,266,288.2,27,1,ready,,,L-90 cognition session (not the L-120 familiarisation run),ms,synthetic-calibrated,NORMS
+CM-2,L1,,omnivore; dislikes fish,,,1,1,ready,,,character story,,authored,AUTHORED
+CM-2,M2,,standard notifications; English,,,1,1,ready,,,character story,,authored,AUTHORED
+CM-2,M3,,mood data shared with CMO,,,1,1,ready,,,character story,,authored,AUTHORED
+CM-2,CHECKIN,fatigue,3,2,5,151,0.839,ready,5,0.3592,median of 180 days; personal range = p10..p90,1-7,real-ground;synthetic-calibrated,LIFESNAPS;NORMS
+CM-2,CHECKIN,kss,3,2,5,151,0.839,ready,3,0.0202,median of 180 days; personal range = p10..p90,1-9,synthetic-calibrated,NORMS
+CM-2,CHECKIN,mood_valence,4,1,6,151,0.839,ready,2,-0.443,median of 180 days; personal range = p10..p90,1-7,real-ground;synthetic-calibrated,LIFESNAPS;NORMS
+CM-2,CHECKIN,team_cohesion,4,3,5,151,0.839,ready,4,0.0047,median of 180 days; personal range = p10..p90,1-5,synthetic-calibrated,NORMS
+CM-2,CHECKIN,workload,4,3,6,151,0.839,ready,3.5,-0.0497,median of 180 days; personal range = p10..p90,0-10,synthetic-calibrated,NORMS

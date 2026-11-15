@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+# Node
+node_modules/
+frontend/dist/
+frontend/.vite/
+dist/
+# OS
+.DS_Store
+# Data pipeline: raw downloads are re-fetched by `python -m pipeline fetch` (see data/catalog.yaml)
+data/raw/
+pipeline/.venv/
+# Large re-downloadable OSD-410 expression matrix (source URL in data/catalog.yaml)
+data/osd-410/GSE63952_normalized_data_with_controls.txt.gz

@@ -1,0 +1,4 @@
+day,hr_rest,hrv_rmssd,sleep_hours,sleep_efficiency,steps,spo2,skin_temp_dev,body_mass,pvt_rt,mood_valence,fatigue,kss
+-180,58,62,7.1,92,9400,97.2,-0.2,72.4,265,5,3,3
+-179,57,65,7.4,94,11020,97.0,0.1,,,6,2,3
+-178,60,58,6.6,89,8300,96.8,0.3,,,5,3,4

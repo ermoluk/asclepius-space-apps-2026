@@ -1,0 +1,1125 @@
+# Hand-encoded rule subset from knowledge-base/05-rules.md (IDs, CFs, levels, actions, refs as written there).
+# Schema: {id, system, label, when, then:{hypothesis|escalation, cf, level}, expected?, modifiers?:{P-xx: bonus},
+#          actions:[A-..], confirm_with:[fact], refs:[key]}
+# when  = {all:[...]} | {any:[...]} | {not: ...} | {fact, op, value}; ops: eq ne gt gte lt lte between in true.
+# Missing facts are unknown (tri-state). Closed-world facts (absent = false): sym_*, mod_*, hyp_*, confusion and
+# habitat alarms (see engine.CLOSED_WORLD_*). Escalations ("esc" in 05-rules) carry cf 1.0 (used only to rank
+# pending checks). Modifier rules R-EYE-03, R-VES-02, R-CV-14 are `modifiers:` on R-EYE-01, R-VES-01, R-CV-13.
+# R-GU-04P (controller addition) encodes "RED with P-02" from R-GU-04; R-GU-04 excludes P-02 so the same
+# evidence is not counted twice (CF stays 0.7 as in 05-rules).
+# All CFs are team heuristics [T].
+
+# ---------------------------------------------------------------- SLEEP
+- id: R-SLP-01
+  system: SLEEP
+  label: Sleep ≤ 6 h for 3+ nights in a row
+  when: {fact: days_sleep_le6, op: gte, value: 3}
+  then: {hypothesis: X01, cf: 0.8, level: YELLOW}
+  actions: [A-SLP-01, A-SLP-02, A-SLP-03, A-SLP-05]
+  confirm_with: []
+  refs: [RISK-SLEEP, TB041, BARGER2014, JONES2022]
+
+- id: R-SLP-02
+  system: SLEEP
+  label: Poor sleeper (P-10) and sleep < 6 h for 2 nights
+  when:
+    all:
+      - {fact: mod_P-10, op: "true"}
+      - {fact: days_sleep_lt6, op: gte, value: 2}
+  then: {hypothesis: X01, cf: 0.7, level: YELLOW}
+  actions: [A-SLP-01, A-SLP-02]
+  confirm_with: []
+  refs: [PSQI, ISI]
+
+- id: R-SLP-04
+  system: SLEEP
+  label: Sleepiness KSS ≥ 7
+  when: {fact: kss, op: gte, value: 7}
+  then: {hypothesis: X02, cf: 0.6, level: ORANGE}
+  actions: [A-GEN-08, A-SLP-04]
+  confirm_with: [pvt_rt]
+  refs: [KSS]
+
+- id: R-SLP-05
+  system: SLEEP
+  label: Sleep deficit and reaction time > 15% slower than baseline
+  when:
+    all:
+      - {fact: hyp_X01, op: "true"}
+      - {fact: delta_pct_pvt_rt, op: gt, value: 0.15}
+  then: {hypothesis: X02, cf: 0.75, level: ORANGE}
+  actions: [A-GEN-08, A-SLP-04, A-GEN-02]
+  confirm_with: []
+  refs: [PVT-BASNER, RST-ISS]
+
+- id: R-SLP-07
+  system: SLEEP
+  label: ≥ 16 h awake, > 16 h work or > 6 work days in a row
+  when:
+    any:
+      - {fact: awake_hours, op: gte, value: 16}
+      - {fact: work_hours, op: gt, value: 16}
+      - {fact: work_days_in_row, op: gt, value: 6}
+  then: {hypothesis: X02, cf: 0.5, level: YELLOW}
+  actions: [A-SLP-06]
+  confirm_with: []
+  refs: [RISK-SLEEP]
+
+- id: R-SLP-08
+  system: SLEEP
+  label: Workload ≥ 8 on 3 of 7 days and sleep < 6 h
+  when:
+    all:
+      - {fact: count7_workload_ge8, op: gte, value: 3}
+      - {fact: sleep_hours, op: lt, value: 6}
+  then: {hypothesis: X02, cf: 0.5, level: YELLOW}
+  actions: [A-SLP-06, A-BEH-05]
+  confirm_with: []
+  refs: [TB-COGWL, BEDFORD]
+
+- id: R-SLP-09
+  system: SLEEP
+  label: Poor sleep in the first days of flight (expected)
+  expected: true
+  when:
+    all:
+      - {fact: adaptation_window, op: "true"}
+      - any:
+          - {fact: sleep_quality, op: lte, value: 2}
+          - {fact: sleep_hours, op: lt, value: 6}
+  then: {hypothesis: C062, cf: 0.7, level: GREEN}
+  actions: [A-SLP-05, A-SLP-02]
+  confirm_with: []
+  refs: [IMM-INC, BARGER2014]
+
+- id: R-SLP-10
+  system: SLEEP
+  label: Short or poor sleep on ≥ 7 of 14 days after adaptation
+  when:
+    all:
+      - {not: {fact: adaptation_window, op: "true"}}
+      - {fact: count14_poor_sleep, op: gte, value: 7}
+  then: {hypothesis: C064, cf: 0.7, level: YELLOW}
+  actions: [A-SLP-01, A-SLP-02, A-SLP-03, A-SLP-05, A-SLP-07]
+  confirm_with: []
+  refs: [RISK-SLEEP, ISI]
+
+# ---------------------------------------------------------------- BEHAV
+- id: R-BEH-01
+  system: BEHAV
+  label: Low mood (≤ 2/7) on 5 of the last 7 evenings
+  when: {fact: count7_mood_le2, op: gte, value: 5}
+  then: {hypothesis: C038, cf: 0.6, level: ORANGE}
+  actions: [A-BEH-01, A-BEH-03, A-BEH-10]
+  confirm_with: [phq9]
+  refs: [RISK-BMED, APPLE-SOM]
+
+- id: R-BEH-02
+  system: BEHAV
+  label: PHQ-9 ≥ 10
+  when: {fact: phq9, op: gte, value: 10}
+  then: {hypothesis: C038, cf: 0.75, level: ORANGE}
+  actions: [A-BEH-01, A-BEH-03]
+  confirm_with: []
+  refs: [PHQ9, TB016]
+
+- id: R-BEH-04
+  system: BEHAV
+  label: GAD-7 ≥ 10
+  when: {fact: gad7, op: gte, value: 10}
+  then: {hypothesis: C018, cf: 0.75, level: ORANGE}
+  actions: [A-BEH-01, A-BEH-09]
+  confirm_with: []
+  refs: [GAD7, TB016]
+
+- id: R-BEH-06
+  system: BEHAV
+  label: Team cohesion ≤ 2 on 3 of 7 days
+  when: {fact: count7_cohesion_le2, op: gte, value: 3}
+  then: {hypothesis: X12, cf: 0.6, level: YELLOW}
+  actions: [A-BEH-07]
+  confirm_with: []
+  refs: [RISK-TEAM, STDMEAS]
+
+- id: R-BEH-07
+  system: BEHAV
+  label: Feeling lonely or homesick on 3 of 7 days, or UCLA-3 ≥ 6
+  when:
+    any:
+      - {fact: count7_label_lonely, op: gte, value: 3}
+      - {fact: count7_label_homesick, op: gte, value: 3}
+      - {fact: ucla3, op: gte, value: 6}
+  then: {hypothesis: X13, cf: 0.6, level: YELLOW}
+  actions: [A-BEH-02, A-BEH-06]
+  confirm_with: []
+  refs: [UCLA3, TB016]
+
+- id: R-BEH-09
+  system: BEHAV
+  label: Self-harm thoughts, hallucinations or feeling unsafe
+  when:
+    any:
+      - {fact: phq9_item9, op: gt, value: 0}
+      - {fact: sym_self_harm_thoughts, op: "true"}
+      - {fact: sym_hallucinations, op: "true"}
+      - {fact: sym_feeling_unsafe_or_unable_to_cope, op: "true"}
+  then: {hypothesis: C024, cf: 1.0, level: RED}
+  actions: [A-BEH-08]
+  confirm_with: []
+  refs: [PHQ9, TB016, IMM-MYERS]
+
+- id: R-BEH-10
+  system: BEHAV
+  label: Sleep deficit and low mood - fix sleep first
+  when:
+    all:
+      - {fact: hyp_X01, op: "true"}
+      - {fact: mood_valence, op: lte, value: 2}
+  then: {hypothesis: C038, cf: 0.3, level: YELLOW}
+  actions: [A-SLP-01, A-BEH-03]
+  confirm_with: []
+  refs: [TB016]
+
+- id: R-BEH-12
+  system: BEHAV
+  label: WHO-5 well-being ≤ 28
+  when: {fact: who5, op: lte, value: 28}
+  then: {hypothesis: C038, cf: 0.6, level: ORANGE}
+  actions: [A-BEH-10]
+  confirm_with: [phq9]
+  refs: [WHO5]
+
+# ---------------------------------------------------------------- NEURO
+- id: R-NEU-01
+  system: NEURO
+  label: Headache with cabin CO₂ > 3.0 mmHg (1 h)
+  when:
+    all:
+      - {fact: sym_headache, op: "true"}
+      - {fact: co2_1h, op: gt, value: 3.0}
+  then: {hypothesis: C051, cf: 0.75, level: YELLOW}
+  actions: [A-ENV-01, A-GEN-05]
+  confirm_with: []
+  refs: [TB004, STD3001-V2]
+
+- id: R-NEU-02
+  system: NEURO
+  label: Headache with cabin CO₂ > 2.5 mmHg (7-day average)
+  when:
+    all:
+      - {fact: sym_headache, op: "true"}
+      - {fact: co2_7d, op: gt, value: 2.5}
+  then: {hypothesis: C051, cf: 0.5, level: YELLOW}
+  actions: [A-ENV-01]
+  confirm_with: []
+  refs: [TB004]
+
+- id: R-NEU-03
+  system: NEURO
+  label: Headache in the first days of flight (expected)
+  expected: true
+  when:
+    all:
+      - {fact: sym_headache, op: "true"}
+      - {fact: adaptation_window, op: "true"}
+      - not:
+          any:
+            - {fact: sym_fever_chills, op: "true"}
+            - {fact: temp, op: gte, value: 38.1}
+  then: {hypothesis: C053, cf: 0.7, level: GREEN}
+  actions: [A-GEN-04]
+  confirm_with: []
+  refs: [HEADACHE2024, IMM-INC]
+
+- id: R-NEU-04
+  system: NEURO
+  label: Headache after adaptation, CO₂ normal
+  when:
+    all:
+      - {fact: sym_headache, op: "true"}
+      - {not: {fact: adaptation_window, op: "true"}}
+      - not:
+          any:
+            - {fact: co2_1h, op: gt, value: 3.0}
+            - {fact: co2_7d, op: gt, value: 2.5}
+  then: {hypothesis: C052, cf: 0.5, level: YELLOW}
+  actions: [A-NEU-04, A-CV-05]
+  confirm_with: []
+  refs: [SNNOOP10, IMM-MYERS]
+
+- id: R-NEU-05
+  system: NEURO
+  label: Headache with a red flag (SNNOOP10)
+  when:
+    all:
+      - {fact: sym_headache, op: "true"}
+      - any:
+          - {fact: sym_headache_red_flag, op: "true"}
+          - {fact: sym_head_impact, op: "true"}
+          - {fact: sym_weakness_one_side, op: "true"}
+          - {fact: sym_facial_droop, op: "true"}
+          - {fact: sym_speech_difficulty, op: "true"}
+  then: {escalation: "Possible secondary headache - CMO now", cf: 1.0, level: RED}
+  actions: [A-NEU-04, A-NEU-01, A-GEN-03]
+  confirm_with: []
+  refs: [SNNOOP10]
+
+- id: R-NEU-07
+  system: NEURO
+  label: One-sided weakness, facial droop, speech difficulty or positive BE-FAST
+  when:
+    any:
+      - {fact: befast_positive, op: "true"}
+      - {fact: sym_weakness_one_side, op: "true"}
+      - {fact: sym_facial_droop, op: "true"}
+      - {fact: sym_speech_difficulty, op: "true"}
+  then: {hypothesis: C090, cf: 0.85, level: RED}
+  actions: [A-NEU-01, A-GEN-10, A-GEN-03]
+  confirm_with: [befast_positive]
+  refs: [BEFAST]
+
+- id: R-NEU-08
+  system: NEURO
+  label: Seizure witnessed
+  when: {fact: sym_seizure_witnessed, op: "true"}
+  then: {hypothesis: C079, cf: 0.95, level: RED}
+  actions: [A-NEU-03, A-GEN-10]
+  confirm_with: []
+  refs: [IMM-MYERS]
+
+- id: R-NEU-12
+  system: NEURO
+  label: New confusion
+  when: {fact: confusion, op: "true"}
+  then: {escalation: "New confusion - check glucose and SpO₂", cf: 1.0, level: RED}
+  actions: [A-GEN-01, A-NEU-02, A-GEN-02]
+  confirm_with: [glucose, spo2]
+  refs: [NEWS2]
+
+- id: R-NEU-13
+  system: NEURO
+  label: Headache with BP ≥ 180/120
+  when:
+    all:
+      - {fact: sym_headache, op: "true"}
+      - any:
+          - {fact: bp_sys, op: gte, value: 180}
+          - {fact: bp_dia, op: gte, value: 120}
+  then: {hypothesis: C059, cf: 0.8, level: RED}
+  actions: [A-CV-05, A-GEN-03]
+  confirm_with: []
+  refs: [AHA-BP]
+
+# ---------------------------------------------------------------- EYE
+- id: R-EYE-01
+  system: EYE
+  label: Headache and blurred near vision after day 30
+  when:
+    all:
+      - {fact: sym_headache, op: "true"}
+      - {fact: sym_blurred_near_vision, op: "true"}
+      - {fact: mission_day, op: gt, value: 30}
+  then: {hypothesis: C098, cf: 0.6, level: ORANGE}
+  modifiers: {P-03: 0.10}  # R-EYE-03
+  actions: [A-EYE-01, A-EYE-02, A-GEN-06]
+  confirm_with: [near_acuity_decline]
+  refs: [RISK-SANS, LEE2020, ZWART2016]
+
+- id: R-EYE-02
+  system: EYE
+  label: Near-vision test ≥ 1 line worse (either eye)
+  when: {fact: near_acuity_decline, op: gte, value: 1}
+  then: {hypothesis: C098, cf: 0.5, level: ORANGE}
+  actions: [A-EYE-01, A-EYE-02]
+  confirm_with: []
+  refs: [RISK-SANS]
+
+- id: R-EYE-05
+  system: EYE
+  label: Chemical in the eye
+  when: {fact: sym_eye_chemical_exposure, op: "true"}
+  then: {hypothesis: C043, cf: 0.95, level: RED}
+  actions: [A-EYE-03, A-GEN-02]
+  confirm_with: []
+  refs: [IMM-MYERS]
+
+- id: R-EYE-09
+  system: EYE
+  label: Flashes, floaters or a curtain over vision
+  when: {fact: sym_flashes_floaters_curtain, op: "true"}
+  then: {hypothesis: C078, cf: 0.7, level: RED}
+  actions: [A-GEN-03]
+  confirm_with: []
+  refs: [IMM-MYERS]
+
+- id: R-EYE-12
+  system: EYE
+  label: Light flashes with eyes closed, no other eye symptom
+  expected: true
+  when:
+    all:
+      - {fact: sym_light_flashes_closed_eyes, op: "true"}
+      - not:
+          any:
+            - {fact: sym_blurred_near_vision, op: "true"}
+            - {fact: sym_flashes_floaters_curtain, op: "true"}
+            - {fact: sym_vision_loss_sudden, op: "true"}
+            - {fact: sym_eye_pain, op: "true"}
+            - {fact: sym_red_eye, op: "true"}
+            - {fact: sym_eye_chemical_exposure, op: "true"}
+  then: {escalation: "Radiation light flashes - harmless", cf: 1.0, level: GREEN}
+  actions: []
+  confirm_with: []
+  refs: [HAZ-RAD]
+
+# ---------------------------------------------------------------- ENT
+- id: R-ENT-01
+  system: ENT
+  label: Nasal congestion without fever (expected in microgravity)
+  expected: true
+  when:
+    all:
+      - {fact: sym_nasal_congestion, op: "true"}
+      - not:
+          any:
+            - {fact: sym_fever_chills, op: "true"}
+            - {fact: temp, op: gte, value: 38.1}
+  then: {hypothesis: C069, cf: 0.7, level: GREEN}
+  actions: [A-ENT-01]
+  confirm_with: []
+  refs: [IMM-INC]
+
+- id: R-ENT-03
+  system: ENT
+  label: Short nosebleed (< 20 min) in the first 2 weeks (expected)
+  expected: true
+  when:
+    all:
+      - {fact: sym_nosebleed, op: "true"}
+      - {fact: mission_day, op: lte, value: 14}
+      - {fact: nosebleed_minutes, op: lt, value: 20}
+  then: {hypothesis: C072, cf: 0.7, level: GREEN}
+  actions: [A-ENT-03]
+  confirm_with: []
+  refs: [IMM-INC]
+
+- id: R-ENT-05
+  system: ENT
+  label: Ear pain or fullness after a pressure change
+  when:
+    any:
+      - {fact: sym_ear_fullness_after_pressure_change, op: "true"}
+      - all:
+          - {fact: sym_ear_pain, op: "true"}
+          - {fact: depress_alarm, op: "true"}
+  then: {hypothesis: C023, cf: 0.7, level: YELLOW}
+  actions: [A-ENT-02]
+  confirm_with: []
+  refs: [IMM-MYERS]
+
+- id: R-ENT-09
+  system: ENT
+  label: Sore throat with Centor score ≥ 3
+  when:
+    all:
+      - {fact: sym_sore_throat, op: "true"}
+      - {fact: centor, op: gte, value: 3}
+  then: {hypothesis: C076, cf: 0.6, level: YELLOW}
+  actions: [A-GEN-04, A-GEN-11]
+  confirm_with: []
+  refs: [CENTOR]
+
+# ---------------------------------------------------------------- CV
+- id: R-CV-01
+  system: CV
+  label: NEWS2 ≥ 7 or one vital sign in the red band
+  when:
+    any:
+      - {fact: news2_total, op: gte, value: 7}
+      - {fact: news2_max, op: eq, value: 3}
+  then: {escalation: "NEWS2 critical", cf: 1.0, level: RED}
+  actions: [A-GEN-01, A-GEN-02, A-GEN-03]
+  confirm_with: []
+  refs: [NEWS2]
+
+- id: R-CV-02
+  system: CV
+  label: NEWS2 5-6
+  when: {fact: news2_total, op: between, value: [5, 6]}
+  then: {escalation: "NEWS2 5-6", cf: 1.0, level: ORANGE}
+  actions: [A-GEN-01, A-GEN-02]
+  confirm_with: []
+  refs: [NEWS2]
+
+- id: R-CV-03
+  system: CV
+  label: Blood pressure ≥ 180/120
+  when:
+    any:
+      - {fact: bp_sys, op: gte, value: 180}
+      - {fact: bp_dia, op: gte, value: 120}
+  then: {hypothesis: C059, cf: 0.8, level: RED}
+  actions: [A-CV-05, A-GEN-03]
+  confirm_with: []
+  refs: [AHA-BP]
+
+- id: R-CV-04
+  system: CV
+  label: Blood pressure ≥ 140/90 on 2 days in a row
+  when: {fact: days_bp_ge140_90, op: gte, value: 2}
+  then: {hypothesis: C059, cf: 0.6, level: ORANGE}
+  actions: [A-CV-05, A-GEN-06]
+  confirm_with: []
+  refs: [AHA-BP]
+
+- id: R-CV-06
+  system: CV
+  label: Systolic BP ≤ 90 with dizziness or at landing
+  when:
+    all:
+      - {fact: bp_sys, op: lte, value: 90}
+      - any:
+          - {fact: sym_dizziness, op: "true"}
+          - {fact: phase, op: in, value: [landing, post-landing]}
+  then: {hypothesis: X03, cf: 0.7, level: ORANGE}
+  actions: [A-CV-01, A-CV-02, A-CV-03]
+  confirm_with: []
+  refs: [CV-ER, MECK2001]
+
+- id: R-CV-08
+  system: CV
+  label: Palpitations or irregular pulse on the cuff
+  when:
+    any:
+      - {fact: sym_palpitations, op: "true"}
+      - {fact: pulse_irregular, op: "true"}
+  then: {hypothesis: C020, cf: 0.5, level: ORANGE}
+  actions: [A-CV-04]
+  confirm_with: [ecg_rhythm]
+  refs: [CV-ER]
+
+- id: R-CV-09
+  system: CV
+  label: Irregular rhythm on the ECG strip
+  when: {fact: ecg_rhythm, op: eq, value: irregular}
+  then: {hypothesis: C020, cf: 0.85, level: RED}
+  actions: [A-GEN-02, A-GEN-03]
+  confirm_with: []
+  refs: [CV-ER, IMM-INC]
+
+- id: R-CV-10
+  system: CV
+  label: Chest pain (pressure-like or on exertion)
+  when: {fact: sym_chest_pain, op: "true"}
+  then: {hypothesis: C015, cf: 0.7, level: RED}
+  actions: [A-GEN-07, A-CV-04, A-GEN-10]
+  confirm_with: [ecg_rhythm]
+  refs: [HEART, IMM-MYERS]
+
+- id: R-CV-13
+  system: CV
+  label: One-sided neck pain/swelling (or headache + one-sided facial swelling) after day 30
+  when:
+    all:
+      - any:
+          - {fact: sym_neck_pain_or_swelling_one_side, op: "true"}
+          - all:
+              - {fact: sym_headache, op: "true"}
+              - {fact: sym_facial_swelling_one_side, op: "true"}
+      - {fact: mission_day, op: gt, value: 30}
+  then: {hypothesis: X04, cf: 0.6, level: RED}
+  modifiers: {P-17: 0.10}  # R-CV-14
+  actions: [A-CV-06, A-GEN-03]
+  confirm_with: []
+  refs: [MARSHALL-GOEBEL2019, CV-ER]
+
+# ---------------------------------------------------------------- RESP
+- id: R-RES-01
+  system: RESP
+  label: SpO₂ ≤ 91%
+  when: {fact: spo2, op: lte, value: 91}
+  then: {escalation: "Low oxygen (SpO₂ ≤ 91%)", cf: 1.0, level: RED}
+  actions: [A-RESP-01, A-RESP-02, A-GEN-02]
+  confirm_with: []
+  refs: [NEWS2]
+
+- id: R-RES-02
+  system: RESP
+  label: SpO₂ 92-93%
+  when:
+    all:
+      - {fact: spo2, op: gt, value: 91}
+      - {fact: spo2, op: lt, value: 94}
+  then: {escalation: "SpO₂ 92-93%", cf: 1.0, level: ORANGE}
+  actions: [A-GEN-01, A-RESP-02]
+  confirm_with: []
+  refs: [NEWS2]
+
+- id: R-RES-03
+  system: RESP
+  label: Cabin pIO₂ < 127 mmHg or altitude > 8,300 ft
+  when:
+    any:
+      - {fact: pio2, op: lt, value: 127}
+      - {fact: cabin_alt, op: gt, value: 8300}
+  then: {hypothesis: C014, cf: 0.6, level: ORANGE}
+  actions: [A-RESP-02]
+  confirm_with: [spo2]
+  refs: [STD3001-V2, RISK-HYPOX]
+
+- id: R-RES-05
+  system: RESP
+  label: Cough or congestion with temperature ≥ 38.1 °C
+  when:
+    all:
+      - any:
+          - {fact: sym_cough, op: "true"}
+          - {fact: sym_nasal_congestion, op: "true"}
+      - {fact: temp, op: gte, value: 38.1}
+  then: {hypothesis: C077, cf: 0.6, level: ORANGE}
+  actions: [A-GEN-11, A-GEN-12]
+  confirm_with: [spo2, resp_rate]
+  refs: [NEWS2, RISK-HMI]
+
+- id: R-RES-06
+  system: RESP
+  label: Cough with SpO₂ ≤ 93% or breathing rate ≥ 21/min
+  when:
+    all:
+      - {fact: sym_cough, op: "true"}
+      - any:
+          - {fact: spo2, op: lte, value: 93}
+          - {fact: resp_rate, op: gte, value: 21}
+  then: {hypothesis: C077, cf: 0.7, level: RED}
+  actions: [A-RESP-01, A-GEN-03]
+  confirm_with: [temp]
+  refs: [NEWS2]
+
+# ---------------------------------------------------------------- VEST
+- id: R-VES-01
+  system: VEST
+  label: Nausea in the first 3 days or ≤ 72 h after a gravity transition
+  when:
+    all:
+      - {fact: sym_nausea, op: "true"}
+      - {fact: adaptation_window, op: "true"}
+  then: {hypothesis: C089, cf: 0.8, level: YELLOW}
+  modifiers: {P-01: 0.15}  # R-VES-02
+  actions: [A-GI-03, A-GEN-04]
+  confirm_with: []
+  refs: [SMS-SHUTTLE, RISK-SMV, MSSQ]
+
+# ---------------------------------------------------------------- GI
+- id: R-GI-01
+  system: GI
+  label: Vomiting for more than 24 h
+  when:
+    all:
+      - {fact: sym_vomiting, op: "true"}
+      - {fact: vomiting_hours, op: gt, value: 24}
+  then: {hypothesis: X08, cf: 0.6, level: ORANGE}
+  actions: [A-GI-01, A-GEN-02]
+  confirm_with: [fluid_intake]
+  refs: [RISK-SMV, NUTR-ER]
+
+- id: R-GI-02
+  system: GI
+  label: Vomiting and diarrhea
+  when:
+    all:
+      - {fact: sym_vomiting, op: "true"}
+      - {fact: sym_diarrhea, op: "true"}
+  then: {hypothesis: C049, cf: 0.7, level: ORANGE}
+  actions: [A-GI-01, A-GEN-11, A-GEN-12]
+  confirm_with: [temp]
+  refs: [RISK-HMI]
+
+- id: R-GI-05
+  system: GI
+  label: No stool for 3+ days in the first 2 weeks, no pain or vomiting (expected)
+  expected: true
+  when:
+    all:
+      - {fact: constipation_days, op: gte, value: 3}
+      - {fact: mission_day, op: lte, value: 14}
+      - not:
+          any:
+            - {fact: sym_abdominal_pain, op: "true"}
+            - {fact: sym_vomiting, op: "true"}
+  then: {hypothesis: C029, cf: 0.7, level: GREEN}
+  actions: [A-GI-02]
+  confirm_with: []
+  refs: [IMM-INC]
+
+- id: R-GI-07
+  system: GI
+  label: Right-lower abdominal pain with nausea or loss of appetite
+  when:
+    all:
+      - {fact: sym_abdominal_pain, op: "true"}
+      - {fact: abdominal_pain_location, op: in, value: [RLQ, migrating_to_RLQ]}
+      - any:
+          - {fact: sym_nausea, op: "true"}
+          - {fact: sym_loss_of_appetite, op: "true"}
+  then: {hypothesis: C019, cf: 0.6, level: RED}
+  actions: [A-GI-05, A-GI-04, A-GEN-03]
+  confirm_with: [temp]
+  refs: [ALVARADO]
+
+# ---------------------------------------------------------------- GU
+- id: R-GU-01
+  system: GU
+  label: Painful and frequent urination
+  when:
+    all:
+      - {fact: sym_dysuria, op: "true"}
+      - {fact: sym_urinary_frequency, op: "true"}
+  then: {hypothesis: C096, cf: 0.7, level: ORANGE}
+  actions: [A-GU-01, A-GU-02, A-GEN-02]
+  confirm_with: [urine_nitrite_le, temp]
+  refs: [IMM-INC]
+
+- id: R-GU-04
+  system: GU
+  label: Colicky flank pain
+  when:
+    all:
+      - {fact: sym_flank_pain, op: "true"}
+      - {not: {fact: mod_P-02, op: "true"}}  # with P-02 see R-GU-04P (same evidence, higher level)
+  then: {hypothesis: C070, cf: 0.7, level: ORANGE}
+  actions: [A-GU-01, A-GU-02, A-GEN-02]
+  confirm_with: [urine_blood]
+  refs: [TB030, STONE]
+
+- id: R-GU-04P
+  system: GU
+  label: Colicky flank pain with kidney-stone history (P-02)
+  when:
+    all:
+      - {fact: sym_flank_pain, op: "true"}
+      - {fact: mod_P-02, op: "true"}
+  then: {hypothesis: C070, cf: 0.7, level: RED}
+  actions: [A-GU-01, A-GU-02, A-GEN-02, A-GEN-03]
+  confirm_with: [urine_blood]
+  refs: [TB030, IMM-INC]
+
+- id: R-GU-11
+  system: GU
+  label: Fluid intake < 2.5 L (3.0 L with P-02) on 2 days
+  when:
+    any:
+      - {fact: days_fluid_lt25, op: gte, value: 2}
+      - all:
+          - {fact: mod_P-02, op: "true"}
+          - {fact: days_fluid_lt30, op: gte, value: 2}
+  then: {hypothesis: X08, cf: 0.5, level: YELLOW}
+  actions: [A-GU-02]
+  confirm_with: []
+  refs: [STD3001-V2]
+
+# ---------------------------------------------------------------- MSK
+- id: R-MSK-01
+  system: MSK
+  label: Back pain in the first 2 weeks, no red flags (expected)
+  expected: true
+  when:
+    all:
+      - {fact: sym_back_pain, op: "true"}
+      - {fact: mission_day, op: lte, value: 14}
+      - not:
+          any:
+            - {fact: sym_tingling_numbness, op: "true"}
+            - {fact: sym_weakness_one_side, op: "true"}
+            - {fact: sym_urinary_retention, op: "true"}
+            - {fact: sym_urinary_incontinence, op: "true"}
+            - {fact: sym_fever_chills, op: "true"}
+            - {fact: temp, op: gte, value: 38.1}
+  then: {hypothesis: C022, cf: 0.7, level: GREEN}
+  actions: [A-MSK-04]
+  confirm_with: []
+  refs: [KERSTMAN2012, IMM-INC]
+
+- id: R-MSK-02
+  system: MSK
+  label: Back pain with a red flag (fever, neurological change, bladder or bowel change, high load)
+  when:
+    all:
+      - {fact: sym_back_pain, op: "true"}
+      - any:
+          - {fact: sym_fever_chills, op: "true"}
+          - {fact: temp, op: gte, value: 38.1}
+          - {fact: sym_tingling_numbness, op: "true"}
+          - {fact: sym_weakness_one_side, op: "true"}
+          - {fact: sym_urinary_retention, op: "true"}
+          - {fact: sym_urinary_incontinence, op: "true"}
+          - {fact: phase, op: eq, value: landing}
+  then: {escalation: "Back pain with red flag", cf: 1.0, level: RED}
+  actions: [A-MSK-05, A-GEN-03]
+  confirm_with: []
+  refs: [NICE-NG59]
+
+- id: R-MSK-22
+  system: MSK
+  label: Head impact with GCS < 15, loss of consciousness, repeated vomiting, amnesia or dangerous mechanism
+  when:
+    all:
+      - {fact: sym_head_impact, op: "true"}
+      - any:
+          - {fact: gcs, op: lt, value: 15}
+          - {fact: sym_loss_of_consciousness, op: "true"}
+          - {fact: vomiting_episodes, op: gte, value: 2}
+          - {fact: amnesia_minutes, op: gt, value: 30}
+          - {fact: dangerous_mechanism, op: "true"}
+  then: {hypothesis: C050, cf: 0.8, level: RED}
+  actions: [A-NEU-02, A-GEN-10]
+  confirm_with: [gcs]
+  refs: [CCHR, GCS]
+
+- id: R-MSK-26
+  system: MSK
+  label: Exercise < 90 min on 3 of the last 7 days, after day 14
+  # Long-flight rule (ISS-style daily exercise). Short flights such as a 10-day lunar flyby have brief flywheel
+  # sessions and no measurable deconditioning in the first two weeks, so the rule waits until day 15.
+  when:
+    all:
+      - {fact: count7_exercise_lt90, op: gte, value: 3}
+      - {fact: mission_day, op: gt, value: 14}
+  then: {hypothesis: X10, cf: 0.5, level: YELLOW}
+  actions: [A-MSK-06]
+  confirm_with: []
+  refs: [RISK-FIT]
+
+# ---------------------------------------------------------------- SKIN
+- id: R-SKN-01
+  system: SKIN
+  label: Rash without fever
+  when:
+    all:
+      - {fact: sym_rash, op: "true"}
+      - not:
+          any:
+            - {fact: sym_fever_chills, op: "true"}
+            - {fact: temp, op: gte, value: 38.1}
+  then: {hypothesis: C086, cf: 0.6, level: YELLOW}
+  actions: [A-GEN-09, A-SKIN-05, A-IMM-01]
+  confirm_with: []
+  refs: [CRUCIAN2016, ISS-EVENTS]
+
+- id: R-SKN-02
+  system: SKIN
+  label: Painful band-like rash on one side, or rash with fever
+  when:
+    any:
+      - {fact: sym_painful_band_rash_one_side, op: "true"}
+      - all:
+          - {fact: sym_rash, op: "true"}
+          - {fact: temp, op: gte, value: 38.1}
+  then: {hypothesis: C056, cf: 0.75, level: ORANGE}
+  modifiers: {P-04: 0.10}
+  actions: [A-IMM-03, A-GEN-02, A-GEN-09]
+  confirm_with: [temp]
+  refs: [RISK-IMMUNE]
+
+- id: R-SKN-04
+  system: SKIN
+  label: Warm, spreading skin redness
+  when: {fact: sym_skin_redness_warm_spreading, op: "true"}
+  then: {hypothesis: C084, cf: 0.7, level: ORANGE}
+  actions: [A-SKIN-03, A-GEN-02]
+  confirm_with: [temp]
+  refs: [IMM-INC]
+
+# ---------------------------------------------------------------- IMMUNE
+- id: R-IMM-01
+  system: IMMUNE
+  label: Hives or itching without airway, breathing or BP signs
+  when:
+    all:
+      - any:
+          - {fact: sym_hives, op: "true"}
+          - {fact: sym_itching, op: "true"}
+      - not:
+          any:
+            - {fact: sym_throat_tightness, op: "true"}
+            - {fact: sym_shortness_of_breath, op: "true"}
+            - {fact: bp_sys, op: lt, value: 90}
+  then: {hypothesis: C013, cf: 0.7, level: YELLOW}
+  actions: [A-IMM-01, A-GEN-05]
+  confirm_with: []
+  refs: [ANAPH]
+
+- id: R-IMM-02
+  system: IMMUNE
+  label: Skin or lip signs with throat tightness, breathlessness or BP < 90
+  when:
+    all:
+      - any:
+          - {fact: sym_hives, op: "true"}
+          - {fact: sym_itching, op: "true"}
+          - {fact: sym_rash, op: "true"}
+          - {fact: sym_lip_tongue_swelling, op: "true"}
+      - any:
+          - {fact: sym_throat_tightness, op: "true"}
+          - {fact: sym_shortness_of_breath, op: "true"}
+          - {fact: bp_sys, op: lt, value: 90}
+  then: {hypothesis: C016, cf: 0.9, level: RED}
+  modifiers: {P-08: 0.05}
+  actions: [A-IMM-02, A-GEN-10]
+  confirm_with: [bp_sys, spo2]
+  refs: [ANAPH]
+
+- id: R-IMM-04
+  system: IMMUNE
+  label: Suspected infection with qSOFA ≥ 2
+  when:
+    all:
+      - any:
+          - {fact: temp, op: gte, value: 38.1}
+          - {fact: sym_fever_chills, op: "true"}
+          - {fact: hyp_C077, op: "true"}
+          - {fact: hyp_C096, op: "true"}
+          - {fact: hyp_C084, op: "true"}
+          - {fact: hyp_C049, op: "true"}
+          - {fact: hyp_C056, op: "true"}
+      # qSOFA >= 2 as "2 of 3" raw leaves (RR >= 22, altered mentation, SBP <= 100) so an unmeasured
+      # vital stays unknown; the derived `qsofa` fact scores missing vitals as 0 and is for display only.
+      - any:
+          - all:
+              - {fact: resp_rate, op: gte, value: 22}
+              - {fact: confusion, op: "true"}
+          - all:
+              - {fact: resp_rate, op: gte, value: 22}
+              - {fact: bp_sys, op: lte, value: 100}
+          - all:
+              - {fact: confusion, op: "true"}
+              - {fact: bp_sys, op: lte, value: 100}
+  then: {hypothesis: C080, cf: 0.85, level: RED}
+  actions: [A-GEN-10, A-GEN-03]
+  confirm_with: []
+  refs: [SEPSIS3]
+
+- id: R-IMM-06
+  system: IMMUNE
+  label: Fever (temperature ≥ 38.1 °C or fever/chills reported)
+  when:
+    any:
+      - {fact: temp, op: gte, value: 38.1}
+      - {fact: sym_fever_chills, op: "true"}
+  then: {escalation: "Fever - tell the CMO", cf: 1.0, level: ORANGE}
+  actions: [A-GEN-13, A-GEN-11, A-GEN-02]
+  confirm_with: [temp]
+  refs: [NEWS2]
+
+- id: R-IMM-07
+  system: IMMUNE
+  label: High fever (temperature ≥ 39.1 °C)
+  when: {fact: temp, op: gte, value: 39.1}
+  then: {escalation: "High fever", cf: 1.0, level: ORANGE}
+  actions: [A-GEN-02, A-GEN-04]
+  confirm_with: []
+  refs: [NEWS2]
+
+# ---------------------------------------------------------------- NUTR
+- id: R-NUT-01
+  system: NUTR
+  label: Glucose < 54 mg/dL
+  when: {fact: glucose, op: lt, value: 54}
+  then: {hypothesis: X05, cf: 0.9, level: RED}
+  actions: [A-NUT-01, A-GEN-02]
+  confirm_with: []
+  refs: [ADA-SOC]
+
+- id: R-NUT-02
+  system: NUTR
+  label: Glucose 54-69 mg/dL
+  when:
+    all:
+      - {fact: glucose, op: gte, value: 54}
+      - {fact: glucose, op: lt, value: 70}
+  then: {hypothesis: X05, cf: 0.7, level: YELLOW}
+  actions: [A-NUT-01]
+  confirm_with: []
+  refs: [ADA-SOC]
+
+- id: R-NUT-06
+  system: NUTR
+  label: Body mass ≥ 5% below pre-flight, or intake < 80% for 3 days
+  when:
+    any:
+      - {fact: delta_pct_body_mass, op: lte, value: -0.05}
+      - {fact: days_intake_lt80, op: gte, value: 3}
+  then: {hypothesis: X07, cf: 0.6, level: ORANGE}
+  actions: [A-NUT-02, A-NUT-03]
+  confirm_with: [body_mass]
+  refs: [NUTR-ER]
+
+- id: R-NUT-07
+  system: NUTR
+  label: Body mass ≥ 7.7% below pre-flight
+  when: {fact: delta_pct_body_mass, op: lte, value: -0.077}
+  then: {hypothesis: X07, cf: 0.9, level: RED}
+  actions: [A-NUT-03, A-GEN-03]
+  confirm_with: []
+  refs: [NUTR-ER]
+
+# ---------------------------------------------------------------- RAD
+- id: R-RAD-01
+  system: RAD
+  label: Solar particle event alert
+  when: {fact: spe_alert, op: "true"}
+  then: {escalation: "Solar particle event - shelter", cf: 1.0, level: ORANGE}
+  actions: [A-RAD-01, A-RAD-02]
+  confirm_with: []
+  refs: [TB020]
+
+- id: R-RAD-02
+  system: RAD
+  label: Cumulative dose ≥ 480 mSv (team early warning at 80% of the NASA career limit)
+  when: {fact: dose_cumulative, op: gte, value: 480}
+  then: {hypothesis: X09, cf: 0.9, level: ORANGE}
+  actions: [A-RAD-03, A-GEN-06]
+  confirm_with: []
+  refs: [STD3001-V1]
+
+- id: R-RAD-05
+  system: RAD
+  label: Nausea, vomiting or fatigue ≤ 48 h after a solar particle event
+  when:
+    all:
+      - any:
+          - {fact: sym_nausea, op: "true"}
+          - {fact: sym_vomiting, op: "true"}
+          - {fact: sym_fatigue, op: "true"}
+      - {fact: hours_since_spe, op: lte, value: 48}
+  then: {hypothesis: C011, cf: 0.6, level: RED}
+  actions: [A-RAD-04, A-GEN-03]
+  confirm_with: [lymphocytes_abs]
+  refs: [TB020]
+
+- id: R-RAD-06
+  system: RAD
+  label: Suspected radiation sickness and lymphocytes > 50% below baseline
+  when:
+    all:
+      - {fact: hyp_C011, op: "true"}
+      - {fact: delta_pct_lymphocytes_abs, op: lt, value: -0.5}
+  then: {hypothesis: C011, cf: 0.85, level: RED}
+  actions: [A-GEN-03]
+  confirm_with: []
+  refs: [TB020, OSD569]
+
+# ---------------------------------------------------------------- ENV
+- id: R-ENV-01
+  system: ENV
+  label: Cabin CO₂ > 3.0 mmHg (1 h) - advisory
+  when: {fact: co2_1h, op: gt, value: 3.0}
+  then: {hypothesis: C051, cf: 0.2, level: YELLOW}
+  actions: [A-ENV-01]
+  confirm_with: []
+  refs: [STD3001-V2]
+
+- id: R-ENV-02
+  system: ENV
+  label: Ammonia alarm
+  when: {fact: ammonia_alarm, op: "true"}
+  then: {hypothesis: C092, cf: 0.9, level: RED}
+  actions: [A-ENV-02]
+  confirm_with: []
+  refs: [IMM-MYERS]
+
+- id: R-ENV-05
+  system: ENV
+  label: Cabin temperature outside 18-27 °C with fever or raised resting HR
+  when:
+    all:
+      - any:
+          - {fact: cabin_temp, op: lt, value: 18}
+          - {fact: cabin_temp, op: gt, value: 27}
+      - any:
+          - {fact: temp, op: gte, value: 38.1}
+          - {fact: delta_pct_hr_rest, op: gt, value: 0.15}
+  then: {hypothesis: X11, cf: 0.5, level: ORANGE}
+  actions: [A-ENV-03, A-GI-01]
+  confirm_with: [temp]
+  refs: [STD3001-V2]
+
+# ---------------------------------------------------------------- EVA
+- id: R-EVA-01
+  system: EVA
+  label: Joint pain, tingling, mottled skin, confusion or breathlessness ≤ 24 h after EVA
+  when:
+    all:
+      - {fact: post_eva_hours, op: lte, value: 24}
+      - any:
+          - {fact: sym_joint_pain, op: "true"}
+          - {fact: sym_tingling_numbness, op: "true"}
+          - {fact: sym_skin_mottling, op: "true"}
+          - {fact: confusion, op: "true"}
+          - {fact: sym_shortness_of_breath, op: "true"}
+  then: {hypothesis: C030, cf: 0.8, level: RED}
+  actions: [A-EVA-01, A-GEN-03]
+  confirm_with: []
+  refs: [RISK-DCS]
+
+# ---------------------------------------------------------------- RULES FED BY THE SIX-MONTH PASSPORT DATA
+# Personal baselines, personal ranges (p10..p90) and lab reference ranges come from data/passports/<crew>.json
+# (pipeline: Inspiration4 labs, NHANES exams, LifeSnaps daily streams). R-CV-17 is the knowledge-base indicator
+# threshold for HRV (03-indicators I-VIT-hrv_rmssd, team threshold [T]).
+- id: R-CV-15
+  system: CV
+  label: Resting HR > 115% of personal baseline for 3+ days, no fever (recovery flag)
+  when:
+    all:
+      - {fact: days_hr_gt15, op: gte, value: 3}
+      - not:
+          any:
+            - {fact: sym_fever_chills, op: "true"}
+            - {fact: temp, op: gte, value: 38.1}
+  then: {hypothesis: X02, cf: 0.3, level: YELLOW}
+  actions: [A-SLP-06, A-GEN-05]
+  confirm_with: [temp]
+  refs: [CV-ER]  # threshold is a team heuristic [T]
+
+- id: R-CV-16
+  system: CV
+  label: Hemoglobin below the lab reference range with fatigue (space anemia)
+  when:
+    all:
+      - {fact: lab_below_hemoglobin, op: "true"}
+      - any:
+          - {fact: sym_fatigue, op: "true"}
+          - {fact: fatigue, op: gte, value: 5}
+  then: {hypothesis: X15, cf: 0.6, level: ORANGE}
+  actions: [A-GEN-02, A-GEN-06]
+  confirm_with: []
+  refs: [TRUDEL2022]
+
+- id: R-CV-17
+  system: CV
+  label: HRV (RMSSD) more than 30% below personal baseline for 3+ mornings (recovery flag)
+  when: {fact: days_hrv_lt70, op: gte, value: 3}
+  then: {hypothesis: X02, cf: 0.3, level: YELLOW}
+  actions: [A-SLP-06, A-GEN-05]
+  confirm_with: [hr_rest]
+  refs: [CV-ER]  # threshold from 03-indicators I-VIT-hrv_rmssd, team heuristic [T]
+
+- id: R-GU-12
+  system: GU
+  label: Concentrated urine (colour ≥ 6 or osmolality > 700 mOsm/kg)
+  when:
+    any:
+      - {fact: urine_color, op: gte, value: 6}
+      - {fact: urine_osm, op: gt, value: 700}
+  then: {hypothesis: X08, cf: 0.6, level: YELLOW}
+  actions: [A-GU-02]
+  confirm_with: []
+  refs: [NUTR-ER]
+
+- id: R-GU-12N
+  system: GU
+  label: Serum sodium > 145 mmol/L (dehydration)
+  when: {fact: sodium, op: gt, value: 145}
+  then: {hypothesis: X08, cf: 0.8, level: ORANGE}
+  actions: [A-GU-02, A-GEN-02]
+  confirm_with: []
+  refs: [NUTR-ER]

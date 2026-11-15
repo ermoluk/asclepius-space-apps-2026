@@ -1,0 +1,4 @@
+profile,metric,value,lo,hi,unit,source_id,ref_key,note
+mars-transit,dose_equivalent_rate,1.84,1.51,2.17,mSv/day,MSL-RAD,ZEITLIN2013,MSL RAD inside the cruise stage (220 of 253 days); absorbed 0.481 mGy/day
+mars-surface,dose_equivalent_rate,0.64,0.52,0.76,mSv/day,MSL-RAD,HASSLER2014,MSL RAD at Gale crater; absorbed 0.21 mGy/day
+lunar-surface,dose_equivalent_rate,1.369,1.25,1.49,mSv/day,CE4-LND,ZHANG2020,Chang'e-4 Lunar Lander Neutron and Dosimetry (LND) on the far side surface

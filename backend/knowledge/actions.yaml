@@ -1,0 +1,408 @@
+A-GEN-01:
+  id: A-GEN-01
+  text: Repeat this measurement now with the guided steps (or in the time shown).
+  who: 🧑‍🚀
+A-GEN-02:
+  id: A-GEN-02
+  text: Inform your Crew Medical Officer now.
+  who: 🩺
+A-GEN-03:
+  id: A-GEN-03
+  text: Send the flight-surgeon packet (summary, trend, rule trace). With a long comm delay, start the onboard steps first.
+  who: 🌍
+A-GEN-04:
+  id: A-GEN-04
+  text: Follow the onboard medical checklist for this condition; medication only as the checklist / CMO directs.
+  who: 🩺
+A-GEN-05:
+  id: A-GEN-05
+  text: Recheck in 24 h (scheduled reminder).
+  who: 🧑‍🚀
+A-GEN-06:
+  id: A-GEN-06
+  text: Added to today's medical downlink.
+  who: 🌍
+A-GEN-07:
+  id: A-GEN-07
+  text: Stop the current activity and rest.
+  who: 🧑‍🚀
+A-GEN-08:
+  id: A-GEN-08
+  text: No EVA, piloting or safety-critical tasks until cleared by CMO.
+  who: 🩺
+A-GEN-09:
+  id: A-GEN-09
+  text: Take a photo for the medical log (same angle and light each time).
+  who: 🧑‍🚀
+A-GEN-10:
+  id: A-GEN-10
+  text: 'Emergency: alert the crew; CMO leads; get the emergency/trauma medical pack.'
+  who: 👥 🩺
+A-GEN-11:
+  id: A-GEN-11
+  text: 'Hygiene and isolation: wash/sanitise hands, mask, own utensils and towel, disinfect touched surfaces.'
+  who: 🧑‍🚀
+A-GEN-12:
+  id: A-GEN-12
+  text: Ask crewmates whether anyone has the same symptoms (possible outbreak or environmental cause).
+  who: 👥
+A-GEN-13:
+  id: A-GEN-13
+  text: Start the guided symptom interview (tap the body region, answer onset / severity / red-flag questions).
+  who: 🧑‍🚀
+A-SLP-01:
+  id: A-SLP-01
+  text: Keep a fixed sleep window tonight (same start time ±30 min).
+  who: 🧑‍🚀
+A-SLP-02:
+  id: A-SLP-02
+  text: Dim, blue-reduced light 1 h before sleep; bright light after waking (Earth-like light schedule).
+  who: 🧑‍🚀
+A-SLP-03:
+  id: A-SLP-03
+  text: Caffeine only in the first half of your work day.
+  who: 🧑‍🚀
+A-SLP-04:
+  id: A-SLP-04
+  text: Take a 20-40 min nap if the schedule allows (quiet, < 50 dB).
+  who: 🧑‍🚀
+A-SLP-05:
+  id: A-SLP-05
+  text: Eye mask, earplugs, secure sleeping bag; check sleep-station temperature and noise.
+  who: 🧑‍🚀
+A-SLP-06:
+  id: A-SLP-06
+  text: Ask for a rest block / move non-critical tasks (workload review).
+  who: 🩺 🌍
+A-SLP-07:
+  id: A-SLP-07
+  text: Review sleep-medication use with the CMO.
+  who: 🩺
+A-BEH-01:
+  id: A-BEH-01
+  text: Book a private psychological conference.
+  who: 🌍
+A-BEH-02:
+  id: A-BEH-02
+  text: Schedule a video call with family or friends.
+  who: 🧑‍🚀
+A-BEH-03:
+  id: A-BEH-03
+  text: Try one of *your* helpers from your passport (e.g. music, exercise, journaling).
+  who: 🧑‍🚀
+A-BEH-04:
+  id: A-BEH-04
+  text: Journal for 5 minutes (private).
+  who: 🧑‍🚀
+A-BEH-05:
+  id: A-BEH-05
+  text: Plan one task you choose yourself today (autonomy over schedule).
+  who: 🧑‍🚀
+A-BEH-06:
+  id: A-BEH-06
+  text: Earth observation / photography session, or time with the plant garden.
+  who: 🧑‍🚀
+A-BEH-07:
+  id: A-BEH-07
+  text: Crew debrief or the conflict-resolution guide.
+  who: 👥
+A-BEH-08:
+  id: A-BEH-08
+  text: 'Behavioral emergency: you are not alone - contact the CMO and the psychologist now (private channel). Crew stays with you.'
+  who: 🩺 🌍
+A-BEH-09:
+  id: A-BEH-09
+  text: 3-minute guided breathing / relaxation (VR if available).
+  who: 🧑‍🚀
+A-BEH-10:
+  id: A-BEH-10
+  text: Take the PHQ-9 / GAD-7 now (2 min).
+  who: 🧑‍🚀
+A-CV-01:
+  id: A-CV-01
+  text: Lie down (or restrain supine); legs elevated in gravity.
+  who: 🧑‍🚀
+A-CV-02:
+  id: A-CV-02
+  text: Fluid and salt loading per protocol.
+  who: 🩺
+A-CV-03:
+  id: A-CV-03
+  text: Put on the compression garment.
+  who: 🧑‍🚀
+A-CV-04:
+  id: A-CV-04
+  text: Record an ECG strip and attach it to the report.
+  who: 🧑‍🚀 🩺
+A-CV-05:
+  id: A-CV-05
+  text: Rest 5 min, then repeat BP (same arm, seated/restrained).
+  who: 🧑‍🚀
+A-CV-06:
+  id: A-CV-06
+  text: Neck (jugular) ultrasound by CMO with ground guidance.
+  who: 🩺 🌍
+A-CV-07:
+  id: A-CV-07
+  text: 'Cardiac arrest: start CPR, get the defibrillator, CMO leads.'
+  who: 👥 🩺
+A-RESP-01:
+  id: A-RESP-01
+  text: Supplemental oxygen per protocol.
+  who: 🩺
+A-RESP-02:
+  id: A-RESP-02
+  text: Check cabin O₂ partial pressure / pressure altitude with life support.
+  who: 👥
+A-RESP-03:
+  id: A-RESP-03
+  text: 'Choking: abdominal thrusts (brace against a wall in 0 g) / back blows; call crew.'
+  who: 👥
+A-RESP-04:
+  id: A-RESP-04
+  text: 'Smoke: emergency mask, leave the module, oxygen per protocol.'
+  who: 👥
+A-NEU-01:
+  id: A-NEU-01
+  text: BE-FAST check now; record the time symptoms started.
+  who: 👥
+A-NEU-02:
+  id: A-NEU-02
+  text: Neuro checks (GCS, pupils, limbs) every 15 min for 2 h, then hourly.
+  who: 👥 🩺
+A-NEU-03:
+  id: A-NEU-03
+  text: 'Seizure: protect from injury, restrain loosely, time it, nothing in the mouth, recovery position after.'
+  who: 👥
+A-NEU-04:
+  id: A-NEU-04
+  text: Answer the headache red-flag questions (SNNOOP10).
+  who: 🧑‍🚀
+A-EYE-01:
+  id: A-EYE-01
+  text: Do the near-vision test in the app (each eye).
+  who: 🧑‍🚀
+A-EYE-02:
+  id: A-EYE-02
+  text: Schedule OCT / ocular ultrasound at the next CMO exam.
+  who: 🩺
+A-EYE-03:
+  id: A-EYE-03
+  text: Irrigate the eye with water/saline for at least 15 min.
+  who: 👥
+A-EYE-04:
+  id: A-EYE-04
+  text: Cover with a rigid eye shield; no pressure on the eye.
+  who: 👥
+A-EYE-05:
+  id: A-EYE-05
+  text: Remove contact lenses.
+  who: 🧑‍🚀
+A-EYE-06:
+  id: A-EYE-06
+  text: Wear goggles when working with particles or debris (they float in 0 g).
+  who: 🧑‍🚀
+A-ENT-01:
+  id: A-ENT-01
+  text: Decongestant per onboard checklist; head-up position if possible.
+  who: 🧑‍🚀
+A-ENT-02:
+  id: A-ENT-02
+  text: Equalise pressure (gentle Valsalva); stop pressure changes if painful.
+  who: 🧑‍🚀
+A-ENT-03:
+  id: A-ENT-03
+  text: 'Nosebleed: pinch the soft part of the nose 10-15 min, lean forward, absorbent pad (blood floats).'
+  who: 🧑‍🚀
+A-ENT-04:
+  id: A-ENT-04
+  text: Hearing protection; review noise exposure.
+  who: 🧑‍🚀
+A-ENT-05:
+  id: A-ENT-05
+  text: Keep the ear canal dry; clean headset ear pieces.
+  who: 🧑‍🚀
+A-DENT-01:
+  id: A-DENT-01
+  text: Temporary filling / cement from the dental kit.
+  who: 🩺
+A-DENT-02:
+  id: A-DENT-02
+  text: 'Knocked-out tooth: hold by the crown, rinse, re-implant now or keep in saline/milk; CMO.'
+  who: 🩺
+A-DENT-03:
+  id: A-DENT-03
+  text: Pain relief per onboard checklist.
+  who: 🧑‍🚀
+A-DENT-04:
+  id: A-DENT-04
+  text: Brush, floss, rinse after meals.
+  who: 🧑‍🚀
+A-GI-01:
+  id: A-GI-01
+  text: 'Oral rehydration: small sips often; track fluids.'
+  who: 🧑‍🚀
+A-GI-02:
+  id: A-GI-02
+  text: Fibre and fluids; regular toilet time.
+  who: 🧑‍🚀
+A-GI-03:
+  id: A-GI-03
+  text: Small frequent meals; limit head movements; medication per checklist.
+  who: 🧑‍🚀
+A-GI-04:
+  id: A-GI-04
+  text: Guided abdominal check (where it hurts, rebound, guarding); repeat every 2 h.
+  who: 👥 🩺
+A-GI-05:
+  id: A-GI-05
+  text: Nothing by mouth until the CMO reviews.
+  who: 🩺
+A-GU-01:
+  id: A-GU-01
+  text: Urine dipstick test (blood, nitrite, leukocytes).
+  who: 🧑‍🚀
+A-GU-02:
+  id: A-GU-02
+  text: Drink to at least 2.5 L today (3.0 L if you have a kidney-stone history).
+  who: 🧑‍🚀
+A-GU-03:
+  id: A-GU-03
+  text: Bladder catheter per onboard checklist (CMO).
+  who: 🩺
+A-GU-04:
+  id: A-GU-04
+  text: Timed voiding every 2-3 h.
+  who: 🧑‍🚀
+A-MSK-01:
+  id: A-MSK-01
+  text: Rest the joint, cold pack, compression wrap; gentle movement as pain allows.
+  who: 🧑‍🚀
+A-MSK-02:
+  id: A-MSK-02
+  text: Splint / immobilise in the position found; CMO exam.
+  who: 👥 🩺
+A-MSK-03:
+  id: A-MSK-03
+  text: Ottawa ankle/knee check (guided).
+  who: 👥
+A-MSK-04:
+  id: A-MSK-04
+  text: 'Back pain (space adaptation): knees-to-chest position, gentle stretching, loading exercise.'
+  who: 🧑‍🚀
+A-MSK-05:
+  id: A-MSK-05
+  text: Check circulation, sensation and movement beyond the injury every 30 min.
+  who: 👥
+A-MSK-06:
+  id: A-MSK-06
+  text: Do today's resistance + aerobic session (goal ~1.5 h/day).
+  who: 🧑‍🚀
+A-MSK-07:
+  id: A-MSK-07
+  text: Adjust the exercise prescription with the ground team.
+  who: 🌍
+A-SKIN-01:
+  id: A-SKIN-01
+  text: Clean and cover the wound; watch for redness or warmth.
+  who: 🧑‍🚀
+A-SKIN-02:
+  id: A-SKIN-02
+  text: Firm pressure to stop bleeding; closure strips; CMO for deep wounds.
+  who: 👥 🩺
+A-SKIN-03:
+  id: A-SKIN-03
+  text: Mark the edge of the redness with a pen; recheck in 12 h.
+  who: 🧑‍🚀
+A-SKIN-04:
+  id: A-SKIN-04
+  text: Cool the burn with running/clean water for 20 min; cover loosely; chemical burn → irrigate.
+  who: 👥
+A-SKIN-05:
+  id: A-SKIN-05
+  text: Moisturise; avoid the irritant; check humidity.
+  who: 🧑‍🚀
+A-SKIN-06:
+  id: A-SKIN-06
+  text: Glove fit check; protect nails (tape, trimmed) before the next EVA.
+  who: 🧑‍🚀
+A-IMM-01:
+  id: A-IMM-01
+  text: Antihistamine per onboard checklist; avoid the trigger.
+  who: 🧑‍🚀
+A-IMM-02:
+  id: A-IMM-02
+  text: 'Anaphylaxis protocol: emergency injector per checklist, oxygen, lie flat, crew alert.'
+  who: 👥 🩺
+A-IMM-03:
+  id: A-IMM-03
+  text: Antiviral only if the CMO / flight surgeon decides.
+  who: 🩺
+A-IMM-04:
+  id: A-IMM-04
+  text: 'Immune support: sleep window, stress reduction, diet and vitamin D plan.'
+  who: 🧑‍🚀
+A-NUT-01:
+  id: A-NUT-01
+  text: 'Low sugar: take 15-20 g fast carbohydrate now; recheck in 15 min.'
+  who: 🧑‍🚀
+A-NUT-02:
+  id: A-NUT-02
+  text: Add your preferred foods and snacks today.
+  who: 🧑‍🚀
+A-NUT-03:
+  id: A-NUT-03
+  text: Dietitian review via downlink.
+  who: 🌍
+A-NUT-04:
+  id: A-NUT-04
+  text: Vitamin D plan per flight surgeon.
+  who: 🌍
+A-NUT-05:
+  id: A-NUT-05
+  text: Review meals, activity and timing of the glucose test; report.
+  who: 🧑‍🚀 🌍
+A-RAD-01:
+  id: A-RAD-01
+  text: Go to the storm shelter (≥ 10 cm water equivalent) until the all-clear.
+  who: 👥
+A-RAD-02:
+  id: A-RAD-02
+  text: End the EVA and return inside within 2 h.
+  who: 👥
+A-RAD-03:
+  id: A-RAD-03
+  text: Review dose with the ground; plan shielding and EVA exposure.
+  who: 🌍
+A-RAD-04:
+  id: A-RAD-04
+  text: Blood count (lymphocytes) if an analyser is available; repeat at 24 h.
+  who: 🩺
+A-ENV-01:
+  id: A-ENV-01
+  text: Move to a better-ventilated module; report CO₂ to life support; recheck symptoms in 1 h.
+  who: 🧑‍🚀 👥
+A-ENV-02:
+  id: A-ENV-02
+  text: 'Ammonia: emergency mask, leave and isolate the module, irrigate eyes and skin.'
+  who: 👥
+A-ENV-03:
+  id: A-ENV-03
+  text: Adjust thermal control / airflow at the sleep station or work area.
+  who: 👥
+A-ENV-04:
+  id: A-ENV-04
+  text: Report for water / surface microbial sampling.
+  who: 👥 🌍
+A-EVA-01:
+  id: A-EVA-01
+  text: Breathe 100% oxygen and repressurise per the DCS protocol.
+  who: 👥 🩺
+A-EVA-02:
+  id: A-EVA-02
+  text: 'Post-EVA: rest, rehydrate, eat (+200 kcal per EVA hour).'
+  who: 🧑‍🚀
+A-EVA-03:
+  id: A-EVA-03
+  text: Review suit and glove fit, padding at contact points.
+  who: 👥 🌍

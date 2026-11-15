@@ -1,0 +1,9 @@
+day,metric,value,unit,ref_lo,ref_hi
+-92,hemoglobin,14.6,g/dL,13.2,17.1
+-92,lymphocytes_abs,2100,cells/uL,850,3900
+-92,wbc,5.9,10^3/uL,3.8,10.8
+-92,glucose,88,mg/dL,65,99
+-92,sodium,140,mmol/L,135,146
+-92,creatinine,0.95,mg/dL,0.6,1.29
+-44,hemoglobin,14.9,g/dL,13.2,17.1
+-44,lymphocytes_abs,2250,cells/uL,850,3900

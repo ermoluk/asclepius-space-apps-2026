@@ -1,0 +1,24 @@
+# Fictional crew member used by the single-person demo scenarios (sleep debt, CO2 vs SANS, solar event, day two).
+id: CM-2
+name: CM-2
+role: Mission Specialist
+sex: M
+age: 41
+lab_donor: I4-C001          # real Inspiration4 pre-flight labs (L-92, L-44, L-3)
+story_targets: {hr_rest: 58, bp_sys: 116}   # used only to pick the closest real daily donor
+modifiers: []
+authored:
+  A3: {value: "variable by scenario (180 d in low Earth orbit / Mars transit)", unit: ""}
+  A4: {value: "1 prior flight, 166 days", unit: ""}
+  A5: {value: "none", unit: ""}
+  A6: {value: 42, unit: "mSv"}
+  C1: {value: "none", unit: ""}
+  C4: {value: "no known allergies", unit: ""}
+  C5: {value: "none", unit: ""}
+  C10: {value: "A+", unit: ""}
+  E2: {value: "genetic module declined", unit: ""}
+  I1: {value: "MSSQ-short low", unit: ""}
+  J4: {value: "exercise, sleep hygiene", unit: ""}
+  L1: {value: "omnivore; dislikes fish", unit: ""}
+  M2: {value: "standard notifications; English", unit: ""}
+  M3: {value: "mood data shared with CMO", unit: ""}

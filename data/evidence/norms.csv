@@ -1,0 +1,20 @@
+metric,mean,sd,lo,hi,unit,ref_key,note,value_type
+pvt_rt,262,22,220,320,ms,PVT-BASNER,3-min PVT mean RT in rested adults; learning effect -4% between L-120 and L-90 [T],
+pvt_lapses,1.5,1.2,0,5,count,PVT-BASNER,lapses (RT > 500 ms) per 3-min test,
+near_acuity_logmar,0.0,0.06,-0.1,0.2,logMAR,,"near acuity in corrected healthy adults [T]: team assumption, no published norm confirmed (LEE2020 is a SANS review; a MAVIS healthy-control value could not be traced)",assumed
+oct_rnfl,95,9,80,110,um,LEE2020,retinal nerve fibre layer thickness [T],
+iop,15,2.5,10,21,mmHg,RISK-SANS,intra-ocular pressure [T],
+cimt,0.62,0.08,0.45,0.8,mm,STDMEAS,carotid intima-media thickness at 35-50 y [T],
+resp_rate,14,2,12,18,/min,NEWS2,resting respiratory rate,
+temp_oral,36.6,0.2,36.2,37.0,degC,NEWS2,morning oral temperature,
+kss,3,1,1,9,1-9,KSS,"Karolinska Sleepiness Scale, rating of the last 10 minutes; lo/hi are the scale ends; mean 3 is an assumed value for a rested morning check-in [T], not a NASA norm",assumed
+workload,5,1.3,2,8,0-10,BEDFORD,typical pre-flight training day [T],
+team_cohesion,4,0.6,3,5,1-5,STDMEAS,pre-flight cohesion [T],
+gad7,2.5,2,0,6,0-21,GAD7,healthy adults [T],
+pss,12,5,4,22,0-40,PSS,healthy adults [T],
+who5,68,12,48,88,0-100,WHO5,healthy adults [T],
+ucla3,3.8,1,3,6,3-9,UCLA3,healthy adults [T],
+isi,4,3,0,9,0-28,ISI,healthy adults [T],
+vo2peak:M,40,7,28,54,mL/kg/min,RISK-FIT,graded exercise test in fit men 35-50 [T],
+vo2peak:F,33,6,23,45,mL/kg/min,RISK-FIT,graded exercise test in fit women 35-50 [T],
+stai_state,38,8,25,55,20-80,,STAI state anxiety in healthy adults [T],

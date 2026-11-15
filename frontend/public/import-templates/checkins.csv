@@ -1,0 +1,4 @@
+day,sleep_hours,sleep_quality,kss,physical_state,hr_rest,bp_sys,bp_dia,temp,spo2,mood_valence,team_cohesion,workload,fatigue,exercise_min,sym_headache
+1,6.8,4,4,5,62,118,76,36.7,97,5,4,6,3,30,no
+2,6.1,3,5,5,64,121,78,36.8,97,5,4,7,4,25,no
+3,5.4,3,6,4,66,124,80,36.9,96,4,4,8,5,20,yes

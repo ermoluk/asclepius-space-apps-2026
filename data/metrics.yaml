@@ -1,0 +1,103 @@
+# Metric dictionary: the common language of data, passport fields, rule facts and the UI.
+# field = physiological-passport field (knowledge-base/01-physiological-passport.md); kb = indicator ID (03-indicators.md)
+# freq: daily | weekly | monthly | session | once
+metrics:
+  # --- daily wearable / check-in streams (passport months L-180..L-1) ---
+  hr_rest:          {label: Resting heart rate, unit: bpm, field: B3, kb: I-VIT-hr_rest, freq: daily, range: [30, 120]}
+  hrv_rmssd:        {label: Heart-rate variability (RMSSD), unit: ms, field: B9, kb: I-VIT-hrv_rmssd, freq: daily, range: [5, 200]}
+  sleep_hours:      {label: Sleep duration, unit: h, field: H1, kb: I-SLEEP-sleep_hours, freq: daily, range: [0, 14]}
+  sleep_efficiency: {label: Sleep efficiency, unit: "%", field: H6, kb: I-SLEEP-sleep_quality, freq: daily, range: [40, 100]}
+  steps:            {label: Steps, unit: steps/day, field: F4, kb: I-MSK-exercise_min, freq: daily, range: [0, 60000]}
+  spo2:             {label: Night SpO2, unit: "%", field: B6, kb: I-VIT-spo2, freq: daily, range: [85, 100]}
+  skin_temp_dev:    {label: Night skin-temperature deviation, unit: degC, field: B7, kb: I-VIT-temp, freq: daily, range: [-3, 3]}
+  stress_score:     {label: Fitbit stress-management score, unit: 0-100, field: J3, kb: I-BEH-pss, freq: daily, range: [0, 100]}
+  mood_valence:     {label: Evening mood, unit: 1-7, field: "", kb: I-SELF-mood_valence, freq: daily, range: [1, 7]}
+  fatigue:          {label: Fatigue, unit: 1-7, field: "", kb: I-SLEEP-fatigue, freq: daily, range: [1, 7]}
+  kss:              {label: Sleepiness (KSS), unit: 1-9, field: "", kb: I-SLEEP-kss, freq: daily, range: [1, 9]}
+  workload:         {label: Workload, unit: 0-10, field: "", kb: I-BEH-workload, freq: daily, range: [0, 10]}
+  team_cohesion:    {label: Team cohesion, unit: 1-5, field: "", kb: I-BEH-team_cohesion, freq: daily, range: [1, 5]}
+  body_mass:        {label: Body mass, unit: kg, field: B2, kb: I-NUTR-body_mass, freq: weekly, range: [35, 150]}
+  pvt_rt:           {label: Reaction time (PVT mean), unit: ms, field: K1, kb: I-TEST-pvt_rt, freq: weekly, range: [150, 600]}
+  near_acuity_logmar: {label: Near visual acuity, unit: logMAR, field: G1, kb: I-TEST-near_acuity, freq: weekly, range: [-0.3, 1.0]}
+  # --- monthly questionnaires ---
+  phq9:             {label: PHQ-9, unit: 0-27, field: J2, kb: I-BEH-phq9, freq: monthly, range: [0, 27]}
+  gad7:             {label: GAD-7, unit: 0-21, field: J2, kb: I-BEH-gad7, freq: monthly, range: [0, 21]}
+  pss:              {label: Perceived Stress Scale, unit: 0-40, field: J3, kb: I-BEH-pss, freq: monthly, range: [0, 40]}
+  who5:             {label: WHO-5 well-being, unit: 0-100, field: J2, kb: I-BEH-who5, freq: monthly, range: [0, 100]}
+  ucla3:            {label: UCLA-3 loneliness, unit: 3-9, field: J2, kb: I-BEH-ucla3, freq: monthly, range: [3, 9]}
+  stai_state:       {label: STAI state anxiety, unit: 20-80, field: J2, kb: "", freq: monthly, range: [20, 80]}
+  # --- labs (Inspiration4 format) ---
+  wbc:              {label: White blood cells, unit: 10^3/uL, field: D1, kb: I-LAB-wbc, freq: session}
+  lymphocytes_abs:  {label: Lymphocytes (absolute), unit: cells/uL, field: D1, kb: I-LAB-lymphocytes_abs, freq: session}
+  neutrophils_abs:  {label: Neutrophils (absolute), unit: cells/uL, field: D1, kb: "", freq: session}
+  hemoglobin:       {label: Hemoglobin, unit: g/dL, field: D1, kb: I-LAB-hemoglobin, freq: session}
+  hematocrit:       {label: Hematocrit, unit: "%", field: D1, kb: "", freq: session}
+  platelets:        {label: Platelets, unit: 10^3/uL, field: D1, kb: "", freq: session}
+  glucose:          {label: Glucose, unit: mg/dL, field: B10, kb: I-VIT-glucose, freq: session}
+  sodium:           {label: Sodium, unit: mmol/L, field: D2, kb: I-LAB-sodium, freq: session}
+  potassium:        {label: Potassium, unit: mmol/L, field: D2, kb: "", freq: session}
+  calcium:          {label: Calcium, unit: mg/dL, field: D2, kb: "", freq: session}
+  creatinine:       {label: Creatinine, unit: mg/dL, field: D2, kb: I-LAB-creatinine, freq: session}
+  egfr:             {label: eGFR, unit: mL/min/1.73m2, field: D2, kb: "", freq: session}
+  bun:              {label: Urea nitrogen, unit: mg/dL, field: D2, kb: "", freq: session}
+  albumin:          {label: Albumin, unit: g/dL, field: D2, kb: "", freq: session}
+  alt:              {label: ALT, unit: U/L, field: D2, kb: "", freq: session}
+  ast:              {label: AST, unit: U/L, field: D2, kb: "", freq: session}
+  crp:              {label: C-reactive protein, unit: mg/L, field: D4, kb: "", freq: session}
+  # --- one-off exams (NHANES donor, PTB-XL, norms) ---
+  height:           {label: Height, unit: cm, field: B1, kb: "", freq: once}
+  bp_sys:           {label: Seated systolic BP (mean of 3), unit: mmHg, field: B4, kb: I-VIT-bp_sys, freq: session}
+  bp_dia:           {label: Seated diastolic BP (mean of 3), unit: mmHg, field: B4, kb: I-VIT-bp_dia, freq: session}
+  hr_clinic:        {label: Clinic pulse (60 s), unit: bpm, field: B3, kb: I-VIT-hr_rest, freq: session}
+  resp_rate:        {label: Respiratory rate, unit: /min, field: B8, kb: I-VIT-resp_rate, freq: session}
+  temp_oral:        {label: Oral temperature (morning), unit: degC, field: B7, kb: I-VIT-temp, freq: session}
+  hba1c:            {label: HbA1c, unit: "%", field: B10, kb: I-VIT-glucose, freq: session}
+  vitd:             {label: 25-OH vitamin D, unit: ng/mL, field: D3, kb: I-LAB-vitd, freq: session}
+  total_chol:       {label: Total cholesterol, unit: mg/dL, field: D4, kb: "", freq: session}
+  hdl:              {label: HDL cholesterol, unit: mg/dL, field: D4, kb: "", freq: session}
+  hsv1_pos:         {label: HSV-1 serostatus, unit: "1=pos", field: D6, kb: "", freq: once}
+  hsv2_pos:         {label: HSV-2 serostatus, unit: "1=pos", field: D6, kb: "", freq: once}
+  bmd_total:        {label: Total-body BMD (DXA), unit: g/cm2, field: F7, kb: "", freq: session}
+  body_fat_pct:     {label: Body fat (DXA), unit: "%", field: F7, kb: "", freq: session}
+  lean_mass:        {label: Lean mass (DXA), unit: kg, field: F7, kb: "", freq: session}
+  grip_strength:    {label: Grip strength (sum of both hands), unit: kg, field: F2, kb: I-TEST-strength_pct, freq: session}
+  hearing_pta_right: {label: Hearing, right ear (PTA 0.5-4 kHz), unit: dB HL, field: C16, kb: "", freq: once}
+  hearing_pta_left: {label: Hearing, left ear (PTA 0.5-4 kHz), unit: dB HL, field: C16, kb: "", freq: once}
+  kidney_stone_history: {label: Kidney-stone history, unit: "1=yes", field: C2, kb: "", freq: once}
+  family_early_mi:  {label: Family history of early heart attack, unit: "1=yes", field: C12, kb: "", freq: once}
+  asthma_ever:      {label: Asthma ever, unit: "1=yes", field: C1, kb: "", freq: once}
+  sleep_hours_reported: {label: Usual sleep (self-report), unit: h, field: H1, kb: "", freq: once}
+  vo2peak:          {label: VO2peak, unit: mL/kg/min, field: F5, kb: I-TEST-aerobic_pct, freq: session}
+  cimt:             {label: Carotid intima-media thickness, unit: mm, field: B12, kb: "", freq: session}
+  oct_rnfl:         {label: Retinal nerve fibre layer (OCT), unit: um, field: G2, kb: "", freq: session}
+  iop:              {label: Intra-ocular pressure, unit: mmHg, field: G2, kb: "", freq: session}
+  isi:              {label: Insomnia Severity Index, unit: 0-28, field: H4, kb: "", freq: once}
+  pvt_lapses:       {label: PVT lapses, unit: count, field: K1, kb: I-TEST-pvt_lapses, freq: weekly}
+  ipip_extraversion:      {label: "IPIP Big Five: extraversion", unit: 10-50, field: J1, kb: "", freq: once}
+  ipip_agreeableness:     {label: "IPIP Big Five: agreeableness", unit: 10-50, field: J1, kb: "", freq: once}
+  ipip_conscientiousness: {label: "IPIP Big Five: conscientiousness", unit: 10-50, field: J1, kb: "", freq: once}
+  ipip_stability:         {label: "IPIP Big Five: emotional stability", unit: 10-50, field: J1, kb: "", freq: once}
+  ipip_intellect:         {label: "IPIP Big Five: intellect", unit: 10-50, field: J1, kb: "", freq: once}
+  cortisol_wake:    {label: Saliva cortisol on waking (normalised units), unit: norm, field: D7, kb: "", freq: session}
+  cortisol_bed:     {label: Saliva cortisol before sleep (normalised units), unit: norm, field: D7, kb: "", freq: session}
+  melatonin_wake:   {label: Saliva melatonin on waking (normalised units), unit: norm, field: D7, kb: "", freq: session}
+  melatonin_bed:    {label: Saliva melatonin before sleep (normalised units), unit: norm, field: D7, kb: "", freq: session}
+  psqi:             {label: Pittsburgh Sleep Quality Index, unit: 0-21, field: H3, kb: "", freq: once}
+  meq:              {label: Morningness-eveningness (MEQ), unit: 16-86, field: H2, kb: "", freq: once}
+  ecg_hr:           {label: "ECG: ventricular rate", unit: bpm, field: B11, kb: I-VIT-ecg_rhythm, freq: session}
+  ecg_pr:           {label: "ECG: PR interval", unit: ms, field: B11, kb: I-VIT-ecg_rhythm, freq: session}
+  ecg_qrs:          {label: "ECG: QRS duration", unit: ms, field: B11, kb: I-VIT-ecg_rhythm, freq: session}
+  ecg_qt:           {label: "ECG: QT interval", unit: ms, field: B11, kb: I-VIT-ecg_rhythm, freq: session}
+  ecg_qtc:          {label: "ECG: QTc (Bazett)", unit: ms, field: B11, kb: I-VIT-ecg_rhythm, freq: session}
+  ortho_sbp_supine: {label: "Orthostatic test: supine systolic BP", unit: mmHg, field: B5, kb: I-VIT-bp_orthostatic, freq: session}
+  ortho_dbp_supine: {label: "Orthostatic test: supine diastolic BP", unit: mmHg, field: B5, kb: I-VIT-bp_orthostatic, freq: session}
+  ortho_hr_supine:  {label: "Orthostatic test: supine heart rate", unit: bpm, field: B5, kb: I-VIT-bp_orthostatic, freq: session}
+  ortho_dsbp:       {label: "Orthostatic test: systolic change on tilt", unit: mmHg, field: B5, kb: I-VIT-bp_orthostatic, freq: session}
+  ortho_ddbp:       {label: "Orthostatic test: diastolic change on tilt", unit: mmHg, field: B5, kb: I-VIT-bp_orthostatic, freq: session}
+  ortho_dhr:        {label: "Orthostatic test: heart-rate change on tilt", unit: bpm, field: B5, kb: I-VIT-bp_orthostatic, freq: session}
+  microbiome_oral:  {label: "Oral microbiome diversity (Shannon)", unit: Shannon, field: D10, kb: "", freq: session}
+  microbiome_nasal: {label: "Nasal microbiome diversity (Shannon)", unit: Shannon, field: D10, kb: "", freq: session}
+  microbiome_skin_arm: {label: "Forearm skin microbiome diversity (Shannon)", unit: Shannon, field: D10, kb: "", freq: session}
+  microbiome_skin_forehead: {label: "Forehead skin microbiome diversity (Shannon)", unit: Shannon, field: D10, kb: "", freq: session}
+  balance_conditions_passed: {label: "Balance (modified Romberg): conditions passed", unit: 0-4, field: C15, kb: "", freq: session}
+  balance_foam_eyes_closed: {label: "Balance on foam, eyes closed (vestibular)", unit: "1=pass", field: C15, kb: "", freq: session}

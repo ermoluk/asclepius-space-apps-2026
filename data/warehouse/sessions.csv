@@ -1,0 +1,126 @@
+crew_id,session_id,t,title,status,provenance,source_ids
+HY-CDR,eye-exam,-180,Comprehensive eye examination (L-9/6 months slot),done,synthetic-calibrated,NORMS
+HY-CDR,personality,-180,Personality profile (IPIP Big Five),done,real-ground,LIFESNAPS
+HY-CDR,medical-core,-180,"Core medical exam: anthropometry, blood pressure, hearing, history",done,real-ground;real-population;synthetic-calibrated,MMASH;NHANES-2011;NORMS;PTB-XL
+HY-CDR,biochem,-180,"Biochemical markers: CBC, CMP",done,real-population;synthetic-calibrated,NHANES-2011;OSD-569;OSD-575;OSD-575-EVE-CV
+HY-CDR,cimt,-180,Carotid intima-media thickness,done,synthetic-calibrated,NORMS
+HY-CDR,vo2peak,-180,Aerobic capacity (VO2peak),done,synthetic-calibrated,LIFESNAPS
+HY-CDR,dxa,-180,DXA: bone density and body composition,done,real-population,NHANES-2011
+HY-CDR,strength-fitness,-180,Strength and functional fitness,done,real-population,NHANES-2011
+HY-CDR,actigraphy,-180,"Actigraphy and sleep log, 2 weeks (L-180..L-167)",done,,
+HY-CDR,cognition-fam,-120,Cognition battery: familiarisation run,done,synthetic-calibrated,NORMS
+HY-CDR,i4-L-92,-92,"Pre-flight labs (Inspiration4 draw L-92, in the L-90 slot)",done,real-astronaut,OSD-569;OSD-572;OSD-575;OSD-575-EVE-CV
+HY-CDR,cognition,-90,Cognition battery: baseline run,done,synthetic-calibrated,NORMS
+HY-CDR,cellular,-90,Cellular profile: saliva stress hormones,done,real-ground,MMASH
+HY-CDR,sensorimotor,-90,Sensorimotor baseline (planned source),planned-source,,
+HY-CDR,microbiome,-90,Microbiome baseline (swabs at the Inspiration4 draws),done,,
+HY-CDR,posturography,-90,Balance test (modified Romberg; stands in for platform posturography),done,real-population,NHANES-2003
+HY-CDR,medical-labs,-90,Medical labs: blood pressure re-check,done,synthetic-calibrated,NHANES-2011;NORMS
+HY-CDR,orthostatic,-90,Orthostatic test: supine to head-up tilt,done,real-ground,TILT
+HY-CDR,vo2peak-2,-60,VO2peak repeat,done,synthetic-calibrated,LIFESNAPS
+HY-CDR,i4-L-44,-44,"Pre-flight labs (Inspiration4 draw L-44, in the L-30 slot)",done,real-astronaut,OSD-569;OSD-572;OSD-575;OSD-575-EVE-CV
+HY-CDR,medical-labs-2,-30,"Medical labs, light eye exam, strength re-check",done,synthetic-calibrated,NHANES-2011
+HY-CDR,dxa-2,-30,DXA repeat,done,synthetic-calibrated,NHANES-2011
+HY-CDR,hsp,-14,Health Stabilization Program quarantine: vitals re-baseline,done,synthetic-calibrated,NORMS
+HY-CDR,ksc,-6,Move to Kennedy Space Center,done,,
+HY-CDR,i4-L-3,-3,Pre-flight labs (Inspiration4 draw L-3),done,real-astronaut,OSD-569;OSD-572;OSD-575;OSD-575-EVE-CV
+HY-MS1,eye-exam,-180,Comprehensive eye examination (L-9/6 months slot),done,synthetic-calibrated,NORMS
+HY-MS1,personality,-180,Personality profile (IPIP Big Five),done,real-ground,LIFESNAPS
+HY-MS1,medical-core,-180,"Core medical exam: anthropometry, blood pressure, hearing, history",done,real-ground;real-population;synthetic-calibrated,MMASH;NHANES-2011;NORMS;PTB-XL
+HY-MS1,biochem,-180,"Biochemical markers: CBC, CMP",done,real-population;synthetic-calibrated,NHANES-2011;OSD-569;OSD-575;OSD-575-EVE-CV
+HY-MS1,cimt,-180,Carotid intima-media thickness,done,synthetic-calibrated,NORMS
+HY-MS1,vo2peak,-180,Aerobic capacity (VO2peak),done,synthetic-calibrated,LIFESNAPS
+HY-MS1,dxa,-180,DXA: bone density and body composition,done,real-population,NHANES-2011
+HY-MS1,strength-fitness,-180,Strength and functional fitness,done,real-population,NHANES-2011
+HY-MS1,actigraphy,-180,"Actigraphy and sleep log, 2 weeks (L-180..L-167)",done,,
+HY-MS1,cognition-fam,-120,Cognition battery: familiarisation run,done,synthetic-calibrated,NORMS
+HY-MS1,i4-L-92,-92,"Pre-flight labs (Inspiration4 draw L-92, in the L-90 slot)",done,real-astronaut,OSD-569;OSD-572;OSD-575;OSD-575-EVE-CV
+HY-MS1,cognition,-90,Cognition battery: baseline run,done,synthetic-calibrated,NORMS
+HY-MS1,cellular,-90,Cellular profile: saliva stress hormones,done,real-ground,MMASH
+HY-MS1,sensorimotor,-90,Sensorimotor baseline (planned source),planned-source,,
+HY-MS1,microbiome,-90,Microbiome baseline (swabs at the Inspiration4 draws),done,,
+HY-MS1,posturography,-90,Balance test (modified Romberg; stands in for platform posturography),done,real-population,NHANES-2003
+HY-MS1,medical-labs,-90,Medical labs: blood pressure re-check,done,synthetic-calibrated,NHANES-2011;NORMS
+HY-MS1,orthostatic,-90,Orthostatic test: supine to head-up tilt,done,real-ground,TILT
+HY-MS1,vo2peak-2,-60,VO2peak repeat,done,synthetic-calibrated,LIFESNAPS
+HY-MS1,i4-L-44,-44,"Pre-flight labs (Inspiration4 draw L-44, in the L-30 slot)",done,real-astronaut,OSD-569;OSD-572;OSD-575;OSD-575-EVE-CV
+HY-MS1,medical-labs-2,-30,"Medical labs, light eye exam, strength re-check",done,synthetic-calibrated,NHANES-2011
+HY-MS1,dxa-2,-30,DXA repeat,done,synthetic-calibrated,NHANES-2011
+HY-MS1,hsp,-14,Health Stabilization Program quarantine: vitals re-baseline,done,synthetic-calibrated,NORMS
+HY-MS1,ksc,-6,Move to Kennedy Space Center,done,,
+HY-MS1,i4-L-3,-3,Pre-flight labs (Inspiration4 draw L-3),done,real-astronaut,OSD-569;OSD-572;OSD-575;OSD-575-EVE-CV
+HY-MS2,eye-exam,-180,Comprehensive eye examination (L-9/6 months slot),done,synthetic-calibrated,NORMS
+HY-MS2,personality,-180,Personality profile (IPIP Big Five),done,,
+HY-MS2,medical-core,-180,"Core medical exam: anthropometry, blood pressure, hearing, history",done,real-ground;real-population;synthetic-calibrated,NHANES-2011;NORMS;PTB-XL
+HY-MS2,biochem,-180,"Biochemical markers: CBC, CMP",done,real-population;synthetic-calibrated,NHANES-2011;OSD-569;OSD-575;OSD-575-EVE-CV
+HY-MS2,cimt,-180,Carotid intima-media thickness,done,synthetic-calibrated,NORMS
+HY-MS2,vo2peak,-180,Aerobic capacity (VO2peak),done,synthetic-calibrated,LIFESNAPS
+HY-MS2,dxa,-180,DXA: bone density and body composition,done,real-population,NHANES-2011
+HY-MS2,strength-fitness,-180,Strength and functional fitness,done,real-population,NHANES-2011
+HY-MS2,actigraphy,-180,"Actigraphy and sleep log, 2 weeks (L-180..L-167)",done,,
+HY-MS2,cognition-fam,-120,Cognition battery: familiarisation run,done,synthetic-calibrated,NORMS
+HY-MS2,i4-L-92,-92,"Pre-flight labs (Inspiration4 draw L-92, in the L-90 slot)",done,real-astronaut,OSD-569;OSD-572;OSD-575;OSD-575-EVE-CV
+HY-MS2,cognition,-90,Cognition battery: baseline run,done,synthetic-calibrated,NORMS
+HY-MS2,cellular,-90,Cellular profile: saliva stress hormones,done,,
+HY-MS2,sensorimotor,-90,Sensorimotor baseline (planned source),planned-source,,
+HY-MS2,microbiome,-90,Microbiome baseline (swabs at the Inspiration4 draws),done,,
+HY-MS2,posturography,-90,Balance test (modified Romberg; stands in for platform posturography),done,real-population,NHANES-2003
+HY-MS2,medical-labs,-90,Medical labs: blood pressure re-check,done,synthetic-calibrated,NHANES-2011;NORMS
+HY-MS2,orthostatic,-90,Orthostatic test: supine to head-up tilt,done,real-ground,TILT
+HY-MS2,vo2peak-2,-60,VO2peak repeat,done,synthetic-calibrated,LIFESNAPS
+HY-MS2,i4-L-44,-44,"Pre-flight labs (Inspiration4 draw L-44, in the L-30 slot)",done,real-astronaut,OSD-569;OSD-572;OSD-575;OSD-575-EVE-CV
+HY-MS2,medical-labs-2,-30,"Medical labs, light eye exam, strength re-check",done,synthetic-calibrated,NHANES-2011
+HY-MS2,dxa-2,-30,DXA repeat,done,synthetic-calibrated,NHANES-2011
+HY-MS2,hsp,-14,Health Stabilization Program quarantine: vitals re-baseline,done,synthetic-calibrated,NORMS
+HY-MS2,ksc,-6,Move to Kennedy Space Center,done,,
+HY-MS2,i4-L-3,-3,Pre-flight labs (Inspiration4 draw L-3),done,real-astronaut,OSD-569;OSD-572;OSD-575;OSD-575-EVE-CV
+HY-PLT,eye-exam,-180,Comprehensive eye examination (L-9/6 months slot),done,synthetic-calibrated,NORMS
+HY-PLT,personality,-180,Personality profile (IPIP Big Five),done,real-ground,LIFESNAPS
+HY-PLT,medical-core,-180,"Core medical exam: anthropometry, blood pressure, hearing, history",done,real-ground;real-population;synthetic-calibrated,MMASH;NHANES-2011;NORMS;PTB-XL
+HY-PLT,biochem,-180,"Biochemical markers: CBC, CMP",done,real-population;synthetic-calibrated,NHANES-2011;OSD-569;OSD-575;OSD-575-EVE-CV
+HY-PLT,cimt,-180,Carotid intima-media thickness,done,synthetic-calibrated,NORMS
+HY-PLT,vo2peak,-180,Aerobic capacity (VO2peak),done,synthetic-calibrated,LIFESNAPS
+HY-PLT,dxa,-180,DXA: bone density and body composition,done,real-population,NHANES-2011
+HY-PLT,strength-fitness,-180,Strength and functional fitness,done,real-population,NHANES-2011
+HY-PLT,actigraphy,-180,"Actigraphy and sleep log, 2 weeks (L-180..L-167)",done,,
+HY-PLT,cognition-fam,-120,Cognition battery: familiarisation run,done,synthetic-calibrated,NORMS
+HY-PLT,i4-L-92,-92,"Pre-flight labs (Inspiration4 draw L-92, in the L-90 slot)",done,real-astronaut,OSD-569;OSD-572;OSD-575;OSD-575-EVE-CV
+HY-PLT,cognition,-90,Cognition battery: baseline run,done,synthetic-calibrated,NORMS
+HY-PLT,cellular,-90,Cellular profile: saliva stress hormones,done,real-ground,MMASH
+HY-PLT,sensorimotor,-90,Sensorimotor baseline (planned source),planned-source,,
+HY-PLT,microbiome,-90,Microbiome baseline (swabs at the Inspiration4 draws),done,,
+HY-PLT,posturography,-90,Balance test (modified Romberg; stands in for platform posturography),done,real-population,NHANES-2003
+HY-PLT,medical-labs,-90,Medical labs: blood pressure re-check,done,synthetic-calibrated,NHANES-2011;NORMS
+HY-PLT,orthostatic,-90,Orthostatic test: supine to head-up tilt,done,real-ground,TILT
+HY-PLT,vo2peak-2,-60,VO2peak repeat,done,synthetic-calibrated,LIFESNAPS
+HY-PLT,i4-L-44,-44,"Pre-flight labs (Inspiration4 draw L-44, in the L-30 slot)",done,real-astronaut,OSD-569;OSD-572;OSD-575;OSD-575-EVE-CV
+HY-PLT,medical-labs-2,-30,"Medical labs, light eye exam, strength re-check",done,synthetic-calibrated,NHANES-2011
+HY-PLT,dxa-2,-30,DXA repeat,done,synthetic-calibrated,NHANES-2011
+HY-PLT,hsp,-14,Health Stabilization Program quarantine: vitals re-baseline,done,synthetic-calibrated,NORMS
+HY-PLT,ksc,-6,Move to Kennedy Space Center,done,,
+HY-PLT,i4-L-3,-3,Pre-flight labs (Inspiration4 draw L-3),done,real-astronaut,OSD-569;OSD-572;OSD-575;OSD-575-EVE-CV
+CM-2,eye-exam,-180,Comprehensive eye examination (L-9/6 months slot),done,synthetic-calibrated,NORMS
+CM-2,personality,-180,Personality profile (IPIP Big Five),done,real-ground,LIFESNAPS
+CM-2,medical-core,-180,"Core medical exam: anthropometry, blood pressure, hearing, history",done,real-ground;real-population;synthetic-calibrated,MMASH;NHANES-2011;NORMS;PTB-XL
+CM-2,biochem,-180,"Biochemical markers: CBC, CMP",done,real-population;synthetic-calibrated,NHANES-2011;OSD-569;OSD-575;OSD-575-EVE-CV
+CM-2,cimt,-180,Carotid intima-media thickness,done,synthetic-calibrated,NORMS
+CM-2,vo2peak,-180,Aerobic capacity (VO2peak),done,synthetic-calibrated,LIFESNAPS
+CM-2,dxa,-180,DXA: bone density and body composition,done,real-population,NHANES-2011
+CM-2,strength-fitness,-180,Strength and functional fitness,done,real-population,NHANES-2011
+CM-2,actigraphy,-180,"Actigraphy and sleep log, 2 weeks (L-180..L-167)",done,,
+CM-2,cognition-fam,-120,Cognition battery: familiarisation run,done,synthetic-calibrated,NORMS
+CM-2,i4-L-92,-92,"Pre-flight labs (Inspiration4 draw L-92, in the L-90 slot)",done,real-astronaut,OSD-569;OSD-572;OSD-575;OSD-575-EVE-CV
+CM-2,cognition,-90,Cognition battery: baseline run,done,synthetic-calibrated,NORMS
+CM-2,cellular,-90,Cellular profile: saliva stress hormones,done,real-ground,MMASH
+CM-2,sensorimotor,-90,Sensorimotor baseline (planned source),planned-source,,
+CM-2,microbiome,-90,Microbiome baseline (swabs at the Inspiration4 draws),done,,
+CM-2,posturography,-90,Balance test (modified Romberg; stands in for platform posturography),done,real-population,NHANES-2003
+CM-2,medical-labs,-90,Medical labs: blood pressure re-check,done,synthetic-calibrated,NHANES-2011;NORMS
+CM-2,orthostatic,-90,Orthostatic test: supine to head-up tilt,done,real-ground,TILT
+CM-2,vo2peak-2,-60,VO2peak repeat,done,synthetic-calibrated,LIFESNAPS
+CM-2,i4-L-44,-44,"Pre-flight labs (Inspiration4 draw L-44, in the L-30 slot)",done,real-astronaut,OSD-569;OSD-572;OSD-575;OSD-575-EVE-CV
+CM-2,medical-labs-2,-30,"Medical labs, light eye exam, strength re-check",done,synthetic-calibrated,NHANES-2011
+CM-2,dxa-2,-30,DXA repeat,done,synthetic-calibrated,NHANES-2011
+CM-2,hsp,-14,Health Stabilization Program quarantine: vitals re-baseline,done,synthetic-calibrated,NORMS
+CM-2,ksc,-6,Move to Kennedy Space Center,done,,
+CM-2,i4-L-3,-3,Pre-flight labs (Inspiration4 draw L-3),done,real-astronaut,OSD-569;OSD-572;OSD-575;OSD-575-EVE-CV

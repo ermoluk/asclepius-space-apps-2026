@@ -1,0 +1,22 @@
+id: HY-MS1
+seed: 135064188412629  # keeps the generated series identical to the earlier call-sign
+name: Thomas Rein
+role: Mission Specialist 1
+sex: M
+age: 39
+lab_donor: I4-C001
+story_targets: {hr_rest: 58, bp_sys: 116}
+modifiers: [P-05, P-10]
+authored:
+  A3: {value: 10, unit: "days"}
+  A4: {value: "first flight", unit: ""}
+  A5: {value: "n/a", unit: ""}
+  A6: {value: 0, unit: "mSv"}
+  C1: {value: "migraine without aura", unit: ""}
+  C3: {value: "migraine 1-2/month; triggers: short sleep, bright light; helps: dark, quiet, hydration", unit: ""}
+  C10: {value: "A-", unit: ""}
+  E2: {value: "genetic module declined", unit: ""}
+  H5: {value: "evening type; caffeine 3 cups/day, last at 15:00", unit: ""}
+  I1: {value: "MSSQ-short low", unit: ""}
+  J4: {value: "photos of Earth", unit: ""}
+  M3: {value: "mood data shared with CMO", unit: ""}

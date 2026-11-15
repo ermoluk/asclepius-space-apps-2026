@@ -1,0 +1,27 @@
+key,target,op,value,lo,hi,unit,ref_key,note,value_type
+co2_1h_limit,co2_1h,gt,3.0,,,mmHg,STD3001-V2;TB004,1-hour average above limit (R-ENV-01),requirement
+co2_7d_headache,co2_7d,gt,2.5,,,mmHg,TB004,7-day average above which headache risk exceeds 1%,
+ppo2_normoxia,pio2,between,,145,155,mmHg,STD3001-V2,normoxic inspired O2,requirement
+ppo2_mild_hypoxia,pio2,lt,127,,,mmHg,STD3001-V2,mild-hypoxia limit,requirement
+cabin_alt_watch,cabin_alt,gt,8300,,,ft,RISK-HYPOX,hypoxia watch above this cabin-altitude equivalent,
+cabin_temp_range,cabin_temp,between,,18,27,degC,STD3001-V2,habitable temperature range (R-ENV-05),requirement
+career_dose_limit,dose_cumulative,lt,600,,,mSv,STD3001-V1;TB020,"career effective-dose limit: less than 600 mSv [V1 4030]; a cancer-risk limit, not an acute radiation-sickness threshold",requirement
+career_dose_watch,dose_cumulative,gte,480,,,mSv,STD3001-V1;TB020,[T] team early warning at 80% of the 600 mSv NASA career limit; not a NASA limit (R-RAD-02),team_threshold
+sleep_need,sleep_hours,between,,7,9,h,RISK-SLEEP;TB041,sleep need per 24 h,
+sleep_restricted,sleep_hours,lte,6,,,h,RISK-SLEEP;TB041;JONES2022,"restricted sleep, 6 h or less (R-SLP-01): Jones 2022 links 6 h or less to slower psychomotor speed, more stress and workload (its abstract writes <6 h)",
+awake_max,awake_hours,gte,16,,,h,RISK-SLEEP,hours awake,
+work_day_max,work_hours,gt,16,,,h,RISK-SLEEP,work hours per day,
+work_days_row_max,work_days_in_row,gt,6,,,days,RISK-SLEEP,consecutive work days,
+vo2max_eva,vo2max,gte,32.9,,,mL/kg/min,STD3001-V1,minimum aerobic capacity for EVA,requirement
+aerobic_inflight_min,vo2max_relative_to_preflight,gte,80,,,% of pre-flight,STD3001-V1,"in-flight VO2max at least 80% of pre-flight: an operational requirement, not a physiological mean",requirement
+strength_inflight_min,strength_pct,gte,80,,,% of pre-flight,STD3001-V1,"in-flight strength at least 80% of pre-flight: an operational requirement, not a physiological mean",requirement
+body_mass_orange,delta_pct_body_mass,lte,-0.05,,,fraction,NUTR-ER,mass loss 5% (team threshold on NASA evidence),team_threshold
+body_mass_red,delta_pct_body_mass,lte,-0.077,,,fraction,NUTR-ER,mass loss 7.7% (performance decline),
+fluid_min,fluid_intake,gte,2.5,,,L/day,STD3001-V2,daily fluid,requirement
+energy_default,energy_target,eq,3035,,,kcal/day,STD3001-V2,default energy target (+200 kcal per EVA hour),requirement
+exercise_daily,exercise_min,gte,90,,,min/day,RISK-FIT,in-flight exercise prescription (about 1.5 h/day),
+sodium_dehydration,sodium,gt,145,,,mmol/L,NUTR-ER,serum sodium above range suggests dehydration (R-GU-12),
+urine_osm_dehydration,urine_osm,gt,700,,,mOsm/kg,NUTR-ER,under-hydrated,
+vitd_supplement,vitd,lt,35,,,ng/mL,TB030,supplement below this,
+vitd_treat,vitd,lt,20,,,ng/mL,TB030,treat below this,
+bmd_tscore_fly,bmd_tscore,gte,-1.0,,,T-score,TB030,minimum T-score to fly,

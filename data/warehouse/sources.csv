@@ -1,0 +1,31 @@
+source_id,title,url,license,access,kind,citation
+OSD-569,Inspiration4 crew complete blood count (CBC),https://osdr.nasa.gov/bio/repo/data/studies/OSD-569,NASA open data,open,real-astronaut,"NASA OSDR OSD-569 (Inspiration4, SOMA)"
+OSD-575,Inspiration4 crew comprehensive metabolic panel (CMP) and serum panels,https://osdr.nasa.gov/bio/repo/data/studies/OSD-575,NASA open data,open,real-astronaut,"NASA OSDR OSD-575 (Inspiration4, SOMA)"
+OSD-575-EVE-CV,Inspiration4 serum cardiovascular panel (Eve) - CRP and acute-phase proteins,https://osdr.nasa.gov/bio/repo/data/studies/OSD-575,NASA open data,open,real-astronaut,"NASA OSDR OSD-575 (Inspiration4, SOMA)"
+NHANES-2011,"NHANES 2011-2012 examination, laboratory and questionnaire files (CDC/NCHS)",https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?BeginYear=2011,Public domain,open,real-population,CDC/NCHS National Health and Nutrition Examination Survey 2011-2012
+LIFESNAPS,"LifeSnaps: 4-month multi-modal Fitbit, EMA and survey dataset (71 participants)",https://zenodo.org/records/7229547,CC BY 4.0,open,real-ground,"Yfantidou et al., Scientific Data 9, 663 (2022), doi:10.1038/s41597-022-01764-x"
+DONKI,NASA DONKI space-weather notifications (solar energetic particle events),https://ccmc.gsfc.nasa.gov/tools/DONKI,NASA open data,open,real-events,NASA CCMC DONKI
+IMM,NASA Integrated Medical Model incidence and ISS clinical events (as summarised in the knowledge base),https://ntrs.nasa.gov/api/citations/20100023129/downloads/20100023129.pdf,NASA public,open,nasa-evidence,"IMM-INC, ISS-EVENTS, KERSTMAN2012, SMS-SHUTTLE, HEADACHE2024, CRUCIAN2016"
+NASA-LIMITS,NASA-STD-3001 and OCHMO technical-brief limits,https://www.nasa.gov/wp-content/uploads/2020/10/2022-04-08_nasa-std-3001_vol_2_rev_c_final.pdf,NASA public,open,nasa-evidence,"STD3001-V1, STD3001-V2, TB004, TB020, TB030, TB041, NUTR-ER, RISK-SLEEP"
+HRP-EFFECTS,In-flight physiological shifts from HRP evidence reports and Standard Measures,https://humanresearchroadmap.nasa.gov/,NASA public,open,nasa-evidence,"CV-ER, NUTR-ER, NORSK2015, STAHN2017, RISK-BONE, RISK-FIT, ORTHO2011"
+NORMS,"Published norms for measures with no open data (PVT, cognition, OCT, CIMT)",https://www.nasa.gov/reference/standard-measures/,citations,open,synthetic-calibrated,PVT-BASNER and others in knowledge-base/08-references.md
+AUTHORED,"Fictional crew stories (history, preferences, consent)",,project,open,authored,Asclepius team
+NOAA-SEP,NOAA SWPC solar proton events affecting the Earth environment (1976-2017; peak >10 MeV flux),https://umbra.nascom.nasa.gov/SEP/,public,open,real-events,
+CE4-LND,"Chang'e-4 LND lunar-surface dose rate (Zhang et al., Sci Adv 2020)",https://doi.org/10.1126/sciadv.aaz1334,publication,open,real-events,
+OSD-410,Radiation dose/time transcriptomics (GSE63952),https://osdr.nasa.gov/bio/repo/data/studies/OSD-410,NASA/GEO open,open,real-ground,
+OSD-570,Inspiration4 blood (PBMC single-cell) - verify contents,https://osdr.nasa.gov/bio/repo/data/studies/OSD-570,NASA open data,open (processed),real-astronaut,
+OSD-571,Inspiration4 blood - verify contents,https://osdr.nasa.gov/bio/repo/data/studies/OSD-571,NASA open data,open (processed),real-astronaut,
+OSD-572,Inspiration4 skin/oral/nasal metagenomes (GeneLab MetaPhlAn table),https://osdr.nasa.gov/bio/repo/data/studies/OSD-572,NASA open data,open (processed),real-astronaut,
+NHANES-2003,NHANES 2003-2004 balance examination (modified Romberg),https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/BAX_C.htm,Public domain,open,real-population,
+GOES,NOAA GOES proton flux,https://www.swpc.noaa.gov/products/goes-proton-flux,public,open,real-events,
+MSL-RAD,MSL RAD dose rates (cruise and Mars surface),https://pds-ppi.igpp.ucla.edu/volume/MSLRAD_1002/,NASA PDS,open,real-events,
+LRO-CRATER,LRO CRaTER lunar dose rates,https://pds.nasa.gov/data/pds4/releases/ppi/lro-crater-20260615/,NASA PDS,open,real-events,
+ARTEMIS-I-DLR,Artemis I Orion radiation findings (DLR),https://www.dlr.de/en/latest/news/2024/orion-spacecraft-radiation-protection-tested-initial-findings-from-artemis-i-moon-mission,publication,open,real-events,
+PMDATA,PMData Fitbit and wellness logs,https://datasets.simula.no/pmdata,CC BY-NC 4.0,open,real-ground,
+MMASH,MMASH RR intervals,https://physionet.org/content/mmash/,ODbL,open,real-ground,
+PTB-XL,PTB-XL 12-lead ECG,https://physionet.org/content/ptb-xl/,CC BY 4.0,open,real-ground,
+TILT,PhysioNet head-up tilt (Cerebral Vasoregulation in Diabetes),https://physionet.org/content/cerebral-vasoreg-diabetes/1.0.0/,PhysioNet open,open,real-ground,
+BIGIDEAS,BIG IDEAs Lab CGM + Empatica,https://physionet.org/content/big-ideas-glycemic-wearable/,ODC-By,open,real-ground,
+FDC,USDA FoodData Central,https://fdc.nal.usda.gov/,CC0,open,nasa-evidence,
+MIMIC-DEMO,MIMIC-IV Clinical Database Demo + ED Demo,https://physionet.org/content/mimic-iv-demo/,ODbL,open,real-ground,
+LSDA,NASA Life Sciences Data Archive / LSAH (formal request),https://lsda.jsc.nasa.gov/,by request,request,real-astronaut,

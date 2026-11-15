@@ -1,0 +1,124 @@
+# Data catalog: one entry per source. `status: active` sources are built by `python -m pipeline all`;
+# `planned` ones are documented here and wired in later phases. Raw downloads go to data/raw/<id>/ (git-ignored);
+# small derived tables live in data/warehouse/ and data/passports/ (committed).
+# kind: real-astronaut | real-ground | real-population | real-events | nasa-evidence | synthetic-calibrated | authored
+sources:
+  - id: OSD-569
+    title: Inspiration4 crew complete blood count (CBC)
+    url: https://osdr.nasa.gov/bio/repo/data/studies/OSD-569
+    license: NASA open data
+    access: open
+    kind: real-astronaut
+    status: active
+    raw: data/inspiration4/LSDS-7_Complete_Blood_Count_CBC_TRANSFORMED.csv
+    citation: NASA OSDR OSD-569 (Inspiration4, SOMA)
+  - id: OSD-575
+    title: Inspiration4 crew comprehensive metabolic panel (CMP) and serum panels
+    url: https://osdr.nasa.gov/bio/repo/data/studies/OSD-575
+    license: NASA open data
+    access: open
+    kind: real-astronaut
+    status: active
+    raw: data/inspiration4/LSDS-8_Comprehensive_Metabolic_Panel_CMP_TRANSFORMED.csv
+    citation: NASA OSDR OSD-575 (Inspiration4, SOMA)
+  - id: OSD-575-EVE-CV
+    title: Inspiration4 serum cardiovascular panel (Eve) - CRP and acute-phase proteins
+    url: https://osdr.nasa.gov/bio/repo/data/studies/OSD-575
+    license: NASA open data
+    access: open
+    kind: real-astronaut
+    status: active
+    raw: data/inspiration4/LSDS-8_Multiplex_serum_cardiovascular_EvePanel_TRANSFORMED.csv
+    citation: NASA OSDR OSD-575 (Inspiration4, SOMA)
+  - id: NHANES-2011
+    title: NHANES 2011-2012 examination, laboratory and questionnaire files (CDC/NCHS)
+    url: https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?BeginYear=2011
+    license: Public domain
+    access: open
+    kind: real-population
+    status: active
+    raw: data/raw/nhanes/
+    citation: CDC/NCHS National Health and Nutrition Examination Survey 2011-2012
+  - id: LIFESNAPS
+    title: "LifeSnaps: 4-month multi-modal Fitbit, EMA and survey dataset (71 participants)"
+    url: https://zenodo.org/records/7229547
+    license: CC BY 4.0
+    access: open
+    kind: real-ground
+    status: active
+    raw: data/raw/lifesnaps/
+    citation: Yfantidou et al., Scientific Data 9, 663 (2022), doi:10.1038/s41597-022-01764-x
+  - id: DONKI
+    title: NASA DONKI space-weather notifications (solar energetic particle events)
+    url: https://ccmc.gsfc.nasa.gov/tools/DONKI
+    license: NASA open data
+    access: open
+    kind: real-events
+    status: active
+    raw: data/space_weather/donki_sep.json
+    citation: NASA CCMC DONKI
+  - id: IMM
+    title: NASA Integrated Medical Model incidence and ISS clinical events (as summarised in the knowledge base)
+    url: https://ntrs.nasa.gov/api/citations/20100023129/downloads/20100023129.pdf
+    license: NASA public
+    access: open
+    kind: nasa-evidence
+    status: active
+    raw: data/evidence/imm_incidence.csv
+    citation: IMM-INC, ISS-EVENTS, KERSTMAN2012, SMS-SHUTTLE, HEADACHE2024, CRUCIAN2016
+  - id: NASA-LIMITS
+    title: NASA-STD-3001 and OCHMO technical-brief limits
+    url: https://www.nasa.gov/wp-content/uploads/2020/10/2022-04-08_nasa-std-3001_vol_2_rev_c_final.pdf
+    license: NASA public
+    access: open
+    kind: nasa-evidence
+    status: active
+    raw: data/evidence/limits.csv
+    citation: STD3001-V1, STD3001-V2, TB004, TB020, TB030, TB041, NUTR-ER, RISK-SLEEP
+  - id: HRP-EFFECTS
+    title: In-flight physiological shifts from HRP evidence reports and Standard Measures
+    url: https://humanresearchroadmap.nasa.gov/
+    license: NASA public
+    access: open
+    kind: nasa-evidence
+    status: active
+    raw: data/evidence/space_effects.csv
+    citation: CV-ER, NUTR-ER, NORSK2015, STAHN2017, RISK-BONE, RISK-FIT, ORTHO2011
+  - id: NORMS
+    title: Published norms for measures with no open data (PVT, cognition, OCT, CIMT)
+    url: https://www.nasa.gov/reference/standard-measures/
+    license: citations
+    access: open
+    kind: synthetic-calibrated
+    status: active
+    raw: data/evidence/norms.csv
+    citation: PVT-BASNER and others in knowledge-base/08-references.md
+  - id: AUTHORED
+    title: Fictional crew stories (history, preferences, consent)
+    url: ""
+    license: project
+    access: open
+    kind: authored
+    status: active
+    raw: data/crew/
+    citation: Asclepius team
+  - {id: NOAA-SEP, title: NOAA SWPC solar proton events affecting the Earth environment (1976-2017; peak >10 MeV flux), url: https://umbra.nascom.nasa.gov/SEP/, license: public, access: open, kind: real-events, status: active}
+  - {id: CE4-LND, title: "Chang'e-4 LND lunar-surface dose rate (Zhang et al., Sci Adv 2020)", url: https://doi.org/10.1126/sciadv.aaz1334, license: publication, access: open, kind: real-events, status: active}
+  # ---- planned (documented, wired in later phases) ----
+  - {id: OSD-410, title: Radiation dose/time transcriptomics (GSE63952), url: https://osdr.nasa.gov/bio/repo/data/studies/OSD-410, license: NASA/GEO open, access: open, kind: real-ground, status: active}
+  - {id: OSD-570, title: Inspiration4 blood (PBMC single-cell) - verify contents, url: https://osdr.nasa.gov/bio/repo/data/studies/OSD-570, license: NASA open data, access: open (processed), kind: real-astronaut, status: planned}
+  - {id: OSD-571, title: Inspiration4 blood - verify contents, url: https://osdr.nasa.gov/bio/repo/data/studies/OSD-571, license: NASA open data, access: open (processed), kind: real-astronaut, status: planned}
+  - {id: OSD-572, title: "Inspiration4 skin/oral/nasal metagenomes (GeneLab MetaPhlAn table)", url: https://osdr.nasa.gov/bio/repo/data/studies/OSD-572, license: NASA open data, access: open (processed), kind: real-astronaut, status: active}
+  - {id: NHANES-2003, title: "NHANES 2003-2004 balance examination (modified Romberg)", url: https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/BAX_C.htm, license: Public domain, access: open, kind: real-population, status: active}
+  - {id: GOES, title: NOAA GOES proton flux, url: https://www.swpc.noaa.gov/products/goes-proton-flux, license: public, access: open, kind: real-events, status: planned}
+  - {id: MSL-RAD, title: MSL RAD dose rates (cruise and Mars surface), url: https://pds-ppi.igpp.ucla.edu/volume/MSLRAD_1002/, license: NASA PDS, access: open, kind: real-events, status: active}
+  - {id: LRO-CRATER, title: LRO CRaTER lunar dose rates, url: https://pds.nasa.gov/data/pds4/releases/ppi/lro-crater-20260615/, license: NASA PDS, access: open, kind: real-events, status: planned}
+  - {id: ARTEMIS-I-DLR, title: Artemis I Orion radiation findings (DLR), url: https://www.dlr.de/en/latest/news/2024/orion-spacecraft-radiation-protection-tested-initial-findings-from-artemis-i-moon-mission, license: publication, access: open, kind: real-events, status: planned}
+  - {id: PMDATA, title: PMData Fitbit and wellness logs, url: https://datasets.simula.no/pmdata, license: CC BY-NC 4.0, access: open, kind: real-ground, status: planned}
+  - {id: MMASH, title: MMASH RR intervals, sleep, saliva hormones, url: https://physionet.org/content/mmash/, license: ODbL, access: open, kind: real-ground, status: active}
+  - {id: PTB-XL, title: PTB-XL 12-lead ECG, url: https://physionet.org/content/ptb-xl/, license: CC BY 4.0, access: open, kind: real-ground, status: active}
+  - {id: TILT, title: PhysioNet head-up tilt (Cerebral Vasoregulation in Diabetes), url: https://physionet.org/content/cerebral-vasoreg-diabetes/1.0.0/, license: PhysioNet open, access: open, kind: real-ground, status: active}
+  - {id: BIGIDEAS, title: BIG IDEAs Lab CGM + Empatica, url: https://physionet.org/content/big-ideas-glycemic-wearable/, license: ODC-By, access: open, kind: real-ground, status: active}
+  - {id: FDC, title: USDA FoodData Central, url: https://fdc.nal.usda.gov/, license: CC0, access: open, kind: nasa-evidence, status: planned}
+  - {id: MIMIC-DEMO, title: MIMIC-IV Clinical Database Demo + ED Demo, url: https://physionet.org/content/mimic-iv-demo/, license: ODbL, access: open, kind: real-ground, status: active}
+  - {id: LSDA, title: NASA Life Sciences Data Archive / LSAH (formal request), url: https://lsda.jsc.nasa.gov/, license: by request, access: request, kind: real-astronaut, status: planned}

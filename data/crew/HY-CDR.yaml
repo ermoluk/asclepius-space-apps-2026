@@ -1,0 +1,21 @@
+id: HY-CDR
+seed: 132905755103930  # keeps the generated series identical to the earlier call-sign
+name: Daniel Arenas
+role: Commander
+sex: M
+age: 48
+lab_donor: I4-C004
+story_targets: {hr_rest: 54, bp_sys: 118}
+modifiers: []
+authored:
+  A3: {value: 10, unit: "days"}
+  A4: {value: "2 prior flights, 341 days", unit: ""}
+  A5: {value: "none", unit: ""}
+  A6: {value: 96, unit: "mSv"}
+  C1: {value: "none", unit: ""}
+  C4: {value: "no known allergies", unit: ""}
+  C10: {value: "O+", unit: ""}
+  E2: {value: "genetic module declined", unit: ""}
+  I1: {value: "MSSQ-short low", unit: ""}
+  J4: {value: "music, exercise", unit: ""}
+  M3: {value: "mood data private", unit: ""}
