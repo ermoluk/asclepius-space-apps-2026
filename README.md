@@ -38,7 +38,7 @@ Instead of a black-box model, Asclepius turns NASA's medical knowledge into clea
 |---|---|
 | Knowledge base | 60+ indicators, 115 conditions (all 100 of NASA's Integrated Medical Model plus 15 from HRP evidence), 220+ documented rules, 100+ references |
 | Rule engine | 86 rules encoded and running, forward chaining, MYCIN-style certainty factors, red-flag guard, next best measurement |
-| Crew passports | 5 fictional crew members, each with a six-month pre-flight dossier built from real people's data, every value labelled with its source |
+| Crew passports | 5 fictional six-month pre-flight dossiers built from real people's data, every value labelled with its source: the four Hygieia I crew members and CM-2, the default passport behind the onboarding quiz |
 | Validation | the engine was run on real data: healthy volunteers, real astronaut lab draws, emergency patients, CGM, tilt tests (see below) |
 
 ## Using the app
@@ -98,6 +98,21 @@ never clipped. Templates: `frontend/public/import-templates/`.
 4. **Missing data is never normal**: rules with missing inputs stay *pending* and drive the next best measurement; a body region with
    no data shows "not assessed", never green.
 5. **Packet**: RED only; onboard actions first when the delay is over 5 minutes or there is no link.
+
+## NASA and partner resources
+
+The knowledge base is built on the challenge's NASA and partner resources. Every rule cites its sources by key; the full list with
+links is in `knowledge-base/08-references.md`.
+
+| Resource | How Asclepius uses it |
+|---|---|
+| NASA HRP: [5 Hazards of Human Spaceflight](https://www.nasa.gov/hrp/hazards/) and [Risks of Human Spaceflight](https://www.nasa.gov/hrp/risks/) | The starting frame: every HRP risk becomes a body-map system with its own conditions and rules |
+| [NASA Integrated Medical Model](https://ntrs.nasa.gov/api/citations/20150002713/downloads/20150002713.pdf) | All 100 IMM conditions are in the knowledge base, with incidence from IMM and ISS clinical data |
+| [NASA-STD-3001 Vol. 1](https://standards.nasa.gov/sites/default/files/standards/NASA/C//nasa-std-3001-vol-1-rev-c-signature.pdf) and OCHMO technical briefs on [CO2](https://www.nasa.gov/wp-content/uploads/2023/12/ochmo-tb-004-carbon-dioxide.pdf), [radiation](https://www.nasa.gov/wp-content/uploads/2023/03/radiation-protection-technical-brief-ochmo.pdf), [sleep](https://www.nasa.gov/sites/default/files/atoms/files/sleep_accomodations_technical_brief_ochmo.pdf), [behavioral health](https://www.nasa.gov/wp-content/uploads/2023/12/ochmo-tb-016-behavioral-health.pdf) and [bone loss](https://www.nasa.gov/wp-content/uploads/2023/12/ochmo-tb-030-bone-loss.pdf) | Limits and thresholds the rules use: cabin CO2, radiation dose, sleep, behavioral health, bone |
+| [NASA Human Research Roadmap](https://humanresearchroadmap.nasa.gov/) evidence reports | Expected in-flight shifts (for example blood pressure), so normal adaptation is not flagged as illness |
+| [NASA OSDR](https://osdr.nasa.gov/) (OSD-569, OSD-575, OSD-572, OSD-410) and [NASA DONKI](https://ccmc.gsfc.nasa.gov/tools/DONKI) | Data: real astronaut labs, microbiome, radiation gene expression, solar particle events (see Data below) |
+| Partner, CSA: [Monitoring Radiation for Astronaut Health](https://www.asc-csa.gc.ca/eng/news/articles/2026/2026-02-26-monitoring-radiation-astronaut-health.asp) | The neutron share of the ISS dose used by the radiation indicator |
+| Partner, CSA: [Why Do We Conduct Science Experiments in Space?](https://www.asc-csa.gc.ca/eng/iss/science/why-do-we-conduct-science-experiments-in-space.asp) | Background reading on in-flight research |
 
 ## Data
 
@@ -258,3 +273,10 @@ The idea and all design decisions are the team's own. AI tools were used under t
   redrawing of it (`frontend/public/brand/logo-dark.svg`, `logo-light.svg`); the generated image is no longer used in the app.
 - **Demo video**: the narration is an AI-generated voice (open-source Kokoro-82M text-to-speech, run locally, reading the team's
   script). The app shots are screen recordings of the running app; the other graphics are vector animations rendered by code.
+  The app shots were recorded before the logo was redrawn, so the app header in them still shows the earlier ChatGPT logo concept.
+
+## License
+
+Code: MIT, see [`LICENSE`](LICENSE). The datasets in `data/` keep the licences of their sources, listed for every source in
+`data/catalog.yaml`: NASA open data, NHANES (public domain), LifeSnaps and PTB-XL (CC BY 4.0), MMASH (ODbL; values derived from it are
+shared under the same licence) and the others named there.
